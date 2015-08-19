@@ -1,2 +1,3 @@
 # explorato.github.io
-explorato home page
+
+Welcome to the explorato home page
