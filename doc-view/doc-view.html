@@ -57,6 +57,7 @@
 
 		fileName = location.hash ? location.hash.split( '#' )[1] : 'index.html';
 
+// very restricting but just to get going
 		document.title = fileName.substr( 42 );
 
 		ifr.src = fileName;
