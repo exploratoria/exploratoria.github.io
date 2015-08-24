@@ -1,5 +1,5 @@
 [exploratorio]( http://exploratorio.github.io/ ) &raquo;  
-[docView]( doc-view.html )
+[docView]( doc-view.html ) - [&#x24D8;]( https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view )
 ===
 
 [docView Read Me]( doc-view.html#index.html )  

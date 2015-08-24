@@ -1,10 +1,11 @@
-<a href=http://exploratorio.github.io/ target=_blank >exploratrio</a> &raquo;
 docView Read Me
 ===
-<span style=display:none; >[View docView Read Me as web page]( http://exploratorio.github.io/doc-view "View file as a web page." ) </span>
-<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view'; />
+<span style=display:none; >[View docView Read Me as web page]( http://exploratorio.github.io/doc-view/ "View file as a web page." ) </span>
+<!--
+<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view/'; />
+-->
 
-[docView Full Screen Demo]( http://exploratorio.github.io/doc-view/doc-view.html )
+<a href=http://exploratorio.github.io/doc-view/doc-view.html target=_blank >docView Full Screen Demo</a>
 
 ## Concept
 
