@@ -1,7 +1,9 @@
+[exploratorio]( http://exploratorio.github.io/ ) &raquo;  
 [docView]( doc-view.html )
 ===
 
-[docView Read Me]( doc-view.html )
+[docView Read Me]( doc-view.html#index.html )  
+[Code Snippet Example]( #code-snippet-example.html )
 
 <small>
 As an example, the following menu items can be used to call up all the Three.js examples. Note that link names are not yet complete.
