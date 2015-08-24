@@ -1,3 +1,3 @@
-# explorato.github.io
+# exploratorio.github.io
 
-Welcome to the explorato home page
+Welcome to the Exploratorio home page!
