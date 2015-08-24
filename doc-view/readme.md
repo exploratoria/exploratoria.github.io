@@ -1,9 +1,9 @@
-
+[exloratorio]( http://exploratorio.github.io/ ) &raquo;
 docView Read me
 ===
 
-<span style=display:none; >[View as web page]( http://explorato.github.io/doc-view "View file as a web page." ) </span>
-<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://explorato.com/doc-view/'; />
+<span style=display:none; >[View as web page]( http://exploratorio.github.io/doc-view "View file as a web page." ) </span>
+<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://exploratorio.com/doc-view/'; />
 
 
 ## Concept
