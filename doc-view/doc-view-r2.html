@@ -55,7 +55,7 @@
 
 		fileName = location.hash ? location.hash.split( '#' )[1] : 'index.html';
 
-		document.title = fileName.substr( 1 + fileName.lastIndexOf( '/' ) ).toLowerCase();
+		document.title = fileName.substr( 1 + fileName.lastIndexOf( '/' ) );
 
 // add get extension 
 // respond to if ext === 'html' / if ext === 'md'

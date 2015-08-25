@@ -26,7 +26,7 @@ _See also the raw source code of this file for notes embedded as comments_
 
 ## Apps
 
-The intention is to provide scripts dealing with physics, biology, cartography, math and more
+The intention is to provide scripts dealing with physics, astronomy, biology, cartography, math and more
 
 ## Cookbook
 
