@@ -1,11 +1,11 @@
-exploratorio.github.io
+exploratoria.github.io
 ===
-<span style=display:none; >[View as web page]( http://exploratorio.github.io/ "View file as a web page." ) </span>
-<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratorio/exploratorio.github.io/'; />
+<span style=display:none; >[View as web page]( http://exploratoria.github.io/ "View file as a web page." ) </span>
+<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/'; />
 
-Welcome to the Exploratorio home page!
+Welcome to the Exploratoria home page!
 
-Exploratorio is a GitHub Organization. Feel free to request an invitation to join. 
+Exploratoria is a GitHub Organization. Feel free to request an invitation to join. 
 
 _See also the raw source code of this file for notes embedded as comments_
 
@@ -45,8 +45,8 @@ See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wi
 ### docView
 A very simple JavaScript web page viewer and menu script
 
-[docView Full Screen Demo]( http://exploratorio.github.io/doc-view/latest/ )  
-[docView Source Code]( https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view )
+[docView Full Screen Demo]( http://exploratoria.github.io/doc-view/latest/ )  
+[docView Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/doc-view )
 
 
 ## Coding Style
