@@ -48,9 +48,9 @@ Remember: you need html anchor with target="_blank" to bust out of iframe...
 
 ## See Also
 
-* http://mrdoob.github.io/three.js/examples/
-* http://stemkoski.github.io/Three.js/
-* http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63
-* http://scenejs.org/examples/index.html#scenegraph_firstExample
+* <http://mrdoob.github.io/three.js/examples/>
+* <http://stemkoski.github.io/Three.js/>
+* <http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63>
+* <http://scenejs.org/examples/index.html#scenegraph_firstExample>
 * http://www.babylonjs.com/
 

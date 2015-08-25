@@ -31,7 +31,7 @@
 		'opacity: 0.85; overflow: auto; padding: 0 15px; position: absolute; top: 0;';
 
 		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.open( 'GET', 'doc-view-menu.md', true );
+		xmlHttp.open( 'GET', 'doc-view-menu-r2.md', true );
 		xmlHttp.onreadystatechange = function() {
 
 			menu.innerHTML = xmlHttp.readyState === 4 ? new showdown.Converter().makeHtml( xmlHttp.responseText ) : '';
