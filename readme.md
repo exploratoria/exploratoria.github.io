@@ -5,18 +5,24 @@ exploratorio.github.io
 
 Welcome to the Exploratorio home page!
 
+Exploratorio is a GitHub Organization. Feel free to request an invitation to join. 
+
+_See also the source code of this file for notes embedded as comments_
+
 ## Concept
 
 ### Mission  
 <!-- a statement of a rationale, applicable now as well as in the future -->
 * To supply free, open source scripts that help visualize scientific and mathematical concepts
+
 * To supply scripts that help engineers and designers to create visualizations without having to be dedicated software programmers
 * To help youngsters and oldsters delve into new topics with a hands-on, active, 'I can play with this' approach
 
 ### Vision  
 <!--  a descriptive picture of a desired future state -->
 
-To help create new types of visualizations
+* To help create new types of visualizations
+* To help people understand, tackle and push the envelope with increasingly complicated tasks
 
 ## Apps
 
