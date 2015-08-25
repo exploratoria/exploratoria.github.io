@@ -1,15 +1,15 @@
 docView Read Me
 ===
-<span style=display:none; >[View docView Read Me as web page]( http://exploratorio.github.io/doc-view/ "View file as a web page." ) </span>
+<span style=display:none; >[View docView Read Me as web page]( http://exploratoria.github.io/doc-view/ "View file as a web page." ) </span>
 
 <!--
 
 Remember: you need html anchor with target="_blank" to bust out of iframe...
 
-<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view/'; />
+<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/doc-view/'; />
 -->
 
-<a href=http://exploratorio.github.io/doc-view/latest/ target=_blank >docView Full Screen Demo</a>
+<a href=http://exploratoria.github.io/doc-view/latest/ target=_blank >docView Full Screen Demo</a>
 
 ## Concept
 
