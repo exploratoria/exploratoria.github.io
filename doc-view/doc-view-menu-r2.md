@@ -2,7 +2,7 @@
 [docView R2]( doc-view-r2.html ) - [&#x24D8;]( https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view )
 ===
 
-[docView Read Me]( doc-view.html#index.html )  
+[docView Read Me]( doc-view-r2.html#index.html )  
 [Code Snippet Example]( #code-snippet-example.html )
 
 <small>
