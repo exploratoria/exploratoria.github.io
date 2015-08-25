@@ -45,8 +45,15 @@ See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wi
 ### docView
 A very simple JavaScript web page viewer and menu script
 
-[docView Full Screen Demo]( http://exploratorio.github.io/doc-view/doc-view.html )  
+[docView Full Screen Demo]( http://exploratorio.github.io/doc-view/latest/ )  
 [docView Source Code]( https://github.com/exploratorio/exploratorio.github.io/tree/master/doc-view )
 
 
+## Coding Style
 
+The coding style of an app should follow the style of the most-used library of the app.
+
+The font used here is the the default 'monospace' font as determined by your browser. This is because it is the most common font used to write scripts.
+
+
+ 
