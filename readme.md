@@ -7,7 +7,7 @@ Welcome to the Exploratorio home page!
 
 Exploratorio is a GitHub Organization. Feel free to request an invitation to join. 
 
-_See also the source code of this file for notes embedded as comments_
+_See also the raw source code of this file for notes embedded as comments_
 
 ## Concept
 
@@ -30,9 +30,11 @@ The intention is to provide scripts dealing with physics, biology, cartography, 
 
 ## Cookbook
 
-Short coding samples - also called snippets - solutions to common tasks
+Short coding samples - also called snippets - solutions to common tasks, 'presented in detail so that the users who are not necessarily expert in the field can produce workable results'.
 
 <!--
+
+https://en.wikipedia.org/wiki/Cookbook#Usage_outside_the_world_of_food
 
 Might follow the O'Reilly structure: http://archive.oreilly.com/images/cookbooks/spread.gif
 
