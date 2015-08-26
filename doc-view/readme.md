@@ -38,7 +38,7 @@ docView Read Me
 * Three.js Examples
 	* Add 'view source code'?
 	* Read example file names directly from <http://mrdoob.github.io/three.js/examples/>
-	* Data from <view-source:http://mrdoob.github.io/three.js/examples/>?
+	* Data from files var in view-source:http://mrdoob.github.io/three.js/examples/ ?
 
 
 ## Notes
