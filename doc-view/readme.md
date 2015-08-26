@@ -4,7 +4,7 @@ docView Read Me
 
 <input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/doc-view/'; />
 
-[docView Full Screen Demo]( http://exploratoria.github.io/doc-view/latest/ )
+[docView Full Screen Demo]( http://exploratoria.github.io/doc-view/latest/index.html )
 
 ## Concept
 
