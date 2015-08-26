@@ -2,8 +2,8 @@
 [docView R2]( doc-view-r2.html ) - [&#x24D8;]( https://github.com/exploratoria/exploratoria.github.io/tree/master/doc-view )
 ===
 
-[docView Read Me]( doc-view-r2.html#index.html )  
-[Code Snippet Example]( #code-snippet-example.html )
+[docView Read Me]( doc-view-r2.html#../index.html )  
+[Code Snippet Example]( #../code-snippet-example.html )
 
 <small>
 As an example, the following menu items can be used to call up all the Three.js examples. Note that link names are not yet complete.

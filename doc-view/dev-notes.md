@@ -5,6 +5,8 @@ docView Read Me
 
 Is it OK that Three.js examples display full screen / under the menu or would it be better to separate menu and example?
 
+Should the various Three.js example types (WebGL, Canvas, etc be open-able/close-able?
+
 ## Change Log
 
 2015-08-26 ~ Theo

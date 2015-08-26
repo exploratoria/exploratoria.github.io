@@ -4,7 +4,7 @@
  
 [docView Read Me]( #../readme.md )  
 [docView Dev Notes]( #../dev-notes.md )  
-[Code Snippet Example]( #../code-snippet-example.html )
+[Code Snippet Example]( #../code-snippet-example.md)
 
 <small>
 As an example, the following menu items can be used to call up all the Three.js examples. Note that link names are not yet complete.
