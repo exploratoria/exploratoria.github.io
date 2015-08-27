@@ -16,6 +16,7 @@ Should we use a pretty font such as 'inconsolida' or stick with the default?
 * R4 added
 * Reads Three.js Examples file names directly from http://mrdoob.github.io/three.js/examples/index.html
 * Builds menu on the fly
+* Update overflow according to HTML or MD
 
 * R3 added
 * Identifies HTML and MD files

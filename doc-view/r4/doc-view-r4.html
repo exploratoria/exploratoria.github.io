@@ -68,6 +68,8 @@
 
 			iFrame.src = fileName;
 
+			document.body.style.overflow = 'hidden';
+
 		} else if ( fileType === '.md' ) {
 
 			if ( iFrame != undefined ) { iFrame.src = ''; }
@@ -80,6 +82,8 @@
 			}
 
 			requestFile ( divFrame, fileName );
+
+			document.body.style.overflow = '';
 
 		}
 
