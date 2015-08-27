@@ -21,21 +21,25 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 ## Features
 
 * Open files via OS file open dialog
-* Save edits to local file
-* Update view on demand
 * Load files via location.hash from any CORS-enabled source
 * Load file via copy and paste
+* Save edits to local file
+* Update view on demand
+
 
 
 ## Road Map
 
 * More samples
-* Toggle edit view to full-width
+* Toggle Edit view to full-width
 * Toggle View view to full width
-* Allow you to slide the vertical separation horizontaly
+* Allow you to slide the vertical separation horizontally
 * Prettify the code
 * Tidy the code
-* load files via drag and drop
+* Load files via drag and drop
+* Transition from embedded to full-screen
+	* And back?
+
 
 
 
