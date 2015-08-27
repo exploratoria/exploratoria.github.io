@@ -20,8 +20,9 @@ docView Read Me
 	* Loads HTML fies into an IFRAME
 	* Load MD files into a DIV
 * Menus created using [Markdown]( https://en.wikipedia.org/wiki/Markdown ) markup language
-	* Markdown is well supported by GitHub, Reddit and other sites
+	* Markdown is well supported by GitHub, StackOverflow, Reddit and other sites
 	* Menus may contain text and images and more
+	* Uses [Showdown]( https://github.com/showdownjs/showdown ) converter 
 * If no file is selected, the default Read Me file is opened
 
 
