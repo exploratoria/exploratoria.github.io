@@ -94,7 +94,7 @@
 
 			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 
-			response = response.replace( './build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+			response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
 			response = response.replace( 'js/libs/stats.min.js', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
 
 			obj.innerHTML = response 
