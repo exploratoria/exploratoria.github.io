@@ -11,6 +11,11 @@ Should the various Three.js example types (WebGL, Canvas, etc) be open-able/clos
 
 2015-08-26 ~ Theo
 
+* R4 added
+* Reads file names directly from http://mrdoob.github.io/three.js/examples/index.html
+* Builds menu of the fly
+
+* R3 added
 * Identifies HTML and MD files
 	* Loads HTML fies into an iframe
 	* Load MD files into a DIV
