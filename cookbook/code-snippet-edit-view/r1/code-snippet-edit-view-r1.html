@@ -24,7 +24,7 @@
 				'<input type=file id=inpFile onchange=openFile(this); /> ' +
 				'&nbsp;<button onclick=updateView(); >Update View</button> ' +
 				'<button onclick=saveFile(); >Save to File</button> ' +
-				'<sub><a id=info href=http://jaanga.github.io/ >&#x24D8;</a></sub>' +
+				'<sub><a id=info href=https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ >&#x24D8;</a></sub>' +
 			'</div>' +
 			'<div id=msg ></div>' +
 		'';
@@ -92,15 +92,19 @@
 		obj.xmlHttp.open( 'GET', fileName, true );
 		obj.xmlHttp.onreadystatechange = function() {
 
-			obj.innerHTML = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
-updateView();
+			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
+
+			response = response.replace( './build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+			response = response.replace( 'js/libs/stats.min.js', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
+
+			obj.innerHTML = response 
+			updateView();
 
 		};
 
 		obj.xmlHttp.send( null );
 
 	}
-
 
 </script>
 </body>

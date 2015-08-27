@@ -34,6 +34,7 @@ The intention is to provide scripts dealing with physics, astronomy, biology, ca
 
 Short coding samples - also called snippets - solutions to common tasks, 'presented in detail so that the users who are not necessarily expert in the field can produce workable results'.
 
+
 <!--
 
 https://en.wikipedia.org/wiki/Cookbook#Usage_outside_the_world_of_food
