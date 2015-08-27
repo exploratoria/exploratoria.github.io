@@ -23,7 +23,7 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 * Open files via OS file open dialog
 * Save edits to local file
 * Update view on demand
-* Load files via location.hash
+* Load files via location.hash from any CORS-enabled source
 * Load file via copy and paste
 
 
