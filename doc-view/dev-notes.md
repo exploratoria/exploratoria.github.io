@@ -7,13 +7,15 @@ Is it OK that Three.js examples display full screen / under the menu or would it
 
 Should the various Three.js example types (WebGL, Canvas, etc) be open-able/close-able?
 
+Should we use a pretty font such as 'inconsolida' or stick with the default?
+
 ## Change Log
 
 2015-08-26 ~ Theo
 
 * R4 added
-* Reads file names directly from http://mrdoob.github.io/three.js/examples/index.html
-* Builds menu of the fly
+* Reads Three.js Examples file names directly from http://mrdoob.github.io/three.js/examples/index.html
+* Builds menu on the fly
 
 * R3 added
 * Identifies HTML and MD files

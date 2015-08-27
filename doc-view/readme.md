@@ -37,8 +37,7 @@ docView Read Me
 		* Provide a variety of samples dedicated to solving different types of problems
 * Three.js Examples
 	* Add 'view source code'?
-	* Read example file names directly from <http://mrdoob.github.io/three.js/examples/>
-	* Data from files var in view-source:http://mrdoob.github.io/three.js/examples/ ?
+	* Clean up file names
 
 
 ## Notes
