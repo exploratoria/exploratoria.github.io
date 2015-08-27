@@ -47,8 +47,16 @@ See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wi
 ### docView
 A very simple JavaScript web page viewer and menu script
 
-[docView Full Screen Demo]( http://exploratoria.github.io/cookbook/doc-view/latest/ )  
-[docView Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/doc-view )
+[docView - Full Screen Demo]( http://exploratoria.github.io/cookbook/doc-view/latest/ )  
+[docView - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/doc-view )
+
+### Code Snippet Edit View
+
+A simple file editor and vier that is embeddable in HTML and Markdown pages
+
+[Code Snippet Edit View - Full Screen Demo]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/latest/ )  
+[Code Snippet Edit View - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ )
+
 
 
 ## Coding Style
