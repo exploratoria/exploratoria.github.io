@@ -13,3 +13,5 @@
 * Virtual Bucky Balls showing magnetic attractions in real time with and without gravity
 
 * Rubik's cube with interaction and minimal solution
+
+* Interactive mixing of sinusoidal waves with audio output
