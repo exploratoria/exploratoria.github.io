@@ -47,7 +47,9 @@
 
 		document.title = fileName.substr( 1 + fileName.lastIndexOf( '/' ) );
 
-		var fileType = fileName.substr( fileName.lastIndexOf( '.' )).toLowerCase();
+console.log( location.hash );
+
+//		var fileType = fileName.substr( fileName.lastIndexOf( '.' )).toLowerCase();
 
 		requestFile ( edit, fileName );
 
@@ -94,8 +96,13 @@
 
 			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 
+			if ( fileName.indexOf( 'Mr.doob.github' ) > 0 ) {
+
 			response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
 			response = response.replace( '"js/libs/stats.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
+
+			}
+
 
 			obj.innerHTML = response 
 			updateView();
@@ -105,6 +112,7 @@
 		obj.xmlHttp.send( null );
 
 	}
+
 
 </script>
 </body>

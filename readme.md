@@ -56,36 +56,15 @@ The intention is to provide scripts dealing with the following categories:
 
 Short coding samples - also called snippets - solutions to common tasks, 'presented in detail so that the users who are not necessarily expert in the field can produce workable results'.
 
-[Cookbook - web page view]( http://exploratoria.github.io/cookbook/ )
+[Cookbook - web page view]( http://exploratoria.github.io/cookbook/ )  
 [Cookbook - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/ )
-<!--
-
-https://en.wikipedia.org/wiki/Cookbook#Usage_outside_the_world_of_food
-
-Might follow the O'Reilly structure: http://archive.oreilly.com/images/cookbooks/spread.gif
-
-See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wiki/A_Pattern_Language
-
--->
-
-### docView
-A very simple JavaScript web page viewer and menu script
-
-[docView - Full Screen Demo]( http://exploratoria.github.io/cookbook/doc-view/latest/ )  
-[docView - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/doc-view )
-
-### Code Snippet Edit View
-
-A simple file editor and vier that is embeddable in HTML and Markdown pages
-
-[Code Snippet Edit View - Full Screen Demo]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/latest/ )  
-[Code Snippet Edit View - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ )
 
 
-
-## Coding Style
+## Coding Style & Colophon
 
 The coding style of an app should follow the style of the most-used library of the app.
+
+In the instance of a [Three.js]( http://threejs.org ) script, the style generally folows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 ).
 
 The font used here is the the default 'monospace' font as determined by your browser. This is because it is the most common font used to write scripts.
 

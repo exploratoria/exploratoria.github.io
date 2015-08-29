@@ -48,6 +48,8 @@ docView Read Me
 
 The goal here is to establish a simple, standard view/menu system that is flexible enough to support a variety of exhibition types and yet simple enough that it can be adapted by entry level JavaScript programmer
 
+This system is not intended to be a home page or a top page for a particular category of items.
+
 ### See also the following similar efforts
 
 * <http://mrdoob.github.io/three.js/examples/>

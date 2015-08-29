@@ -4,6 +4,10 @@
 <title>Zoom Extents R1</title>
 <meta charset=utf-8 />
 <meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+<style>
+	body { font: 12pt monospace; margin: 0; overflow: hidden; }
+	#a {text-decoration: none; }
+</style>
 </head>
 <body>
 <script src=http://mrdoob.github.io/three.js/build/three.min.js ></script>
@@ -20,15 +24,11 @@
 
 	function init() {
 
-		css = document.head.appendChild( document.createElement( 'style' ) );
-		css.innerHTML ='body { font: 12pt monospace; margin: 0; overflow: hidden; }' +
-			'#i {text-decoration: none; }' +
-		'';
-
 		menu = document.body.appendChild( document.createElement( 'div' ) );
 		menu.style.cssText = 'margin: 0 20px; position: absolute; ';
 		menu.innerHTML = '<h2 style=margin:0; ><a href="" >' + document.title + '</a> ' +
-			'<a id=i href=http://exploratoria.github.io/ >&#x24D8;</a></h2>' +
+			'<a id=a href=https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/threejs-snippets/threejs-zoom-extents >&#x24D8;</a></h2>' +
+			'<p>100 objects in a space of random size and locatio</p>' +
 			'<p><button onclick=zoomExtents() >Zoom Extents</button></p>' +
 			'<div id=info ></div>' +
 		'';
@@ -60,13 +60,10 @@
 			geometry = new THREE.BoxGeometry( 2, 2, 2 );
 			material = new THREE.MeshNormalMaterial();
 			mesh = new THREE.Mesh( geometry, material );
-			mesh.position.set( size * Math.random(), size * Math.random(), size * Math.random() - 60 );
+			mesh.position.set( size * Math.random(), size * Math.random(), size * Math.random() - size );
 			scene.add( mesh );
 
 		}
-
-//		var axisHelper = new THREE.AxisHelper( size );
-//		scene.add( axisHelper );
 
 	}
 

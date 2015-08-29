@@ -22,8 +22,21 @@ A very simple JavaScript web page viewer and menu script
 
 ### Code Snippet Edit View
 
-A simple file editor and vier that is embeddable in HTML and Markdown pages
+A simple file editor and viewer that is embeddable in HTML and Markdown pages
 
 [Code Snippet Edit View - Full Screen Demo]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/latest/ )  
 [Code Snippet Edit View - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ )
 
+### Three.js Zoom Extents
+
+A snipped to place the camera and target so that all geometry currently loaded in the scene may be viewable
+
+[Three.js Zoom Extents - Full Screen Demo]( http://exploratoria.github.io/cookbook/threejs-snippets/threejs-zoom-extents/r1/threejs-zoom-extents-r1.html)  
+[Three.js Zoom Extents - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/threejs-snippets/threejs-zoom-extents )  
+
+### View STL
+
+Open and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files
+
+[View STL Light - Full Screen Demo]( http://exploratoria.github.io/cookbook/viewers/view-stl-light/r1/view-stl-light-r1.html)  
+[View STL Light  - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-light/ )  
