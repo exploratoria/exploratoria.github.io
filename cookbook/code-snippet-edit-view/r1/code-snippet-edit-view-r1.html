@@ -98,8 +98,15 @@ console.log( location.hash );
 
 			if ( fileName.indexOf( 'Mr.doob.github' ) > 0 ) {
 
-			response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
-			response = response.replace( '"js/libs/stats.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
+				response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+				response = response.replace( '"js/libs/stats.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
+
+			} else if ( fileName.indexOf( 'analyticphysics.com/' ) > 0 ) {
+
+				response = response.replace( '"../../style.css"', 'http://analyticphysics.com/style.css' );
+				response = response.replace( '"three.js/three.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+				response = response.replace( '"three.js/OrbitControls.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js' );
+				response = response.replace( '"Common Setup.js"', 'http://analyticphysics.com/General%20Physics/Sound%20Waves/Common%20Setup.js' );
 
 			}
 
