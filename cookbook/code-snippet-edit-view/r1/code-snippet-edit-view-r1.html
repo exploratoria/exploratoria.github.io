@@ -30,6 +30,8 @@
 		'';
 
 		edit.style.cssText = 'height: ' + ( window.innerHeight - 50 ) + 'px; width: 49%; ';
+		
+		var view = document.getElementById( 'view' );  // for Safari compatibility
 
 		view.style.cssText = 'height: ' + ( window.innerHeight - 50 ) + 'px; width: 49%; ';
 
@@ -57,6 +59,8 @@ console.log( location.hash );
 	}
 
 	function updateView() {
+		
+		var view = document.getElementById( 'view' );  // for Safari compatibility
 
 		view.srcdoc = edit.value;
 
