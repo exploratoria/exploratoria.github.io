@@ -30,17 +30,27 @@ _See also the raw source code of this file for notes embedded as comments_
 
 The intention is to provide scripts dealing with the following categories:
 
-Astronomy & Solar System | Light  
-Biology
-Chemistry
-Color
-Electricity & Magnetism
-Energy
-Engineering & Structure
-Geology & Materials
-Heat & Temperature
-Human Anatomy
-Language & Speech
+* Astronomy & Solar System
+* Biology
+* Chemistry
+* Color
+* Electricity & Magnetism
+* Energy
+* Engineering & Structure
+* Geology & Materials
+* Heat & Temperature
+* Human Anatomy
+* Language & Speech
+* Light
+* Mathematics & Patterns
+* Mechanics, Dynamics & Motion
+* Navigation
+* Smell - Taste - Touch
+* Sound & Hearing
+* Vision & Eye Logic
+* Water
+* Waves & Resonance
+* Weather
 
 ## Cookbook
 
