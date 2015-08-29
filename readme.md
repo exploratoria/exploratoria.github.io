@@ -26,9 +26,21 @@ _See also the raw source code of this file for notes embedded as comments_
 
 * To help people understand, tackle and push the envelope with increasingly complicated tasks
 
-## Apps
+## Exhibits
 
-The intention is to provide scripts dealing with physics, astronomy, biology, cartography, math and more
+The intention is to provide scripts dealing with the following categories:
+
+Astronomy & Solar System
+Biology
+Chemistry
+Color
+Electricity & Magnetism
+Energy
+Engineering & Structure
+Geology & Materials
+Heat & Temperature
+Human Anatomy
+Language & Speech
 
 ## Cookbook
 
