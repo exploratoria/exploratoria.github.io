@@ -99,7 +99,7 @@ console.log( location.hash );
 		obj.xmlHttp.open( 'GET', fileName, true );
 		obj.xmlHttp.onreadystatechange = function() {
 
-			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : 'The site entered is not CORS enabled';
+			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 
 			if ( fileName.indexOf( 'Mr.doob.github' ) > 0 ) {
 
