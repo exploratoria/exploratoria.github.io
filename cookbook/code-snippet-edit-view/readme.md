@@ -39,7 +39,8 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 * Load files via drag and drop
 * Transition from embedded to full-screen
 	* And back?
-
+* Improve appearance
+* Add more library call fixes
 
 
 

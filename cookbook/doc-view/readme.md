@@ -1,3 +1,4 @@
+[Exploratoria]( http://exploratoria.github.io ) &raquo; [Cookbook]( http://exploratoria.github.io/cookbook/ )
 docView Read Me
 ===
 <span style=display:none; >[View docView Read Me as web page]( http://exploratoria.github.io/doc-view/ "View file as a web page." ) </span>
@@ -8,7 +9,7 @@ docView Read Me
 
 ## Concept
 
-* Provide a very simple JavaScript HTML web page and Markdown file viewer and menu script
+* Provide a very simple JavaScript viewer for HTML web pages, Markdown files and other file formats along with a menu for selecting files
 * Menu is always visible
 
 ## Features
@@ -17,8 +18,10 @@ docView Read Me
 * Beginner/intermediate level JavaScript
 * Should work on most types of devices including mobile and tablet
 * Use of iframes means content can be almost anything from anywhere
-	* Loads HTML fies into an IFRAME
+	* Loads HTML files into an IFRAME
+	* Load STL files into an IFRAME
 	* Load MD files into a DIV
+		* MD Files are loaded into a DIV so that MD links work in the expected manner because Links in an MD file embedded in an IFRAME cannot break out of the IFRAME
 * Menus created using [Markdown]( https://en.wikipedia.org/wiki/Markdown ) markup language
 	* Markdown is well supported by GitHub, StackOverflow, Reddit and other sites
 	* Menus may contain text and images and more
@@ -43,7 +46,9 @@ docView Read Me
 
 ## Notes
 
-## See Also
+The goal here is to establish a simple, standard view/menu system that is flexible enough to support a variety of exhibition types and yet simple enough that it can be adapted by entry level JavaScript programmer
+
+### See also the following similar efforts
 
 * <http://mrdoob.github.io/three.js/examples/>
 * <http://stemkoski.github.io/Three.js/>
