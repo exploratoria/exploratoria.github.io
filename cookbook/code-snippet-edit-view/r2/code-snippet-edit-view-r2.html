@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=en >
 <head>
-<title>code-snippet-edit-view R1</title>
+<title>code-snippet-edit-view R2</title>
 <meta charset=utf-8 />
 <meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' />
 <style>
@@ -10,24 +10,21 @@
 </style>
 </head>
 <body>
+<textarea id=edit placeholder="Edit HTML here then click the \'Update View\' button..." ></textarea>
+<iframe id=view ></iframe>
+<div>
+	<input type=file id=inpFile onchange=openFile(this); /> 
+	&nbsp;<button onclick=updateView(); >Update View</button> 
+	<button onclick=saveFile(); >Save to File</button> 
+	<sub><a id=info href=https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ >&#x24D8;</a></sub>
+</div>
+<div id=msg ></div>
+
 <script>
 
 	init();
 
 	function init() {
-
-		contents = document.body.appendChild( document.createElement( 'div' ) );
-		contents.innerHTML =
-			'<textarea id=edit placeholder="Edit HTML here then click the \'Update View\' button..." ></textarea>' +
-			'<iframe id=view ></iframe>' +
-			'<div>' +
-				'<input type=file id=inpFile onchange=openFile(this); /> ' +
-				'&nbsp;<button onclick=updateView(); >Update View</button> ' +
-				'<button onclick=saveFile(); >Save to File</button> ' +
-				'<sub><a id=info href=https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ >&#x24D8;</a></sub>' +
-			'</div>' +
-			'<div id=msg ></div>' +
-		'';
 
 		edit.style.cssText = 'height: ' + ( window.innerHeight - 50 ) + 'px; width: 49%; ';
 
@@ -49,10 +46,6 @@
 
 		document.title = fileName.substr( 1 + fileName.lastIndexOf( '/' ) );
 
-console.log( location.hash );
-
-//		var fileType = fileName.substr( fileName.lastIndexOf( '.' )).toLowerCase();
-
 		requestFile ( edit, fileName );
 
 
@@ -70,7 +63,7 @@ console.log( location.hash );
 
 		var reader = new FileReader();
 		reader.onloadend = function( event ) {
-			data =  reader.result;
+			data = reader.result;
 			edit.innerHTML = data;
 			updateView();
 
@@ -115,7 +108,7 @@ console.log( location.hash );
 
 			}
 
-			obj.innerHTML = response
+			obj.innerHTML = response;
 			updateView();
 
 		};

@@ -27,7 +27,6 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 * Update view on demand
 
 
-
 ## Road Map
 
 * More samples
@@ -41,6 +40,7 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 	* And back?
 * Improve appearance
 * Add more library call fixes
+	* Separate these out into example file
 
 
 
