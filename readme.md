@@ -78,3 +78,10 @@ The coding style of an app should follow the style of the most-used library of t
 In the instance of a [Three.js]( http://threejs.org ) script, the style generally follows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 ).
 
 The font used here is the the default 'monospace' font as determined by your browser. This is because it is the most common font used to write scripts.
+
+
+<center>
+# &#x2766;
+
+[ideas]( #ideas.md ) ~ [talk]( #talk.md )~ [sandbox]( #./sandbox/readme.md )
+</center>
