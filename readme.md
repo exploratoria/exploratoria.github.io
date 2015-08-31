@@ -7,7 +7,7 @@ Welcome to the Exploratoria home page!
 
 Exploratoria is a GitHub Organization. Feel free to request an invitation to join. 
 
-_See also the raw source code of this file for notes embedded as comments_
+_See also the [raw source code]( https://raw.githubusercontent.com/exploratoria/exploratoria.github.io/master/readme.md ) of this file for notes embedded as comments_
 
 ## Concept
 
