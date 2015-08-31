@@ -84,5 +84,5 @@ The font used here is the the default 'monospace' font as determined by your bro
 <center>
 # &#x2766;
 
-[ideas]( #ideas.md ) ~ [talk]( #talk.md )~ [sandbox]( #./sandbox/readme.md )
+[ideas]( #ideas.md ) ~ [talk]( #talk.md ) ~ [sandbox]( #./sandbox/readme.md )
 </center>
