@@ -54,7 +54,7 @@ The intention is to provide scripts dealing with the following categories:
 
 <!-- this wording needs work -->
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
-This is because the purpose of this web site is to use technology to explain, show and demonstrate the physical and theoretical aspects of our world.
+This is because the purpose of this website is to use technology to explain, show and demonstrate the physical and theoretical aspects of our world.
 
 
 ## Cookbook
@@ -75,6 +75,6 @@ These are the files we use to build this web site. You can use them too.
 
 The coding style of an app should follow the style of the most-used library of the app.
 
-In the instance of a [Three.js]( http://threejs.org ) script, the style generally folows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 ).
+In the instance of a [Three.js]( http://threejs.org ) script, the style generally follows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 ).
 
 The font used here is the the default 'monospace' font as determined by your browser. This is because it is the most common font used to write scripts.
