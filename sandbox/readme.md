@@ -8,7 +8,7 @@ A sandbox is a place to play with things and get your hands dirty.
 
 This is a good place to put files before they are accepted into the principle exhibition areas.
 
-## Template for Read Me Reader
+## Template for Read Me and Read Me Reader
 
 ### GitHub.com folders display Markdown read me files
 Every folder in displayed on GitHub.com comes with the possibility to properly format and display automatically a Markdown file with the title 'readme'md'.
@@ -31,6 +31,26 @@ The benefit being write once, read twice.
 [Read Me Template - Full Screen Demo]( http://exploratoria.github.io/sandbox/templates/readme/ )  
 [Read Me Template - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/sandbox/templates/readme )
 
+## Templates for Three.js files - as developed by Theo Armour
+
+See also templates developed by Paul Masson
+
+The following will be explained in due course:
+
+<http://exploratoria.github.io/sandbox/templates/armour/template-threejs-basic-r1.html>  
+<https://github.com/exploratoria/exploratoria.github.io/blob/master/sandbox/templates/armour/template-threejs-basic-r1.html>  
+
+<http://exploratoria.github.io/sandbox/templates/armour/template-threejs-canvas-text-r1.html>  
+<https://github.com/exploratoria/exploratoria.github.io/blob/master/sandbox/templates/armour/template-threejs-canvas-text-r1.html>  
+
+<http://exploratoria.github.io/sandbox/templates/armour/template-threejs-draw-things-r1.html> 
+<https://github.com/exploratoria/exploratoria.github.io/blob/master/sandbox/templates/armour/template-threejs-draw-things-r1.html>  
+
+<http://exploratoria.github.io/sandbox/templates/armour/template-threejs-lights-r1.html>  
+<https://github.com/exploratoria/exploratoria.github.io/blob/master/sandbox/templates/armour/template-threejs-lights-r1.html>  
+
+<http://exploratoria.github.io/sandbox/templates/armour/template-threejs-shaders-r1.html>  
+<https://github.com/exploratoria/exploratoria.github.io/blob/master/sandbox/templates/armour/template-threejs-shaders-r1.html>  
  
 
 ## AWE Marker Augmented Reality
