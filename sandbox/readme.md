@@ -32,6 +32,12 @@ The benefit being write once, read twice.
 [Read Me Template - Full Screen Demo]( http://exploratoria.github.io/sandbox/templates/readme/ )  
 [Read Me Template - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/sandbox/templates/readme )
 
+### Status 2015-08-31
+
+* Filles already in use in many Exploratoria locations
+* Ready for move to Templates folder?
+
+
 ## Templates for Three.js files - as developed by Theo Armour
 
 See also templates developed by Paul Masson
@@ -54,6 +60,24 @@ The following will be explained in due course:
 <https://github.com/exploratoria/exploratoria.github.io/blob/master/sandbox/templates/armour/template-threejs-shaders-r1.html>  
  
 
+### Status 2015-08-31
+
+* Read me needs to be created and added to
+* Three.js links need updating to appropriate CDN links
+* All need testing on Safari/iOS
+
+## Mathematics / Parametric Equations
+
+<http://exploratoria.github.io/sandbox/mathematics/parametric-equations/>  
+<https://github.com/exploratoria/exploratoria.github.io/tree/master/sandbox/mathematics/parametric-equations>
+
+### Status 2015-08-31
+
+* Read me needs to be created and added to
+* Three.js links need updating to appropriate CDN links
+* All need testing on Safari/iOS
+
+
 ## AWE Marker Augmented Reality
 
 Starting with [awe.js]( https://github.com/buildar/awe.js )
@@ -65,12 +89,13 @@ Marker: <http://exploratoria.github.io/sandbox/astronomy/augmented-web/marker-ar
 
 The goal is to create an augmented reality exhibit of all the NASA 3D Objects on [GitHub/NASA]( https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Printing )
 
-2015-08-31
+### Status 2015-08-31
 
 * Still has many issues, in very early stage of development
 	* Currently Chrome on Android has issues
 		* See <https://github.com/buildar/awe.js/issues/12>
 	* Currently can just load Three.js primitives but cannot load OJ files. ;-(
 		* Will be contacting developer for help
-
+* Three.js links need updating to appropriate CDN links
+* All need testing on Safari/iOS
 

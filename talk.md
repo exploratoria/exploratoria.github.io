@@ -26,7 +26,7 @@ Strategy: need a 'marketing plan' document outlining the ways we communicate
 
 CDN: suitable CDN links need to be agreed
 
-
+Ideas: add some
 
 2015-08-30 ~ Theo
 
