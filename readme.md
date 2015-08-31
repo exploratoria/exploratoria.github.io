@@ -1,3 +1,4 @@
+![]( ./cookbook/images/exploratoria-profile.jpg )
 exploratoria.github.io
 ===
 <span style=display:none; >[View as web page]( http://exploratoria.github.io/ "View file as a web page." ) </span>
