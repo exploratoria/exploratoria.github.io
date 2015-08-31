@@ -9,6 +9,7 @@ _Notes, discussions, agendas or whatever_
 Release Management: Suggestion: Anybody can put anything in the sandbox, but only Paul M can approve if content moves from sandbox to main exhibition areas.
 Putting it another way: reticent commiters can do as they please, but willy-nilly commiters must be vetted (Theo: we are looking at you).
 
+Release Management: should we use [semantic versioning]( http://semver.org/ )?
 
 Talk: every talk item should be preceded by a category and colon
 
@@ -16,8 +17,14 @@ Email broadcasting: should we have a Google Group?
 
 Informing: Should we have a WordPress Blog?
 
+Exhibitions - mathematics: drop 'algeSurf' from titles?
+
 * WordPress.com has good, free, easy ontology tools - something GitHub lacks 
 If every exhibit had a WordPress page, can we use these as a way to curate the exhibits by categories and tags? 
+
+Strategy: need a 'marketing plan' document outlining the ways we communicate
+
+CDN: suitable CDN links need to be agreed
 
 
 

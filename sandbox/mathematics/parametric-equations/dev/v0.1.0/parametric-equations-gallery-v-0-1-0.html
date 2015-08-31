@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang=en >
+<head>
+<title>Parametric Equations Gallery v0.1.0</title>
+<meta charset=utf-8 />
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' />
+<style>
+	body { font: 12pt monospace; margin: 0 5%; }
+	h1, a { margin: 0; text-decoration: none;}
+</style>
+</head>
+<body>
+<script src=equations-parametric-v-0-1-0.js ></script>
+<script>
+
+	init();
+
+	function init() {
+
+		var eqns = new equations;
+		var equationsKeys = Object.keys( eqns.equations );
+
+		header = document.body.appendChild( document.createElement( 'div' ) );
+
+		if ( window.self === window.top ) {
+
+			header.innerHTML = '<h2>' +
+					'<a href="" >' + document.title + '</a> ' +
+					'<a href=http://explorato.github.io/sandbox/mathematics/parametric-equations/ >&#x24D8;</a>' +
+				'</h2>' +
+				'<div id=gallery ></div>' +
+			'';
+
+		} else {
+
+			header.innerHTML = '<h2>Equations Gallery</h2><div id=gallery ></div>';
+
+		}
+
+		for ( var i = 0, txt = ''; i < equationsKeys.length; i++ ) {
+
+			eqn = eqns.equations[ equationsKeys[i] ];
+
+			txt += '<div style="float: left; height: 250px; overflow: auto; padding: 0 5px; width: 250px;" >' +
+				'<a href="parametric-equations-ui-v-0-1-0.html#' + i + '" target="_top" >' +
+				'<img src="../../images/' +  equationsKeys[ i ] + '.png" /><br>' + eqn.title + '</a>' +
+			'</div>' ; 
+
+		}
+
+		gallery.innerHTML = txt;
+
+	}
+
+</script>
+</body>
+</html>

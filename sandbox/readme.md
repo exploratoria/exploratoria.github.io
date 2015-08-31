@@ -7,6 +7,7 @@ Sandbox Read Me
 A sandbox is a place to play with things and get your hands dirty.
 
 This is a good place to put files before they are accepted into the principle exhibition areas.
+Files placed here should go into a folder with the same name as would be used when exhibited.
 
 ## Template for Read Me and Read Me Reader
 
@@ -57,10 +58,10 @@ The following will be explained in due course:
 
 Starting with [awe.js]( https://github.com/buildar/awe.js )
 
-[AWE Marker AR R1 - Full Screen Demo]( http://exploratoria.github.io/sandbox/augmented-web/marker-ar-r1/ )  
-[AWE Marker AR R1 - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/sandbox/augmented-web/marker-ar-r1 )
+[AWE Marker AR R1 - Full Screen Demo]( http://exploratoria.github.io/sandbox/astronomy/uaugmented-web/marker-ar-r1/ )  
+[AWE Marker AR R1 - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/sandbox/astronomy/augmented-web/marker-ar-r1 )
 
-Marker: <http://exploratoria.github.io/sandbox/augmented-web/marker-ar-r1/64.png>
+Marker: <http://exploratoria.github.io/sandbox/astronomy/augmented-web/marker-ar-r1/64.png>
 
 The goal is to create an augmented reality exhibit of all the NASA 3D Objects on [GitHub/NASA]( https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Printing )
 
