@@ -70,11 +70,11 @@
 
 		var reader = new FileReader();
 		reader.onloadend = function( event ) {
-			data = reader.result;
 
-//			edit.innerHTML = data;
+			data = reader.result;
 			editor.setValue( data );
 			updateView();
+
 		}
 
 		reader.readAsText( that.files[0] );
@@ -99,7 +99,8 @@
 
 			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 
-			if ( fileName.indexOf( 'Mr.doob.github' ) > 0 ) {
+console.log( 'fn',  fileName );
+			if ( fileName.indexOf( 'mrdoob.github.io' ) > 0 ) {
 
 				response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
 				response = response.replace( '"js/libs/stats.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
@@ -113,7 +114,6 @@
 
 			}
 
-//			obj.innerHTML = response;
 			editor.setValue( response );
 			updateView();
 

@@ -25,6 +25,7 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 * Load file via copy and paste
 * Save edits to local file
 * Update view on demand
+* Incorporates [Ace editor]( http://ace.c9.io/ )
 
 
 ## Road Map
