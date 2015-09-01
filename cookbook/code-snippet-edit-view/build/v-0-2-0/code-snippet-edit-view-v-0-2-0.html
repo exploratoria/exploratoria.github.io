@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang=en >
+<head>
+<title>code snippet edit view v0.2.0</title>
+<meta charset=utf-8 />
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0' />
+<style>
+
+	html, body { height: 100%; }
+	* { box-sizing: border-box; vertical-align:top; }
+	body { font: 12pt monospace; margin: 0; }
+	#edit { border: 1px solid; float: left; height: 95%; width: 50%; }
+	#view { border: 1px solid; float: left; height: 95%; width: 50%; }
+	#menu { clear:both; margin: 10px; padding: 10px; }
+	#info { line-height: 12pt; font-size: 24pt; text-decoration: none; }
+</style>
+</head>
+<body>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js ></script>
+
+	<div id=edit >nnn</div>
+	<iframe id=view ></iframe>
+	<div id=menu >
+		<input type=file id=inpFile onchange=openFile(this); /> 
+		<button onclick=updateView(); >Update View</button> 
+		<button onclick=saveFile(); >Save to File</button> 
+		<a id=info href=https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ >&#x24D8;</a>
+	</div>
+
+<script>
+
+	var edit = document.getElementById( 'edit' );  // for Safari compatibility
+	var view = document.getElementById( 'view' );  // for Safari compatibility
+	var editor;
+
+	init();
+
+	function init() {
+
+		window.addEventListener( 'hashchange', hashChange, false );
+
+//		text = '<h1>Hello, world!</h1>';
+		editor = ace.edit( "edit" );
+//		editor.setValue( text );
+		editor.$blockScrolling = Infinity
+
+		hashChange();
+
+	}
+
+	function hashChange() {
+
+		var fileName = location.hash ? location.hash.split( '#' )[1] : '../../code-snippet.html';
+
+		if ( fileName === '' ) { return; }
+
+		document.title = fileName.substr( 1 + fileName.lastIndexOf( '/' ) );
+
+		requestFile ( edit, fileName );
+
+	}
+
+	function updateView() {
+
+		view.srcdoc = editor.getValue();
+
+	}
+
+	function openFile( that ) {
+
+		var reader = new FileReader();
+		reader.onloadend = function( event ) {
+			data = reader.result;
+
+//			edit.innerHTML = data;
+			editor.setValue( data );
+			updateView();
+		}
+
+		reader.readAsText( that.files[0] );
+
+	}
+
+	function saveFile() {
+
+		blob = new Blob( [ edit.innerHTML ] );
+		a = document.body.appendChild( document.createElement( 'a' ) );
+		a.href = window.URL.createObjectURL( blob );
+		a.download = 'code-snippet.html';
+		a.click();
+
+	}
+
+	function requestFile ( obj, fileName ) {
+
+		obj.xmlHttp = new XMLHttpRequest();
+		obj.xmlHttp.open( 'GET', fileName, true );
+		obj.xmlHttp.onreadystatechange = function() {
+
+			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
+
+			if ( fileName.indexOf( 'Mr.doob.github' ) > 0 ) {
+
+				response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+				response = response.replace( '"js/libs/stats.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js' );
+
+			} else if ( fileName.indexOf( 'analyticphysics.com/' ) > 0 ) {
+
+				response = response.replace( '"../../style.css"', 'http://analyticphysics.com/style.css' );
+				response = response.replace( '"three.js/three.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+				response = response.replace( '"three.js/OrbitControls.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js' );
+				response = response.replace( '"Common Setup.js"', 'http://analyticphysics.com/General%20Physics/Sound%20Waves/Common%20Setup.js' );
+
+			}
+
+//			obj.innerHTML = response;
+			editor.setValue( response );
+			updateView();
+
+		};
+
+		obj.xmlHttp.send( null );
+
+	}
+
+
+</script>
+</body>
+</html>
