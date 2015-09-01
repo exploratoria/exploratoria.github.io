@@ -41,6 +41,8 @@ Ideas: add some
 Ethics: Should we adopt the [Open Code of Conduct]( http://todogroup.org/opencodeofconduct/ )?  
 <https://github.com/todogroup/opencodeofconduct/blob/gh-pages/index.md>
 
+* Let's have some exhibits before we worry about this! - Paul 2015.09.01
+
 Favicon: Add favicon
 
 code snippet edit view: add <https://github.com/julianlam/tabIndent.js>? See also behave.js 
