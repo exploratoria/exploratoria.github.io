@@ -2,10 +2,9 @@
 docView Read Me
 ===
 <span style=display:none; >[View docView Read Me as web page]( http://exploratoria.github.io/cookbook/doc-view/ "View file as a web page." ) </span>
-
 <input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/doc-view/'; />
 
-[docView Full Screen Demo]( http://exploratoria.github.io/doc-view/latest/index.html )
+[docView Full Screen Demo]( http://exploratoria.github.io/doc-view/build/index.html )
 
 ## Concept
 
@@ -19,7 +18,7 @@ docView Read Me
 * Should work on most types of devices including mobile and tablet
 * Use of iframes means content can be almost anything from anywhere
 	* Loads HTML files into an IFRAME
-	* Load STL files into an IFRAME
+	* Example loads STL files into an IFRAME
 	* Load MD files into a DIV
 		* MD Files are loaded into a DIV so that MD links work in the expected manner because Links in an MD file embedded in an IFRAME cannot break out of the IFRAME
 * Menus created using [Markdown]( https://en.wikipedia.org/wiki/Markdown ) markup language
@@ -36,17 +35,7 @@ docView Read Me
 ## Roadmap
 
 * More suitable app name
-* Enhance Code Snippet Example
-	* Break out into separate cookbook example
-	* Enhance xem.html
-		* De-minify
-		* Toggle auto-update
-		* Save file to hard disk
-		* Provide a variety of samples dedicated to solving different types of problems
-* Three.js Examples
-	* Add 'view source code'?
-	* Clean up file names
-
+* More examples of usage
 
 ## Notes
 
