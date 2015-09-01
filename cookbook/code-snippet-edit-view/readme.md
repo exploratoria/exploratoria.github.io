@@ -12,8 +12,8 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 
 <span style=display:none; >[For the following samples to display view this Read Me file as a web page]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/ "View file as a web page." ) </span>
 
-<button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#../code-snippet.html"; >code-snippet-threejs.html</button>  
-<button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#../code-snippet-threejs.html"; >code-snippet-threejs.html</button>  
+<button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#../../code-snippet.html"; >code-snippet-threejs.html</button>  
+<button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#../../code-snippet-threejs.html"; >code-snippet-threejs.html</button>  
 <button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://mrdoob.github.io/three.js/examples/webgl_interactive_cubes.html"; >Three.js Example - Interactive Cubes</button>  
 <button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://analyticphysics.com/General%20Physics/Sound%20Waves/Spherical%20Wave%20Random.htm"; >Analytic Physics - Random Spherical Wave</button>  
 <button onclick=view.src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://theo-armour.github.io/theo-armour.testing/opendesk-half-sheet-table/opendesk-half-sheet-table-r3.html"; >OpenDesk Half Sheet Table</button>
