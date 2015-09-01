@@ -15,6 +15,8 @@ code snippet edit view:
 Release Management: Suggestion: Anybody can put anything in the sandbox, but only Paul M can approve if content moves from sandbox to main exhibition areas.
 Putting it another way: reticent commiters can do as they please, but willy-nilly commiters must be vetted (Theo: we are looking at you).
 
+* Since it's easier to move files around than I first thought, this could work fine. Can we also restrict merging by folder, or does that apply to the whole respository? - Paul 2015.09.01
+
 Release Management: should we use [semantic versioning]( http://semver.org/ )?
 
 Talk: every talk item should be preceded by a category and colon
