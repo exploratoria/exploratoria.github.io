@@ -1,9 +1,9 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo; [Cookbook]( http://exploratoria.github.io/cookbook/ )
 docView Read Me
 ===
-<span style=display:none; >[View docView Read Me as web page]( http://exploratoria.github.io/doc-view/ "View file as a web page." ) </span>
+<span style=display:none; >[View docView Read Me as web page]( http://exploratoria.github.io/cookbook/doc-view/ "View file as a web page." ) </span>
 
-<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/doc-view/'; />
+<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/doc-view/'; />
 
 [docView Full Screen Demo]( http://exploratoria.github.io/doc-view/latest/index.html )
 
@@ -28,6 +28,10 @@ docView Read Me
 	* Uses [Showdown]( https://github.com/showdownjs/showdown ) converter 
 * If no file is selected, the default Read Me file is opened
 
+## Examples of Usage
+
+[NASA 3D Objects Viewer]( )  
+[Three.js Examples](  )  
 
 ## Roadmap
 

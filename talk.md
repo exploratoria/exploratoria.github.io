@@ -3,6 +3,12 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+2015-09-01 ~ Theo
+
+code snippet edit view: 
+* trying [semantic versioning]( http://semver.org/ )
+* v 0.2.0 now uses ace editor
+
 
 2015-08-31 ~ Theo
 
