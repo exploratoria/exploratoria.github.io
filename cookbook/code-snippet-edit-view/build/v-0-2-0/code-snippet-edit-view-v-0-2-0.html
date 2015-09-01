@@ -99,7 +99,6 @@
 
 			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 
-console.log( 'fn',  fileName );
 			if ( fileName.indexOf( 'mrdoob.github.io' ) > 0 ) {
 
 				response = response.replace( '../build/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );

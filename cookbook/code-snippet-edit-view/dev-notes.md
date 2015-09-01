@@ -6,6 +6,8 @@ vode snippet edit view dev notes
 * v0.2.0 - uses Ace editor
 * Filling entire space improved
 
+Many Ace tweaks could be added, but this is all beginning to look good
+
 
 2015-08-30 Theo
 
