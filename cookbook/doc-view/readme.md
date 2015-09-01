@@ -4,7 +4,7 @@ docView Read Me
 <span style=display:none; >[View docView Read Me as web page]( http://exploratoria.github.io/cookbook/doc-view/ "View file as a web page." ) </span>
 <input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/doc-view/'; />
 
-[docView Full Screen Demo]( http://exploratoria.github.io/doc-view/build/index.html )
+[docView Full Screen Demo]( http://exploratoria.github.io/cookbook/doc-view/build/index.html )
 
 ## Concept
 
