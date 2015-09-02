@@ -55,7 +55,7 @@ The intention is to provide scripts dealing with the following categories:
 
 <!-- this wording needs work -->
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
-This is because the purpose of this website is to use technology to explain, show and demonstrate the physical and theoretical aspects of our world.
+This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. It attempts to achieve the best of what technology should do in the real world.
 
 
 ## Cookbook
