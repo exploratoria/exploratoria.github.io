@@ -2,6 +2,9 @@
 Cookbook Read Me
 ===
 
+<span style=display:none; >[You are now in GitHub source code view - click here to view Read Me file as a web page]( http://exploratoria.github.io/cookbook/index.html "View file as a web page." ) </span>
+<input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/cookbook/'; />
+
 Short coding samples - also called snippets - solutions to common tasks, 'presented in detail so that the users who are not necessarily expert in the field can produce workable results'.
 
 <!--
@@ -13,6 +16,8 @@ Might follow the O'Reilly structure: http://archive.oreilly.com/images/cookbooks
 See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wiki/A_Pattern_Language
 
 -->
+
+
 
 ### docView
 A very simple JavaScript web page viewer and menu script
