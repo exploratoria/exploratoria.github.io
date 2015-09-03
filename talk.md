@@ -3,6 +3,23 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+
+
+2015-09-02 ~ Theo
+
+renamed sandbox folder to xxx-sandbox
+created sandbox repo
+copied files from xxx-sandbox folder to sandbox repo
+
+Three.js Examples Menu Viewer 
+<explorato.github.io/sandbox/cookbook/threejs-examples-view/dev/v-0-1-0/threejs-examples-v-0-1-0.html>
+
+Three.js Examples Menu Editor and Viewer
+Should be working soon:
+<http://exploratoria.github.io/sandbox/cookbook/threejs-examples-menu-edit-view/build/v-0-2-0/threejs-examples-menu-edit-view-v-0-2-0.html>
+
+
+
 2015-09-01 ~ Theo
 
 code snippet edit view: 

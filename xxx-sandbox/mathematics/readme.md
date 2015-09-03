@@ -1,2 +1,0 @@
-Mathemtics Read Me
-===
