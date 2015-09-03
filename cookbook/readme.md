@@ -17,6 +17,12 @@ See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wi
 
 -->
 
+### Code Menu Edit View
+
+A simple file editor and viewer with a sidebar menu of editable files
+
+[Code Menu Edit View - Full Screen Demo]( http://exploratoria.github.io/cookbook/code-menu-edit-view/build/index.html )  
+[Code Menu Edit View - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-menu-edit-view/ )
 
 
 ### docView
