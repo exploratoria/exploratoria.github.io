@@ -4,6 +4,12 @@ Talk
 _Notes, discussions, agendas or whatever_
 
 
+2015-09-03 ~ Theo
+
+* Major housekeeping
+* Every project has a readme and is navigable from the Exploratoria home page
+* Also lots of code clean up
+
 
 2015-09-02 ~ Theo
 
