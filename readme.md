@@ -81,6 +81,20 @@ The coding style of an app should follow the style of the most-used library of t
 
 In the instance of a [Three.js]( http://threejs.org ) script, the style generally follows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 ).
 
+* Code generally follows the Three.js examples coding style more than the source code style
+	* Functions are functions not variables
+	* Uses init() and animate() functions
+	* Loads libraries from GitHub via a CDN
+	* No external js or css files other then standard Three.js files
+	* In other words, code for dummies
+
+### Markdown
+
+[Markdown]( https://en.wikipedia.org/wiki/Markdown ) is used extensively with the [Showdown converter]( https://github.com/showdownjs/showdown ).
+
+See [Markdown Basics]( https://help.github.com/articles/markdown-basics/ )
+
+
 ### Fonts
 
 The font used here is the the default 'monospace' font as determined by your browser. This is because it is the most common font used to write scripts.
@@ -103,6 +117,13 @@ CDNs used:
 * [RawGit]( https://rawgit.com/ )
 	* Example: <https://rawgit.com/mrdoob/three.js/r70/examples/js/controls/OrbitControls.js>
 
+As in:
+
+```
+<script src=http://rawgit.com/mrdoob/three.js/r71/build/three.min.js ></script>  
+<script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js ></script>
+<script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js ></script>  
+```
 
 <center>
 # &#x2766;

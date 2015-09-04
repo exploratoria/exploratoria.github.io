@@ -4,11 +4,26 @@ Talk
 _Notes, discussions, agendas or whatever_
 
 
+2015-09-04 ~ Theo
+
+Topics of discussion for today's meet-up
+
+* Mailing list?
+* Versioning and revision control
+	* Should be able to run older revisions of apps
+* Naming projects in good SEO ways
+* Use of Ace editor features require splitting files into HTML, CSS, JavaScript...
+	* How about 100% JavaScript ;-)
+* A libs or libraries folder?
+
+
 2015-09-03 ~ Theo
 
 * Major housekeeping
 * Every project has a readme and is navigable from the Exploratoria home page
 * Also lots of code clean up
+
+Added Parametric Surfaces Menu Edit View
 
 
 2015-09-02 ~ Theo
