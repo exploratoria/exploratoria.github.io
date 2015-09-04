@@ -20,6 +20,8 @@ _See also the [raw source code]( https://raw.githubusercontent.com/exploratoria/
 
 * To help youngsters and oldsters delve into new topics with a hands-on, active, 'I can play with this' approach
 
+* To create apps that work not just on computers but also on mobile devices such as phones and tablets
+
 ### Vision  
 <!--  a descriptive picture of a desired future state -->
 
