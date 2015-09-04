@@ -39,9 +39,7 @@
 
 		window.addEventListener( 'hashchange', hashChange, false );
 
-//		text = '<h1>Hello, world!</h1>';
-		editor = ace.edit( "edit" );
-//		editor.setValue( text );
+		editor = ace.edit( 'edit' );
 		editor.$blockScrolling = Infinity
 
 		hashChange();
@@ -106,10 +104,10 @@
 
 			} else if ( fileName.indexOf( 'analyticphysics.com/' ) > 0 ) {
 
-				response = response.replace( '"../../style.css"', 'http://analyticphysics.com/style.css' );
-				response = response.replace( '"three.js/three.min.js"', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
-				response = response.replace( '"three.js/OrbitControls.js"', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js' );
-				response = response.replace( '"Common Setup.js"', 'http://analyticphysics.com/General%20Physics/Sound%20Waves/Common%20Setup.js' );
+				response = response.replace( '../../style.css', 'http://analyticphysics.com/style.css' );
+				response = response.replace( 'three.js/three.min.js', 'https://rawgit.com/mrdoob/three.js/r71/build/three.min.js' );
+				response = response.replace( 'three.js/OrbitControls.js', 'https://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js' );
+				response = response.replace( 'Common Setup.js', 'http://analyticphysics.com/General Physics/Sound Waves/Common Setup.js' );
 
 			}
 
