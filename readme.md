@@ -58,6 +58,14 @@ The intention is to provide scripts dealing with the following categories:
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
 This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. It attempts to achieve the best of what technology should do in the real world.
 
+## Current Status
+
+2015-09-05 ~ Still at a very early stage
+
+This home page will eventually become an attractive place to land on the site.
+
+The following information will be move to other pages.
+
 
 ## Cookbook
 
@@ -102,9 +110,7 @@ The font used here is the the default 'monospace' font as determined by your bro
 ### Versioning
 
 * Trying out [semantic versioning]( http://semver.org/ )
-* Every project to have 'dev','build' and archive folders
-	* Revisions will move between folders
-	* Alternative: files stay in same folders but dev/index.html, build/index.html are updates
+* See [Version Manage]( http://exploratoria.github.io/sandbox/sandbox/version-manage-v-0-1-0/index.html ) project for more details
 
 ### Content Delivery Networks (CDN)
 
