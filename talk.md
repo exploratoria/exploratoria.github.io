@@ -15,6 +15,9 @@ Topics of discussion for today's meet-up
 * Use of Ace editor features require splitting files into HTML, CSS, JavaScript...
 	* How about 100% JavaScript ;-)
 * A libs or libraries folder?
+	* for readme.md index.html
+* NASA STL what next?
+	* See http://va3c.github.io/nasa-samples/browse-nasa-stl-models-r2.html
 
 
 2015-09-03 ~ Theo
