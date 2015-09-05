@@ -64,7 +64,7 @@ This website uses technology to explain, show and demonstrate the physical and t
 
 This home page will eventually become an attractive place to land on the site.
 
-The following information will be move to other pages.
+The following information will be moved to other pages.
 
 
 ## Cookbook
