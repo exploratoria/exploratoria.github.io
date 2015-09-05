@@ -24,7 +24,7 @@
 
 * Traverse the surface of the Moon in 3D
 
-* View 1undreds of thousands of astronomical objects in 3D
+* View hundreds of thousands of astronomical objects in 3D
 
 
 ### Mathematics
