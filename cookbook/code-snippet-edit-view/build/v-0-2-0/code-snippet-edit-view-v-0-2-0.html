@@ -142,15 +142,15 @@
 
 	function updateSplit( ) {
 
-		if ( view.style.width ==='85%' ) {
+		if ( view.style.width ==='100%' ) {
 
-			edit.style.height = inpSplit.value + '%';
-			view.style.height = ( 95 - inpSplit.value) + '%';
+			edit.style.height = 0.94 * inpSplit.value + '%';
+			view.style.height = 0.94 * ( 100 - inpSplit.value ) + '%';
 
 		} else {
 
 			edit.style.width = inpSplit.value + '%';
-			view.style.width = ( 85 - inpSplit.value) + '%';
+			view.style.width = ( 100 - inpSplit.value ) + '%';
 
 		}
 	}
