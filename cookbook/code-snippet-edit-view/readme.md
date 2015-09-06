@@ -26,7 +26,7 @@ _Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.
 * Save edits to local file
 * Update view on demand
 * Incorporates [Ace editor]( http://ace.c9.io/ )
-
+* Vertical or horizontal split view adjustable with slider
 
 ## Road Map
 
