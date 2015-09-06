@@ -4,6 +4,32 @@ Talk
 _Notes, discussions, agendas or whatever_
 
 
+2015-09-06 ~ Theo
+
+Create libs folder in sandbox
+
+Add readme reader to libs
+
+[Reader Read Me - Web Page]( http://exploratoria.github.io/sandbox/lib/reader/index.html )  
+[Reader Read Me - Source Code]( https://github.com/exploratoria/sandbox/tree/gh-pages/lib/reader/ )
+
+index.html that calls JavaScript file in http://exploratoria.github.io/sandbox/lib/ and display the readme.md as HTML
+
+
+
+2015-09-05 ~ Theo
+
+Version Manager
+
+[Version Manage Read Me - Web Page]( http://exploratoria.github.io/sandbox/sandbox/version-manage/index.html )  
+[Version Manage Read Me - Source Code]( https://github.com/exploratoria/sandbox/tree/gh-pages/sandbox/version-manage/ )  
+
+Category Home Page Template
+
+[Category Home Page Template Read Me - Web Page]( http://exploratoria.github.io/sandbox/sandbox/category-home-page-template/index.html )  
+[Category Home Page Template Read Me - Source Code]( - Source Code]( https://github.com/exploratoria/sandbox/tree/gh-pages/sandbox/category-home-page-template/ )  
+
+
 2015-09-04 ~ Theo
 
 Topics of discussion for today's meet-up
