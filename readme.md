@@ -131,6 +131,58 @@ As in:
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js ></script>  
 ```
 
+## Links of interest
+
+Who do we like in terms of content, appearance and behavior?
+
+### Bricks and Mortar
+
+[Wikipedia List of Science Museums]( https://en.wikipedia.org/wiki/List_of_science_museums )
+
+[List of science centers in the United States]( https://en.wikipedia.org/wiki/List_of_science_centers_in_the_United_States )
+
+[List of citizen science projects]( https://en.wikipedia.org/wiki/List_of_citizen_science_projects)
+
+### Online
+
+<http://www.msichicago.org/online-science/>
+
+<http://scienceonline.com/>
+
+<https://www.time4learning.com/science.shtml>
+
+<https://phet.colorado.edu/>
+
+<http://www.edheads.org/>
+
+<https://lagunita.stanford.edu/courses/Engineering/CS101/Summer2014/about>
+
+<https://www.khanacademy.org/>
+
+<https://www.codecademy.com/>
+
+<http://www.go-lab-project.eu/frontpage>
+
+<http://www.golabz.eu/>
+
+<https://www.zooniverse.org/>
+
+	* <http://www.citizensciencealliance.org/index.html>
+
+<http://www.planetseed.com/>
+
+<http://www.sciencebuddies.org/science-activities>
+
+<https://www.googlesciencefair.com/en/>
+
+<http://www.informedbynature.org/science-fair-projects/index/>
+
+<https://www.madewithcode.com>
+
+<https://code.org/>
+
+<https://scratch.mit.edu/>
+
 <center>
 # &#x2766;
 
