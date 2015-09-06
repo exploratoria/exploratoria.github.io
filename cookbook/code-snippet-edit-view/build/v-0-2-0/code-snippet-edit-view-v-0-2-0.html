@@ -11,8 +11,9 @@
 	body { font: 12pt monospace; margin: 0; }
 	#edit { border: 1px solid; float: left; height: 95%; width: 50%; }
 	#view { border: 1px solid; float: left; height: 95%; width: 50%; }
-	#menu { clear:both; margin: 10px; padding: 10px; }
 	#info { line-height: 18pt; font-size: 18pt; text-decoration: none; }
+	#buttons1 { clear: both; margin: 10px 0 10px 15%; padding: 10px; }
+	#buttons2 { position: absolute; right: 0; top: 96%; }
 
 </style>
 </head>
@@ -21,11 +22,16 @@
 
 	<div id=edit ></div>
 	<iframe id=view ></iframe>
-	<div id=menu >
+	<div id=buttons1 >
 		<input type=file id=inpFile onchange=openFile(this); /> 
 		<button onclick=updateView(); >Update View</button> 
 		<button onclick=saveFile(); >Save to File</button> 
 		<a id=info href=https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ >&#x24D8;</a>
+	</div>
+	<div id=buttons2 >
+			<input type=range id=inpSplit min=1 max=83 step=1 value=42.5 onchange=updateSplit() />
+			<button onclick=splitVertical(); >vertical</button> 
+			<button onclick=splitHorizontal(); >horizontal</button> 
 	</div>
 
 <script>
@@ -118,6 +124,37 @@
 
 		obj.xmlHttp.send( null );
 
+	}
+
+	function splitHorizontal() {
+
+		inpSplit.value = view.style.height = edit.style.height = '47.5%';
+		view.style.width = edit.style.width = '85%';
+		view.style.marginLeft ='15%'; 
+
+	}
+
+	function splitVertical() {
+
+		view.style.height = edit.style.height = '95%';
+		inpSplit.value = view.style.width = edit.style.width = '42.5%';
+		view.style.marginLeft =''; 
+
+	}
+
+	function updateSplit( ) {
+
+		if ( view.style.width ==='85%' ) {
+
+			edit.style.height = inpSplit.value + '%';
+			view.style.height = ( 95 - inpSplit.value) + '%';
+
+		} else {
+
+			edit.style.width = inpSplit.value + '%';
+			view.style.width = ( 85 - inpSplit.value) + '%';
+
+		}
 	}
 
 </script>
