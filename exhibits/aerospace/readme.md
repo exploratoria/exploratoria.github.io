@@ -1,5 +1,6 @@
-[Exploratoria]( http://exploratoria.github.io ) &raquo; [Lib]( http://exploratoria.github.io/exhibits/ ) &raquo;
-Read Me Reader Read Me
+[Exploratoria]( http://exploratoria.github.io ) &raquo; [Exhibits]( http://exploratoria.github.io/exhibits/ ) &raquo;
+
+Aerospace Read Me
 ====
 
 <span style=display:none; >[You are now in GitHub source code view - click here to view Read Me file as a web page]( http://exploratoria.github.io/exhibits/aerospace/index.html "View file as a web page." ) </span>
