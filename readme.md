@@ -110,7 +110,7 @@ The font used here is the the default 'monospace' font as determined by your bro
 ### Versioning
 
 * Trying out [semantic versioning]( http://semver.org/ )
-* See [Version Manage]( http://exploratoria.github.io/sandbox/sandbox/version-manage-v-0-1-0/index.html ) project for more details
+* See [Version Manage]( http://exploratoria.github.io/sandbox/sandbox/version-manage/index.html ) project for more details
 
 ### Content Delivery Networks (CDN)
 
