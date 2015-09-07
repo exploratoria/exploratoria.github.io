@@ -3,6 +3,12 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+2015-09-07 ~ Theo
+
+Add to notes section  
+[Version Manage Read Me - Web Page]( http://exploratoria.github.io/sandbox/sandbox/version-manage/index.html )  
+[Version Manage Read Me - Source Code]( https://github.com/exploratoria/sandbox/tree/gh-pages/sandbox/version-manage/ )  
+
 
 2015-09-06 ~ Theo
 
@@ -15,6 +21,8 @@ Add readme reader to libs
 
 index.html that calls JavaScript file in http://exploratoria.github.io/sandbox/lib/ and display the readme.md as HTML
 
+[Code Menu Edit View - Build - Full Screen Demo]( http://exploratoria.github.io/sandbox/cookbook/code-menu-edit-view/build/index.html )  
+[Code Menu Edit View - Dev - Full Screen Demo]( http://exploratoria.github.io/sandbox/cookbook/code-menu-edit-view/dev/index.html ) 
 
 
 2015-09-05 ~ Theo

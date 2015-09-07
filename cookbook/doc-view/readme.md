@@ -46,8 +46,13 @@ This system is not intended to be a home page or a top page for a particular cat
 ### See also the following similar efforts
 
 * <http://mrdoob.github.io/three.js/examples/>
+	* A good 'data comes to you' site. As easy as changing a TV channel
+	* But starts with blank page
 * <http://stemkoski.github.io/Three.js/>
+	* Typical 'you go there then come back the go there' behavior
+	* gets tiring real fast
 * <http://www.smartjava.org/content/all-109-examples-my-book-threejs-threejs-version-r63>
 * <http://scenejs.org/examples/index.html#scenegraph_firstExample>
+	* one of the best 'the data comes to you' sites. As easy as changing a TV channel
 * <http://www.babylonjs.com/>
 
