@@ -32,7 +32,7 @@ A simple file editor and viewer that is embeddable in HTML and Markdown pages
 
 [Code Snippet Edit View - Full Screen Demo]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html )  
 
-[Code Snippet Edit View Read Me - Web Page]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/index.html  )
+[Code Snippet Edit View Read Me - Web Page]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/index.html  )  
 [Code Snippet Edit View Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ )
 
 ### docView
