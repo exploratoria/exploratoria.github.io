@@ -3,6 +3,15 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+2015-09-08 ~ Theo
+
+* start deploying Read Me Reader index.html 
+
+* Update Sandbox Lib read me 
+	* Read Me Reader now in production libe folder
+
+
+
 2015-09-07 ~ Theo
 
 Add to notes section  

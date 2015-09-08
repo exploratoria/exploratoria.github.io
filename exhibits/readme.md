@@ -8,27 +8,27 @@ Exhibits Read Me
 
 Exhibit Categories:
 
-* Aerospace
-* Astronomy & Solar System
-* Biology
-* Chemistry
-* Color
-* Electricity & Magnetism
-* Energy
-* Engineering & Structure
-* Geology
-* Heat & Temperature
-* Human Anatomy
-* Language & Speech
-* Light
-* Materials
-* Mathematics & Patterns
-* Mechanics, Dynamics & Motion
-* Navigation & Mapping
-* Smell - Taste - Touch
-* Sound & Hearing
-* Vision & Eye Logic
-* Water
-* Waves & Resonance
-* Weather
+* [Aerospace]( http://exploratoria.github.io/exhibits/aerospace/index.html )
+* [Astronomy & Solar System]( http://exploratoria.github.io/exhibits/astronomy/index.html )
+* [Biology]( http://exploratoria.github.io/exhibits/biology/index.html )
+* [Chemistry]( http://exploratoria.github.io/exhibits/chemistry/index.html )
+* [Color]( http://exploratoria.github.io/exhibits/color/index.html )
+* [Electricity & Magnetism]( http://exploratoria.github.io/exhibits/electromagnetism/index.html )
+* [Energy]( http://exploratoria.github.io/exhibits/energy/index.html )
+* [Engineering & Structure]( http://exploratoria.github.io/exhibits/engineering/index.html )
+* [Geology]( http://exploratoria.github.io/exhibits/geology/index.html )
+* [Heat & Temperature]( http://exploratoria.github.io/exhibits/heat/index.html )
+* [Human Anatomy]( http://exploratoria.github.io/exhibits/human-anatomy/index.html )
+* [Language & Speech]( http://exploratoria.github.io/exhibits/language/index.html )
+* [Light]( http://exploratoria.github.io/exhibits/light/index.html )
+* [Materials]( http://exploratoria.github.io/exhibits/materials/index.html )
+* [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/index.html )
+* [Mechanics, Dynamics & Motion]( http://exploratoria.github.io/exhibits/mechanics/index.html )
+* [Navigation & Mapping]( http://exploratoria.github.io/exhibits/navigation/index.html )
+* [Smell - Taste - Touch]( http://exploratoria.github.io/exhibits/smell-taste-touch/index.html )
+* [Sound & Hearing]( http://exploratoria.github.io/exhibits/sound/index.html )
+* [Vision & Eye Logic]( http://exploratoria.github.io/exhibits/vision/index.html )
+* [Water]( http://exploratoria.github.io/exhibits/water/index.html )
+* [Waves & Resonance]( http://exploratoria.github.io/exhibits/waves/index.html )
+* [Weather]( http://exploratoria.github.io/exhibits/weather/index.html )
 
