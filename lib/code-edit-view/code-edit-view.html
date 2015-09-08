@@ -29,7 +29,7 @@
 		<a id=info href=https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/code-edit-view/>&#x24D8;</a>
 	</div>
 	<div id=buttons2>
-			<input type=range id=inpSplit min=1 max=99 step=1 value=50 onchange=updateSplit();/>
+			<input type=range id=inpSplit min=1 max=99 step=1 value=50 onchange=updateSplit()/>
 			<button onclick=splitVertical();>vertical</button> 
 			<button onclick=splitHorizontal();>horizontal</button> 
 	</div>
@@ -73,7 +73,7 @@
 	function openFile( that ) {
 
 		var reader = new FileReader();
-		reader.onloadend = function( event ) {
+		reader.onloadend = function() {
 
 			data = reader.result;
 			editor.setValue( data, -1 );
@@ -125,7 +125,7 @@
 
 	}
 
-	function updateSplit( ) {
+	function updateSplit() {
 
 		if ( view.style.width ==='100%' ) {
 
