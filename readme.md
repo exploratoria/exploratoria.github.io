@@ -32,6 +32,7 @@ _See also the [raw source code]( https://raw.githubusercontent.com/exploratoria/
 
 The intention is to provide scripts dealing with the following categories:
 
+* Aerospace
 * Astronomy & Solar System
 * Biology
 * Chemistry
@@ -39,14 +40,15 @@ The intention is to provide scripts dealing with the following categories:
 * Electricity & Magnetism
 * Energy
 * Engineering & Structure
-* Geology & Materials
+* Geology
 * Heat & Temperature
 * Human Anatomy
 * Language & Speech
 * Light
+* Materials
 * Mathematics & Patterns
 * Mechanics, Dynamics & Motion
-* Navigation
+* Navigation & Mapping
 * Smell - Taste - Touch
 * Sound & Hearing
 * Vision & Eye Logic
