@@ -54,7 +54,7 @@
 		}
 
 		current++;
-console.log(current);  
+
 	}
 
 	window.addEventListener( 'resize', function() {
@@ -62,9 +62,6 @@ console.log(current);
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		camera.aspect = window.innerWidth / window.innerHeight;
 		camera.updateProjectionMatrix();
-
-		if ( count % speed == 0 ) addStep();
-		count++;
 
 	} );
 
@@ -74,6 +71,8 @@ console.log(current);
 		renderer.render( scene, camera );
 		controls.update();
 
+		if ( count % speed == 0 ) addStep();
+		count++;
 	}
 
 	var speed = 50;
