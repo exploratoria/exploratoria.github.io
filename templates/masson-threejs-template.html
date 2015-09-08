@@ -29,7 +29,7 @@
 	camera.position.set( 2, 2, 2 ); 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-// geometric code goes here
+// code goes here
 
 
 
@@ -41,7 +41,7 @@
 		
 	} );
 
-	var render = function () {
+	function render() {
 
 		requestAnimationFrame( render ); 
 		renderer.render( scene, camera );
