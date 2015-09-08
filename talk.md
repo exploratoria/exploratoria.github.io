@@ -10,6 +10,7 @@ _Notes, discussions, agendas or whatever_
 * Update Sandbox Lib read me 
 	* Read Me Reader now in production libe folder
 
+* add links to exhinits read me
 
 
 2015-09-07 ~ Theo
