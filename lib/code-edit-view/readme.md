@@ -7,6 +7,6 @@ Code-Edit-View Read Me
 <input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/code-edit-view/'; />
 
 
-Loads a file named readme.md by default, converts Markdown to HTML and displays.
+Loads an HTML file provided in the location hash in a split view showing both raw code and rendered HTML.
 
-Loads and displays any other Markdown file given the filename is included on location hash.
+Defaults to local index.html file.
