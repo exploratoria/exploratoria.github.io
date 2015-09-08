@@ -35,24 +35,26 @@
 
 	var material = new THREE.LineBasicMaterial({ color: 0x0077ff }); 
 	var geometry = new THREE.Geometry();
-	for ( var i=0 ; i < steps ; i++ ) geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
+	for ( var i = 0 ; i < steps ; i++ ) geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
 	scene.add( new THREE.Line( geometry, material ) );
 
 	function addStep() {
 		
 		if ( current < steps ) {
 			
-			var move = new THREE.Vector3( (2*Math.random()-1)*step, (2*Math.random()-1)*step, (2*Math.random()-1)*step );
+			var move = new THREE.Vector3( ( 2 * Math.random() - 1 ) * step, ( 2 * Math.random() - 1 ) * step, ( 2 * Math.random() - 1 ) * step );
 			for ( var i = current ; i < steps ; i++ ) {
 				
 				geometry.vertices[i].add( move );
+
 			}
 			
 		geometry.verticesNeedUpdate = true;
 		
 		}
-	current++;
-  
+
+		current++;
+console.log(current);  
 	}
 
 	window.addEventListener( 'resize', function() {
