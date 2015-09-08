@@ -29,16 +29,41 @@
 	camera.position.set( 2, 2, 2 ); 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-// geometric code goes here
+	var step = .5;
+	var steps = 10000;
+	var current = 1;
 
+	var material = new THREE.LineBasicMaterial({ color: 0x0077ff }); 
+	var geometry = new THREE.Geometry();
+	for ( var i=0 ; i < steps ; i++ ) geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
+	scene.add( new THREE.Line( geometry, material ) );
 
+	function addStep() {
+		
+		if ( current < steps ) {
+			
+			var move = new THREE.Vector3( (2*Math.random()-1)*step, (2*Math.random()-1)*step, (2*Math.random()-1)*step );
+			for ( var i = current ; i < steps ; i++ ) {
+				
+				geometry.vertices[i].add( move );
+			}
+			
+		geometry.verticesNeedUpdate = true;
+		
+		}
+	current++;
+  
+	}
 
 	window.addEventListener( 'resize', function() {
 		
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		camera.aspect = window.innerWidth / window.innerHeight;
 		camera.updateProjectionMatrix();
-		
+
+		if ( count % speed == 0 ) addStep();
+		count++;
+
 	} );
 
 	var render = function () {
@@ -49,6 +74,8 @@
 
 	}
 
+	var speed = 50;
+	var count = 1;
 	render();
 
 </script>
