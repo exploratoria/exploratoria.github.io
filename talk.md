@@ -13,6 +13,8 @@ _Notes, discussions, agendas or whatever_
 
 * add links to exhibits read me
 
+[Three Columns Right Fixed with Data Sample]( three-columns-right-fixed-with-data-sample-v-0-1-0.html )
+
 
 2015-09-07 ~ Theo
 
