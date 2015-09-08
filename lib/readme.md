@@ -1,4 +1,5 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo;
+
 Lib Read Me
 ===
 
@@ -10,7 +11,10 @@ Frequently used files
 
 ## Reader
 
-
 [Reader Read Me - Web Page]( http://exploratoria.github.io/lib/reader/index.html )  
 [Reader Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master//lib/reader/ )
 
+## Code-Edit-View
+
+[Reader Read Me - Web Page]( http://exploratoria.github.io/lib/code-edit-view/index.html )  
+[Reader Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master//lib/code-edit-view/ )
