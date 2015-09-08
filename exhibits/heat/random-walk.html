@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+
+	body { margin: 0px; }
+  
+</style>
+</head>
+
+<body>
+
+<script src=http://rawgit.com/mrdoob/three.js/r71/build/three.min.js></script>
+<script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	var scene = new THREE.Scene();
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000 );
+	document.body.appendChild( renderer.domElement ); 
+
+	scene.add( new THREE.AxisHelper( 2 ) );
+
+	var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); 
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 2, 2, 2 ); 
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+// geometric code goes here
+
+
+
+	window.addEventListener( 'resize', function() {
+		
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		
+	} );
+
+	var render = function () {
+
+		requestAnimationFrame( render ); 
+		renderer.render( scene, camera );
+		controls.update();
+
+	}
+
+	render();
+
+</script>
+
+</body>
+</html>
