@@ -56,9 +56,14 @@ The intention is to provide scripts dealing with the following categories:
 * Waves & Resonance
 * Weather
 
+
 <!-- this wording needs work -->
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
 This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. It attempts to achieve the best of what technology should do in the real world.
+
+[Exhibits Read Me - web page view]( http://exploratoria.github.io/exhibits/ )  
+[Exhibits Read Me- source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/ )
+
 
 ## Current Status
 

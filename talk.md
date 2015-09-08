@@ -6,11 +6,12 @@ _Notes, discussions, agendas or whatever_
 2015-09-08 ~ Theo
 
 * start deploying Read Me Reader index.html 
+	* done down to two or three levels
 
 * Update Sandbox Lib read me 
-	* Read Me Reader now in production libe folder
+	* Read Me Reader now in production lib folder
 
-* add links to exhinits read me
+* add links to exhibits read me
 
 
 2015-09-07 ~ Theo
