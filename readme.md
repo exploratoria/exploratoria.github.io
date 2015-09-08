@@ -169,7 +169,7 @@ Who do we like in terms of content, appearance and behavior?
 
 <https://www.zooniverse.org/>
 
-	* <http://www.citizensciencealliance.org/index.html>
+<http://www.citizensciencealliance.org/index.html>
 
 <http://www.planetseed.com/>
 
