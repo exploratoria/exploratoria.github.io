@@ -18,6 +18,69 @@ Once a geometry is added to a scene in Three.js it cannot be modified. That is w
 
 ### A Little Math
 
-Math test:
+The end point of the line can be written as the vector sum
+<nobr><math displaystyle="true">
+<mi mathvariant="bold">L</mi>
+<mo>=</mo><mo>&sum;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
+</math></nobr>
+over the individual random steps of the path. The squared length of this vector is
 
-<math><mfrac><msqrt><mi>&gamma;</mi></msqrt><msup><mi>x</mi><mn>2</mn></msup></mfrac></math>
+<p style="text-align: center">
+<math displaystyle="true">
+<mtable displaystyle="true" columnalign="left"><mtr><mtd>
+<mi mathvariant="bold">L</mi><mo>&middot;</mo>
+  <mi mathvariant="bold">L</mi>
+<mo>=</mo><mrow><mo>[</mo><mo>&sum;</mo><msub>
+  <mi mathvariant="bold">l</mi><mi>i</mi></msub>
+  <mo>]</mo></mrow><mo>&middot;</mo><mrow><mo>[</mo><mo>&sum;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub><mo>]</mo></mrow>
+</mtd></mtr><mtr><mtd>
+<mphantom><mi mathvariant="bold">L</mi><mo>&middot;</mo>
+  <mi mathvariant="bold">L</mi></mphantom>
+<mo>=</mo><mo>&sum;</mo>
+<msub><mi mathvariant="bold">l</mi><mi>i</mi></msub><mo>&middot;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
+<mo>+</mo><munder><mo>&sum;</mo><mrow><mi>i</mi><mo>&ne;</mo><mi>j</mi></mrow></munder>
+<msub><mi mathvariant="bold">l</mi><mi>i</mi></msub><mo>&middot;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>j</mi></msub>
+</mtd></mtr><mtr><mtd>
+<mi mathvariant="bold">L</mi><mo>&middot;</mo>
+  <mi mathvariant="bold">L</mi>
+<mo>=</mo><mo>&sum;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub><mo>&middot;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
+<mo>+</mo><munder><mo>&sum;</mo><mrow><mi>i</mi><mo>&ne;</mo><mi>j</mi></mrow></munder>
+  <mo stretchy="false">&verbar;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
+  <mo stretchy="false">&verbar;</mo>
+  <mo stretchy="false">&verbar;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>j</mi></msub>
+  <mo stretchy="false">&verbar;</mo>
+  <mo>cos</mo><msub><mi>&gamma;</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
+</mtd></mtr></mtable>
+</math></p>
+
+Since all directions are equally likely, the angle-dependent terms vanish in an average over angular variables
+
+<p style="text-align: center">
+<math displaystyle="true">
+<mrow><mo>&lang;</mo><mi mathvariant="bold">L</mi><mo>&middot;</mo>
+  <mi mathvariant="bold">L</mi><mo>&rang;</mo></mrow>
+<mo>=</mo><mo>&sum;</mo><mrow><mo>&lang;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub><mo>&middot;</mo>
+  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
+  <mo>&rang;</mo></mrow>
+</math></p>
+
+<p>so that for <i>N</i> steps of equal length <i>l</i>&nbsp;, the average path length is</p>
+
+<p  style="text-align: center">
+<math displaystyle="true">
+<mi>L</mi><mo>=</mo><msqrt><mrow><mo>&lang;</mo>
+  <mi mathvariant="bold">L</mi><mo>&middot;</mo>
+  <mi mathvariant="bold">L</mi><mo>&rang;</mo></mrow></msqrt>
+<mo>=</mo><msqrt><mi>N</mi><msup><mi>l</mi><mn>2</mn></msup></msqrt>
+<mo>=</mo><msqrt><mi>N</mi></msqrt><mspace width=".3em"/><mi>l</mi>
+</math></p>
+
