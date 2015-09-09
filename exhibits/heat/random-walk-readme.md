@@ -14,7 +14,7 @@ Things to try:
  
 About the code:
 
-Once a geometry is created in Three.js it cannot be altered. That is why all vertices of the line are created at once, and at each step all vertices but the first are moved by the same random vector.
+Once a geometry is created in Three.js it cannot be altered. That is why all vertices of the line are created at once, and at each step all vertices but one are moved by the same random vector.
 
 Math test:
 
