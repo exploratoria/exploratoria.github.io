@@ -71,11 +71,11 @@
 		renderer.render( scene, camera );
 		controls.update();
 
-		if ( count % speed == 0 ) addStep();
+		if ( count % countBeforeNewStep == 0 ) addStep();
 		count++;
 	}
 
-	var speed = 50;
+	var countBeforeNewStep = 50;
 	var count = 1;
 	render();
 
