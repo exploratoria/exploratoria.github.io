@@ -73,7 +73,7 @@ Since all directions are equally likely, the angle-dependent terms vanish in an 
   <mo>&rang;</mo></mrow>
 </math></p>
 
-<p>so that for <i>N</i> steps of equal length <i>l</i>&nbsp;, the average path length is</p>
+For <i>N</i> steps of equal length <i>l</i>&nbsp;, the average path length is
 
 <p  style="text-align: center">
 <math displaystyle="true">
@@ -83,4 +83,3 @@ Since all directions are equally likely, the angle-dependent terms vanish in an 
 <mo>=</mo><msqrt><mi>N</mi><msup><mi>l</mi><mn>2</mn></msup></msqrt>
 <mo>=</mo><msqrt><mi>N</mi></msqrt><mspace width=".3em"/><mi>l</mi>
 </math></p>
-
