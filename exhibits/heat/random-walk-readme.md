@@ -2,7 +2,7 @@
 # Random Walk
 </center>
 
-<div style='overflow: hidden; height: 500px'>
+<div style='overflow: auto; height: 500px'>
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/heat/random-walk.html style='width: 100%; height: 500px'></iframe>
 </div>
 
