@@ -70,6 +70,8 @@
 		requestAnimationFrame( render ); 
 		renderer.render( scene, camera );
 		controls.update();
+		
+		scene.rotation.z += .001;
 
 		if ( count % countBeforeNewStep == 0 ) addStep();
 		count++;
