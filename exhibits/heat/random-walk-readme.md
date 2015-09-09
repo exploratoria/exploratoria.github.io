@@ -10,7 +10,7 @@ Things to try:
 
 * Click "Update View" several times to see different random paths. If the motion appears to have stopped, then zoom out to find where the end of the path has gone.
 
-* Try altering the "" variable in the code to make the motion faster.
+* Try decreasing the "countBeforeNewStep" variable in the code to make the motion faster.
  
 About the code:
 
