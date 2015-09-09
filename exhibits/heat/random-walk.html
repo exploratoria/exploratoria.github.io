@@ -43,6 +43,7 @@
 		if ( current < steps ) {
 			
 			var move = new THREE.Vector3( ( 2 * Math.random() - 1 ) * step, ( 2 * Math.random() - 1 ) * step, ( 2 * Math.random() - 1 ) * step );
+			
 			for ( var i = current ; i < steps ; i++ ) {
 				
 				geometry.vertices[i].add( move );
@@ -50,6 +51,7 @@
 			}
 			
 		geometry.verticesNeedUpdate = true;
+		camera.position.multiplyScalar( 1.005 );
 		
 		}
 
