@@ -100,7 +100,7 @@
 		obj.xmlHttp = new XMLHttpRequest();
 		obj.xmlHttp.open( 'GET', fileName, true );
 		obj.xmlHttp.onreadystatechange = function() {
-console.log('call');
+
 			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 			editor.setValue( response, -1 );
 			updateView();
