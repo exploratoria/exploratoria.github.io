@@ -5,11 +5,14 @@
 <style>
 
 	body { margin: 0px; overflow: hidden; }
+	#progress { position: absolute; top: 90%; left: 1%; }
   
 </style>
 </head>
 
 <body>
+
+	<span id=progress/>
 
 <script src=http://rawgit.com/mrdoob/three.js/r71/build/three.min.js></script>
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js></script>
@@ -52,6 +55,8 @@
 			
 		geometry.verticesNeedUpdate = true;
 		camera.position.multiplyScalar( 1.003 );
+		
+		progress.innerHTML = 'Steps: ' + current;
 		
 		}
 
