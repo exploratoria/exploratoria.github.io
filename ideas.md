@@ -6,6 +6,11 @@
 
 * Virtual garden for growing plants in space with links to documentation of physical construction
 
+### Chemistry
+
+* Interlocking organic molecules
+
+* Protein folding
 
 ### Waves and Resonance
 
