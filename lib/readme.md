@@ -16,5 +16,5 @@ Frequently used files
 
 ## Code-Edit-View
 
-[Reader Read Me - Web Page]( http://exploratoria.github.io/lib/code-edit-view/index.html )  
-[Reader Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/code-edit-view/ )
+[Code-Edit-View Read Me - Web Page]( http://exploratoria.github.io/lib/code-edit-view/index.html )  
+[Code-Edit-View Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/code-edit-view/ )
