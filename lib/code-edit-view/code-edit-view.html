@@ -87,10 +87,10 @@
 
 	function saveFile() {
 
-		blob = new Blob( [ edit.innerHTML ] );
+		blob = new Blob( [ editor.getValue( data ) ] );
 		a = document.body.appendChild( document.createElement( 'a' ) );
 		a.href = window.URL.createObjectURL( blob );
-		a.download = 'code-snippet.html';
+		a.download = document.title;
 		a.click();
 
 	}
