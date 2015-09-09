@@ -74,7 +74,7 @@
 
 		var reader = new FileReader();
 		reader.onloadend = function() {
-console.log('call');
+
 			data = reader.result;
 			editor.setValue( data, -1 );
 			updateView();
@@ -100,7 +100,7 @@ console.log('call');
 		obj.xmlHttp = new XMLHttpRequest();
 		obj.xmlHttp.open( 'GET', fileName, true );
 		obj.xmlHttp.onreadystatechange = function() {
-
+console.log('call');
 			response = obj.xmlHttp.readyState === 4 ? obj.xmlHttp.responseText : '';
 			editor.setValue( response, -1 );
 			updateView();
