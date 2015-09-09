@@ -8,5 +8,5 @@ Heat & Temperature Read Me
 
 ## Random Walk
 
-[Random Walk - Web Page]( http://exploratoria.github.io/exhibits/heat/index.html#random-walk.md )  
-[Random Walk - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/random-walk.md )
+[Random Walk - Web Page]( http://exploratoria.github.io/exhibits/heat/random-walk/index.html )  
+[Random Walk - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/random-walk/ )
