@@ -4,7 +4,7 @@
 
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/heat/random-walk.html style='width: 100%; height: 500px'></iframe>
 
-A random walk is the name for the random movement of particles subject to Brownian motion. At each step of the motion a random vector is added to the line being traced.
+A random walk is the name for the random movement of particles subject to <a href="https://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a>. At each step of the motion a random vector is added to the line being traced.
 
 Things to try:
 
