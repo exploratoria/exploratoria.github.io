@@ -2,7 +2,7 @@
 # Random Walk
 </center>
 
-<iframe src=random-walk.html style='width: 100%; height: 500px'></iframe>
+<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#random-walk.html style='width: 100%; height: 500px'></iframe>
 
 Math test:
 
