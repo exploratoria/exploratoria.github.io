@@ -6,17 +6,17 @@
 
 A random walk is the name for the random movement of particles subject to <a href="https://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a>. At each step of the motion a random vector is added to the line being traced.
 
-## Things to Try
+### Things to Try
 
 * Click "Update View" several times to see different random paths. If the motion appears to have stopped, then zoom out to find where the end of the path has gone.
 
 * Try decreasing the "countBeforeNewStep" variable in the code to make the motion faster.
  
-## About the Code
+### About the Code
 
 Once a geometry is created in Three.js it cannot be altered. That is why all vertices of the line are created at once, and at each step all vertices but one are moved by the same random vector.
 
-## Mathematical Background
+### Mathematical Background
 
 Math test:
 
