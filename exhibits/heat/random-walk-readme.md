@@ -1,3 +1,3 @@
 Random Walk
 
-<math><mi>&gamma;</mi></math>
+<math><msqrt><mi>&gamma;</mi></msqrt></math>
