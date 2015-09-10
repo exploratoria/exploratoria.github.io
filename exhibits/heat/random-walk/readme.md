@@ -5,7 +5,7 @@
 # Random Walk
 </center>
 
-<span style='display: none'>_View as a web page to see the content of this iframe_</span>
+<span style='display: none'>*View as a web page to see the content of this iframe*</span>
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/heat/random-walk/random-walk.html style='width:100%; height:500px'></iframe>
 
 A random walk is the name for the movement of particles in <a href="https://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a>. At each step of the motion a random vector is added to the line being traced. Since the motion is completely random it can take any shape. The particle could stay right near its initial point the whole time or move away rapidly in any direction. These kinds of motion are possible but statistically unlikely, and the particle generally moves little by little out from the origin.
@@ -33,7 +33,8 @@ The end point of the line can be written as the vector sum
 </math></nobr>
 over the individual random steps of the path. The squared length of this vector is
 
-<div style="text-align: center">
+<span style='display: none'>*View as a web page to see the content of this iframe*</span>
+<iframe style="text-align: center">
 <math displaystyle="true"> 
 <mtable displaystyle="true" columnalign="left"><mtr><mtd>
 <mi mathvariant="bold">L</mi><mo>&middot;</mo>
@@ -66,7 +67,7 @@ over the individual random steps of the path. The squared length of this vector 
   <mo stretchy="false">&verbar;</mo>
   <mo>cos</mo><msub><mi>&gamma;</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
 </mtd></mtr></mtable>
-</math></div>
+</math></iframe>
 
 Since all directions are equally likely, the angle-dependent terms vanish in an average over angular variables
 
