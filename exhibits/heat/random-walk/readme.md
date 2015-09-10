@@ -34,7 +34,7 @@ The end point of the line can be written as the vector sum
 over the individual random steps of the path. The squared length of this vector is
 
 <span style='display: none'>*View as a web page to see the content of this iframe*</span>
-<iframe style="text-align: center" srcdoc='
+<iframe style='width: auto; height:auto' srcdoc='
 <math displaystyle="true"> 
 <mtable displaystyle="true" columnalign="left"><mtr><mtd>
 <mi mathvariant="bold">L</mi><mo>&middot;</mo>
