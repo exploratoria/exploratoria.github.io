@@ -3,6 +3,10 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+2015-09-10 ~ Theo
+
+* Cleaning up exploratoria/cookbook
+
 2015-09-08 ~ Theo
 
 * start deploying Read Me Reader index.html 
