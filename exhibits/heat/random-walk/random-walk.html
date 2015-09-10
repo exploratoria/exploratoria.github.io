@@ -19,6 +19,10 @@
 
 <script>
 
+	var step = .5;
+	var steps = 10000;
+	var current = 1;
+
 	var scene = new THREE.Scene();
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
@@ -32,9 +36,13 @@
 	camera.position.set( 2, 2, 2 ); 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-	var step = .5;
-	var steps = 10000;
-	var current = 1;
+	window.addEventListener( 'resize', function() {
+		
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
 
 	var material = new THREE.LineBasicMaterial({ color: 0x0077ff }); 
 	var geometry = new THREE.Geometry();
@@ -64,14 +72,6 @@
 
 	}
 
-	window.addEventListener( 'resize', function() {
-		
-		renderer.setSize( window.innerWidth, window.innerHeight );
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
-
-	} );
-
 	function render() {
 
 		requestAnimationFrame( render ); 
@@ -82,6 +82,7 @@
 
 		if ( count % countBeforeNewStep == 0 ) addStep();
 		count++;
+		
 	}
 
 	var countBeforeNewStep = 50;
