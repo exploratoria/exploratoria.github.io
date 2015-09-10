@@ -26,11 +26,11 @@ Once a geometry is added to a scene in Three.js it cannot be modified. That is w
 ### A Little Math
 
 The end point of the line can be written as the vector sum
-<nobr><math displaystyle="true">
+<iframe srcdoc='<nobr><math displaystyle="true">
 <mi mathvariant="bold">L</mi>
 <mo>=</mo><mo>&sum;</mo>
   <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
-</math></nobr>
+</math></nobr>'></iframe>
 over the individual random steps of the path. The squared length of this vector is
 
 <p style="text-align: center">
