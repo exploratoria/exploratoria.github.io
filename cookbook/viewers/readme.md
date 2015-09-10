@@ -9,5 +9,5 @@ Viewers Read Me
 
 Open and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files
 
-[View STL Light - Full Screen Demo]( http://exploratoria.github.io/cookbook/viewers/view-stl-light/r1/view-stl-light-r1.html)  
-[View STL Light  - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-light/ )  
+[View STL Files Read Me - Web Page]( http://exploratoria.github.io/cookbook/viewers/view-stl-files )  
+[View STL Files Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-files/ )  

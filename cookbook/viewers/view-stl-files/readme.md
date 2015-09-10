@@ -1,8 +1,18 @@
-[Exploratoria]( http://exploratoria.github.io ) &raquo; [Cookbook]( http://exploratoria.github.io/cookbook/ )
+[Exploratoria]( http://exploratoria.github.io ) &raquo; [Cookbook]( http://exploratoria.github.io/cookbook/ ) [Viewers]( http://exploratoria.github.io/cookbook/viewers/ )
 View STL Files Read Me
 ===
 
+<span style=display:none; >[You are now in GitHub source code view - click here to view Read Me file as a web page]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/index.html "View file as a web page." ) </span>
+<input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-files/'; />
+
+
+<iframe id=view src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html" width=100% height=500px ></iframe>  
+_Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html )
+
+
 Open and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files
 
-[View STL Files - Full Screen Demo]( http://exploratoria.github.io/cookbook/viewers/view-stl-light/r1/view-stl-light-r1.html)  
-[View STL Files  - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-light/ )  
+[View STL Files - Full Screen Demo - Build]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html)  
+
+
+[View STL Files  - Source Code - Build]( https://github.com/exploratoria/exploratoria.github.io/blob/master/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html )  
