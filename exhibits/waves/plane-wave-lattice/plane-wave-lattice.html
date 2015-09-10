@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Plane Wave</title>
 <style>
 
 	body { margin: 0px; overflow: hidden; }
@@ -16,22 +16,22 @@
 
 <script>
 
+	var balls = 20;
+	var size = .35;
+
+	var colors = [ 'rgb(0,127,255)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,255,255)',
+               'rgb(255,0,255)', 'rgb(255,0,127)', 'rgb(255,255,0)', 'rgb(0,255,127)' ]; 
+               
 	var scene = new THREE.Scene();
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setClearColor( 0x000000 );
 	document.body.appendChild( renderer.domElement ); 
 
-	scene.add( new THREE.AxisHelper( 2 ) );
-
 	var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); 
-	camera.up.set( 0, 0, 1 );
-	camera.position.set( 2, 2, 2 ); 
+	camera.up.set( 0, 1, 0 );
+	camera.position.set( 0, 0, 1.2 * balls ); 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
-
-// code goes here
-
-
 
 	window.addEventListener( 'resize', function() {
 		
@@ -41,14 +41,75 @@
 		
 	} );
 
+	var geometry = new THREE.Geometry();
+	var geometry0 = new THREE.Geometry();
+
+	function updateScene( color, lattice ) {
+		
+		  if ( lattice ) {
+
+    var range = balls/2;
+    for ( var i = -range ; i <= range ; i++ ) {
+      for ( var j = -range ; j <= range ; j++ ) {
+        if ( threeD ) {
+          for ( var k = -range ; k <= range ; k++ ) {
+            geometry.vertices.push( new THREE.Vector3( i, j, k ) );
+            geometry0.vertices.push( new THREE.Vector3( i, j, k ) );
+          }
+  } else {
+    if ( threeD ) {
+      for ( var m = 0 ; m < Math.pow( balls, 3 ) ; m++ ) {
+        i = balls * Math.random() - balls/2;
+        j = balls * Math.random() - balls/2;
+        k = balls * Math.random() - balls/2;
+        geometry.vertices.push( new THREE.Vector3( i, j, k ) );
+        geometry0.vertices.push( new THREE.Vector3( i, j, k ) );
+      }
+  var canvas = document.createElement('canvas');
+  canvas.width = 128;
+  canvas.height = 128;
+  var context = canvas.getContext('2d');
+  context.arc(64, 64, 64, 0, 2*Math.PI);
+  context.fillStyle = color;
+  context.fill();
+  var texture = new THREE.Texture(canvas);
+  texture.needsUpdate = true; // critical for using canvas as texture
+
+  var material = new THREE.PointCloudMaterial(
+                   { size: size, map: texture,
+                     transparent: true, alphaTest: .1 } );
+  scene.add( new THREE.PointCloud( geometry, material ) );
+		
+	}
+
+	function displacement( x, y, z, t ) {
+		
+		return new THREE.Vector3( Math.sin( x - t ), 0, 0);
+		
+	}
+
 	function render() {
 
 		requestAnimationFrame( render ); 
 		renderer.render( scene, camera );
 		controls.update();
-
+  
+  		for ( var i = 0 ; i < geometry.vertices.length ; i++ ) {
+  			
+			var v0 = geometry0.vertices[i];
+			var v = displacement( v0.x, v0.y, v0.z, t/5 );
+			geometry.vertices[i].set( v.x + v0.x, v.y + v0.y, v.z + v0.z );
+			
+		}
+		
+		geometry.verticesNeedUpdate = true;
+  		t++;
+  		
 	}
 
+	var index = Math.floor( colors.length * Math.random() );
+	updateScene( colors[index], true, true );
+	var t = 0;
 	render();
 
 </script>
