@@ -7,6 +7,22 @@ _Notes, discussions, agendas or whatever_
 
 * Cleaning up exploratoria/cookbook
 
+### View STL Files
+
+Open and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files
+
+[View STL Files Read Me - Web Page]( http://exploratoria.github.io/cookbook/viewers/view-stl-files )  
+[View STL Files Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-files/ )  
+
+
+### Models
+
+[Models Read Me - Web Page]( http://exploratoria.github.io/cookbook/models/index.html )  
+[Models Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/models/ )
+ 
+
+
+
 2015-09-08 ~ Theo
 
 * start deploying Read Me Reader index.html 
