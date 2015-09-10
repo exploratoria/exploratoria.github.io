@@ -6,13 +6,14 @@ View STL Files Read Me
 <input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-files/'; />
 
 
-<iframe id=view src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html" width=100% height=500px ></iframe>  
-_Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html )
+<iframe id=view src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html" width=100% height=500px ></iframe>  
+_Code Snippet Edit View - build revision_ / [Full Screen]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html )
 
+## Concept
+Open and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files in your browser. The STL file format is the most popular format used in 3D Printing
 
-Open and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files
+## Demos
 
 [View STL Files - Full Screen Demo - Build]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html)  
-
 
 [View STL Files  - Source Code - Build]( https://github.com/exploratoria/exploratoria.github.io/blob/master/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html )  
