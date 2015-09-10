@@ -6,7 +6,7 @@
 </center>
 
 <span style='display: none'>_View as a web page to see the content of this iframe_</span>
-<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/heat/random-walk/random-walk.html style='width: 100%; height: 500px'></iframe>
+<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/heat/random-walk/random-walk.html style=width:100%;height:500px></iframe>
 
 A random walk is the name for the movement of particles in <a href="https://en.wikipedia.org/wiki/Brownian_motion">Brownian motion</a>. At each step of the motion a random vector is added to the line being traced. Since the motion is completely random it can take any shape. The particle could stay right near its initial point the whole time or move away rapidly in any direction. These kinds of motion are possible but statistically unlikely, and the particle generally moves little by little out from the origin.
 
@@ -30,7 +30,7 @@ The end point of the line can be written as the vector sum
 <mi mathvariant="bold">L</mi>
 <mo>=</mo><mo>&sum;</mo>
   <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
-</math></nobr>'></iframe>
+</math></nobr>' style=border:none></iframe>
 over the individual random steps of the path. The squared length of this vector is
 
 <p style="text-align: center">
