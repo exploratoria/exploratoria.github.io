@@ -30,7 +30,7 @@ The end point of the line can be written as the vector sum
 <mi mathvariant="bold">L</mi>
 <mo>=</mo><mo>&sum;</mo>
   <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
-</math></nobr>' style='border: none; disilay: inline'></iframe>
+</math></nobr>'style='border: none; display: inline-block; width: auto; height: auto'></iframe>
 over the individual random steps of the path. The squared length of this vector is
 
 <p style="text-align: center">
