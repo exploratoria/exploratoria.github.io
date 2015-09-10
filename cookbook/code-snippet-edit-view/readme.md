@@ -5,9 +5,9 @@ Code Snippet Edit View Read Me
 <span style=display:none; >[View this Read Me file as a web page]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/ "View file as a web page." ) </span>
 <input type=button value='View this Read Me file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/'; />
 
-<span style=display:none>*View as a web page to see the content of this iframe*</span>
+<span style=display:none>_View as a web page to see the content of this iframe_</span>
 <iframe id=view src="http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html" width=100% height=500px ></iframe>  
-_Code Snippet Edit View - latest revision_ / [Full Screen]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html )
+Code Snippet Edit View - latest revision / [Full Screen]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html )
 
 ## Samples
 
