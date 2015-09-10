@@ -34,7 +34,7 @@ The end point of the line can be written as the vector sum
 over the individual random steps of the path. The squared length of this vector is
 
 <span style='display: none'>*View as a web page to see the content of this iframe*</span>
-<iframe style="text-align: center">
+<iframe style="text-align: center" srcdoc='
 <math displaystyle="true"> 
 <mtable displaystyle="true" columnalign="left"><mtr><mtd>
 <mi mathvariant="bold">L</mi><mo>&middot;</mo>
@@ -67,7 +67,7 @@ over the individual random steps of the path. The squared length of this vector 
   <mo stretchy="false">&verbar;</mo>
   <mo>cos</mo><msub><mi>&gamma;</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub>
 </mtd></mtr></mtable>
-</math></iframe>
+</math>'></iframe>
 
 Since all directions are equally likely, the angle-dependent terms vanish in an average over angular variables
 
