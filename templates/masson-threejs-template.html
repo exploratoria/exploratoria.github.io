@@ -16,6 +16,8 @@
 
 <script>
 
+	// initialize common variables
+
 	var scene = new THREE.Scene();
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
@@ -29,10 +31,6 @@
 	camera.position.set( 2, 2, 2 ); 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-// code goes here
-
-
-
 	window.addEventListener( 'resize', function() {
 		
 		renderer.setSize( window.innerWidth, window.innerHeight );
@@ -40,6 +38,8 @@
 		camera.updateProjectionMatrix();
 		
 	} );
+	
+	// initialize geometry and material
 
 	function render() {
 
@@ -48,7 +48,8 @@
 		controls.update();
 
 	}
-
+	
+	// initialize render
 	render();
 
 </script>
