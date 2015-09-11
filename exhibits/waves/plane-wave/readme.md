@@ -12,9 +12,9 @@ A <a href=https://en.wikipedia.org/wiki/Plane_wave>plane wave</a> is
 
 ### Things to Try
 
-* Click "lattice" to see the wave traveling through a random distribution of particles
+* Click "random" to see the wave traveling through a random distribution of particles
 
-* Change the code in the `displacement()` function to see the effect on the wave
+* Change the variable named "speed" in the `displacement()` function to alter the rate at which the wave moves
  
 ### About the Code
 
