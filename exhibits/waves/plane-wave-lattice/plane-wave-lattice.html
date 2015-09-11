@@ -75,7 +75,7 @@
 	canvas.height = 128;
 	var context = canvas.getContext( '2d' );
 	context.arc( 64, 64, 64, 0, 2 * Math.PI );
-	context.fillStyle = color;
+	context.fillStyle = colors[ index ];
 	context.fill();
 	var texture = new THREE.Texture( canvas );
 	texture.needsUpdate = true; // critical for using canvas as texture
