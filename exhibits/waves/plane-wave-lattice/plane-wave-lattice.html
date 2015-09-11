@@ -5,18 +5,24 @@
 <style>
 
 	body { margin: 0px; overflow: hidden; }
-  
+	#buttons { position: absolute; top: 1%; left: 2%; }
+	
 </style>
 </head>
 
 <body>
+
+	<div id=buttons>
+		<button onclick=updateScene(true)>lattice</button>
+		<button onclick=updateScene(false)>random</button>
+	</div>
 
 <script src=http://rawgit.com/mrdoob/three.js/r71/build/three.min.js></script>
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js></script>
 
 <script>
 
-	var balls = 20;
+	var balls = 19; // integer!
 	var size = .35;
 
 	var colors = [ 'rgb(0,127,255)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,255,255)',
@@ -44,7 +50,7 @@
 	var geometry = new THREE.Geometry();
 	var geometry0 = new THREE.Geometry();
 
-	for ( var m = 0 ; m < Math.pow( balls, 3 ) ; m++ ) {
+	for ( var m = 0 ; m < Math.pow( balls + 1, 3 ) ; m++ ) {
 		
 		geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
 		geometry0.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
@@ -77,6 +83,7 @@
 	context.arc( 64, 64, 64, 0, 2 * Math.PI );
 	context.fillStyle = colors[ index ];
 	context.fill();
+	
 	var texture = new THREE.Texture( canvas );
 	texture.needsUpdate = true; // critical for using canvas as texture
 
@@ -85,7 +92,7 @@
 
 	function updateScene( useLattice ) {
 		
-		for ( var m = 0 ; m < Math.pow( balls, 3 ) ; m++ ) {
+		for ( var m = 0 ; m < Math.pow( balls + 1, 3 ) ; m++ ) {
 
 			if ( useLattice ) {
 				
