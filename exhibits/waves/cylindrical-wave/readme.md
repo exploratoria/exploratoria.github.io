@@ -2,13 +2,13 @@
 [Waves & Resonance]( http://exploratoria.github.io/exhibits/waves/ ) &raquo;
 
 <center>
-# Plane Wave
+# Cylindrical Wave
 </center>
 
 <span style=display:none>_View as a web page to see the content of this iframe_</span>
-<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/plane-wave/plane-wave.html width=100% height=500px></iframe>
+<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/cylindrical-wave/cylindrical-wave.html width=100% height=500px></iframe>
 
-A <a href="https://en.wikipedia.org/wiki/Plane_wave">plane wave</a> is
+A <a href=http://scienceworld.wolfram.com/physics/CylindricalWave.html>cylindrical wave</a> is
 
 ### Things to Try
 
@@ -20,7 +20,7 @@ A <a href="https://en.wikipedia.org/wiki/Plane_wave">plane wave</a> is
 
 Since it is easier to modify a geometry in Three.js rather than recreate it, the `updateScene()` function moves the vertices of the geometry. Clicking "lattice" moves them to the orderly positions of the lattice array, while clicking "random" moves them to arbitrary positions. The variable named "balls" is one less than the number of particles along each edge of the geometry.
 
-<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/waves/plane-wave/index.html "View file as a web page." ) </span>
-<input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/plane-wave/'; />
+<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/waves/cylindrical-wave/index.html "View file as a web page." ) </span>
+<input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/cylindrical-wave/'; />
 
 ### A Little Math
