@@ -127,6 +127,7 @@
 			
 			var rho = Math.sqrt( x * x + y * y );
 			var phi = Math.atan2( y, x );
+			
 			return new THREE.Vector3( amplitude * Math.cos( phi ) * Math.sin( rho - t ) / Math.sqrt( rho ),
 				amplitude * Math.sin( phi ) * Math.sin( rho - t ) / Math.sqrt( rho ), 0 );
 				
