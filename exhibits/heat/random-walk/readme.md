@@ -20,7 +20,7 @@ A random walk is the name for the movement of particles in <a href="https://en.w
 
 Once a geometry is added to a scene in Three.js it cannot be modified. That is why all vertices of the line are created at once. At each step all vertices but one are moved by the same random vector.
 
-<span style=display:none; >[You are now in GitHub source code view - click here to view as a web page]( http://exploratoria.github.io/exhibits/heat/random-walk/index.html "View file as a web page." ) </span>
+<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/heat/random-walk/index.html "View file as a web page." ) </span>
 <input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/random-walk/'; />
 
 ### A Little Math
