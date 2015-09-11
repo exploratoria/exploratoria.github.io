@@ -89,16 +89,16 @@
 
 			if ( useLattice ) {
 				
-				geometry.vertices[m].set( lattice[m] );
-				geometry0.vertices[m].set( lattice[m] );
+				geometry.vertices[m].set( lattice[m].x, lattice[m].y, lattice[m].z );
+				geometry0.vertices[m].set( lattice[m].x, lattice[m].y, lattice[m].z );
 		
 			} else {
 
 				i = balls * Math.random() - balls / 2;
 				j = balls * Math.random() - balls / 2;
 				k = balls * Math.random() - balls / 2;
-				geometry.vertices[m].set( new THREE.Vector3( i, j, k ) );
-			        geometry0.vertices[m].set( new THREE.Vector3( i, j, k ) );
+				geometry.vertices[m].set( i, j, k );
+			        geometry0.vertices[m].set( i, j, k );
 			        
 			}
 			
