@@ -44,41 +44,66 @@
 	var geometry = new THREE.Geometry();
 	var geometry0 = new THREE.Geometry();
 
-	function updateScene( color, lattice ) {
+	for ( var m = 0 ; m < Math.pow( balls, 3 ) ; m++ ) {
 		
-		  if ( lattice ) {
+		geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
+		geometry0.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
 
-    var range = balls/2;
-    for ( var i = -range ; i <= range ; i++ ) {
-      for ( var j = -range ; j <= range ; j++ ) {
-        if ( threeD ) {
-          for ( var k = -range ; k <= range ; k++ ) {
-            geometry.vertices.push( new THREE.Vector3( i, j, k ) );
-            geometry0.vertices.push( new THREE.Vector3( i, j, k ) );
-          }
-  } else {
-    if ( threeD ) {
-      for ( var m = 0 ; m < Math.pow( balls, 3 ) ; m++ ) {
-        i = balls * Math.random() - balls/2;
-        j = balls * Math.random() - balls/2;
-        k = balls * Math.random() - balls/2;
-        geometry.vertices.push( new THREE.Vector3( i, j, k ) );
-        geometry0.vertices.push( new THREE.Vector3( i, j, k ) );
+	}
+
+	var lattice = [];
+	var range = balls / 2;
+	
+	for ( var i = -range ; i <= range ; i++ ) {
+		
+		for ( var j = -range ; j <= range ; j++ ) {
+			
+			for ( var k = -range ; k <= range ; k++ ) {
+				
+				lattice.push( new THREE.Vector3( 0, 0, 0 ) );
+				
+			}
+			
+		}
+		
+	}	
+
+	var index = Math.floor( colors.length * Math.random() );
+
+	var canvas = document.createElement( 'canvas' );
+	canvas.width = 128;
+	canvas.height = 128;
+	var context = canvas.getContext( '2d' );
+	context.arc( 64, 64, 64, 0, 2 * Math.PI );
+	context.fillStyle = color;
+	context.fill();
+	var texture = new THREE.Texture( canvas );
+	texture.needsUpdate = true; // critical for using canvas as texture
+
+	var material = new THREE.PointCloudMaterial( { size: size, map: texture, transparent: true, alphaTest: .1 } );
+	scene.add( new THREE.PointCloud( geometry, material ) );
+
+	function updateScene( useLattice ) {
+		
+		for ( var m = 0 ; m < Math.pow( balls, 3 ) ; m++ ) {
+
+			if ( useLattice ) {
+				
+				geometry.vertices[m].set( lattice[m] );
+		
+			} else {
+
+				i = balls * Math.random() - balls / 2;
+				j = balls * Math.random() - balls / 2;
+				k = balls * Math.random() - balls / 2;
+				geometry.vertices.set( new THREE.Vector3( i, j, k ) );
+			        geometry0.vertices.set( new THREE.Vector3( i, j, k ) );
+			        
+			}
+			
+		}
+		
       }
-  var canvas = document.createElement('canvas');
-  canvas.width = 128;
-  canvas.height = 128;
-  var context = canvas.getContext('2d');
-  context.arc(64, 64, 64, 0, 2*Math.PI);
-  context.fillStyle = color;
-  context.fill();
-  var texture = new THREE.Texture(canvas);
-  texture.needsUpdate = true; // critical for using canvas as texture
-
-  var material = new THREE.PointCloudMaterial(
-                   { size: size, map: texture,
-                     transparent: true, alphaTest: .1 } );
-  scene.add( new THREE.PointCloud( geometry, material ) );
 		
 	}
 
@@ -107,8 +132,7 @@
   		
 	}
 
-	var index = Math.floor( colors.length * Math.random() );
-	updateScene( colors[index], true, true );
+	updateScene( true );
 	var t = 0;
 	render();
 
