@@ -17,4 +17,4 @@ This cookbook example opens and display [STL]( https://en.wikipedia.org/wiki/STL
 
 [View STL Files  - Source Code - Build]( https://github.com/exploratoria/exploratoria.github.io/blob/master/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html )  
 
-[View STL files - Working Example]( http://exploratoria.github.io/cookbook/models/index.html )
+[View STL files - Sample 3D models - Working Example]( http://exploratoria.github.io/cookbook/models/index.html )
