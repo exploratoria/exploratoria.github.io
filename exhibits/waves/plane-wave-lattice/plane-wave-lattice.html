@@ -90,14 +90,15 @@
 			if ( useLattice ) {
 				
 				geometry.vertices[m].set( lattice[m] );
+				geometry0.vertices[m].set( lattice[m] );
 		
 			} else {
 
 				i = balls * Math.random() - balls / 2;
 				j = balls * Math.random() - balls / 2;
 				k = balls * Math.random() - balls / 2;
-				geometry.vertices.set( new THREE.Vector3( i, j, k ) );
-			        geometry0.vertices.set( new THREE.Vector3( i, j, k ) );
+				geometry.vertices[m].set( new THREE.Vector3( i, j, k ) );
+			        geometry0.vertices[m].set( new THREE.Vector3( i, j, k ) );
 			        
 			}
 			
@@ -120,7 +121,7 @@
   		for ( var i = 0 ; i < geometry.vertices.length ; i++ ) {
   			
 			var v0 = geometry0.vertices[i];
-			var v = displacement( v0.x, v0.y, v0.z, t/5 );
+			var v = displacement( v0.x, v0.y, v0.z, t / 5 );
 			geometry.vertices[i].set( v.x + v0.x, v.y + v0.y, v.z + v0.z );
 			
 		}
