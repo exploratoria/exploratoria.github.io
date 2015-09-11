@@ -2,19 +2,23 @@
 [Waves & Resonance]( http://exploratoria.github.io/exhibits/waves/ ) &raquo;
 
 <center>
-# Plane Wave
+# Spherical Wave
 </center>
 
 <span style=display:none>_View as a web page to see the content of this iframe_</span>
-<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/plane-wave/plane-wave.html width=100% height=500px></iframe>
+<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/spherical-wave/spherical-wave.html width=100% height=500px></iframe>
 
-A <a href="https://en.wikipedia.org/wiki/Plane_wave">plane wave</a> is
+A <a href=http://scienceworld.wolfram.com/physics/SphericalWave.html>spherical wave</a> is
 
 ### Things to Try
 
-* Click "lattice" to see the wave traveling through a random distribution of particles
+* Rotate the graphic by holding down your mouse and dragging to see that the waves looks the same from all directions
 
-* Change the code in the `displacement()` function to see the effect on the wave
+* Click "random" to see the wave traveling through a random distribution of particles
+
+* Change the variable named "amplitude" in the `displacement()` function to change the size of the oscillations
+
+* Change the code in the `displacement()` function to distort the spherical nature of the wave
  
 ### About the Code
 
