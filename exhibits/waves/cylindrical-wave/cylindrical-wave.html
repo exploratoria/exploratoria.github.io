@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Plane Wave</title>
+<title>Cylindrical Wave</title>
 <style>
 
 	body { margin: 0px; overflow: hidden; }
@@ -117,7 +117,19 @@
 
 	function displacement( x, y, z, t ) {
 		
-		return new THREE.Vector3( Math.sin( x - t ), 0, 0);
+		  if ( x*x + y*y < 0.01 ) {
+		  	
+			return new THREE.Vector3( 0, 0, 0);
+			
+		} else {
+			
+			var rho = Math.sqrt( x*x + y*y );
+			var phi = Math.atan2( y, x );
+			return new THREE.Vector3( 1.5 * Math.cos( phi ) * Math.sin( rho - t ) / Math.sqrt( rho ),
+				1.5 * Math.sin( phi ) * Math.sin( rho - t ) / Math.sqrt( rho ), 0);
+				
+	}
+
 		
 	}
 
