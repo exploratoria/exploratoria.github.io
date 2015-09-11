@@ -12,9 +12,11 @@ A <a href=http://scienceworld.wolfram.com/physics/CylindricalWave.html>cylindric
 
 ### Things to Try
 
-* Click "lattice" to see the wave traveling through a random distribution of particles
+* Rotate the graphic by holding down your mouse and dragging to see that the waves has a distinct axis
 
-* Change the code in the `displacement()` function to see the effect on the wave
+* Click "random" to see the wave traveling through a random distribution of particles
+
+* Change the variable named "amplitude" in the `displacement()` function to alter the size of the oscillations
  
 ### About the Code
 
