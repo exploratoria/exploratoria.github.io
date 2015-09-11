@@ -16,7 +16,7 @@ A <a href=http://scienceworld.wolfram.com/physics/SphericalWave.html>spherical w
 
 * Click "random" to see the wave traveling through a random distribution of particles
 
-* Change the variable named "amplitude" in the `displacement()` function to change the size of the oscillations
+* Change the variable named "amplitude" in the `displacement()` function to alter the size of the oscillations
 
 * Change the code in the `displacement()` function to distort the spherical nature of the wave
  
