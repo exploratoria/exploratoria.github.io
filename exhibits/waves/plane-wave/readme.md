@@ -8,7 +8,7 @@
 <span style=display:none>_View as a web page to see the content of this iframe_</span>
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/plane-wave/plane-wave.html width=100% height=500px></iframe>
 
-A <a href="https://en.wikipedia.org/wiki/Plane_wave">plane wave</a> is
+A <a href=https://en.wikipedia.org/wiki/Plane_wave>plane wave</a> is
 
 ### Things to Try
 
