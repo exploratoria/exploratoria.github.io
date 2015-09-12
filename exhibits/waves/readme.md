@@ -8,15 +8,15 @@ Waves & Resonance Read Me
 
 ## Plane Wave
 
-[Random Walk - Web Page]( http://exploratoria.github.io/exhibits/waves/plane-wave/index.html )  
-[Random Walk - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/plane-wave/ )
+[Plane Wave - Web Page]( http://exploratoria.github.io/exhibits/waves/plane-wave/index.html )  
+[Plane Wave - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/plane-wave/ )
 
 ## Cylindrical Wave
 
-[Random Walk - Web Page]( http://exploratoria.github.io/exhibits/waves/cylindrical-wave/index.html )  
-[Random Walk - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/cylindrical-wave/ )
+[Cylindrical Wave - Web Page]( http://exploratoria.github.io/exhibits/waves/cylindrical-wave/index.html )  
+[Cylindrical Wave - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/cylindrical-wave/ )
 
 ## Spherical Wave
 
-[Random Walk - Web Page]( http://exploratoria.github.io/exhibits/waves/spherical-wave/index.html )  
-[Random Walk - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/spherical-wave/ )
+[Spherical Wave - Web Page]( http://exploratoria.github.io/exhibits/waves/spherical-wave/index.html )  
+[Spherical Wave - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/spherical-wave/ )
