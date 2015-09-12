@@ -24,3 +24,5 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 <input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/plane-wave/'; />
 
 ### A Little Math
+
+$-b \pm \sqrt{b^2 - 4ac} \over 2a$
