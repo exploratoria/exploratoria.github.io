@@ -25,4 +25,4 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 
 ### A Little Math
 
-`\( -b \pm \sqrt{b^2 - 4ac} \over 2a \)`
+\[ -b \pm \sqrt{b^2 - 4ac} \over 2a \]
