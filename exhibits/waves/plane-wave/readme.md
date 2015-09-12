@@ -14,11 +14,11 @@ A <a href=https://en.wikipedia.org/wiki/Plane_wave>plane wave</a> is
 
 * Click "random" to see the wave traveling through a random distribution of particles
 
-* Change the variable named "speed" in the `displacement()` function to alter the rate at which the wave moves
+* Change the variable named "speed" in the displacement() function to alter the rate at which the wave moves
  
 ### About the Code
 
-Since it is easier to modify a geometry in Three.js rather than recreate it, the `updateScene()` function moves the vertices of the geometry. Clicking "lattice" moves them to the orderly positions of the lattice array, while clicking "random" moves them to arbitrary positions. The variable named "balls" is one less than the number of particles along each edge of the geometry.
+Since it is easier to modify a geometry in Three.js rather than recreate it, the updateScene() function moves the vertices of the geometry. Clicking "lattice" moves them to the orderly positions of the lattice array, while clicking "random" moves them to arbitrary positions. The variable named "balls" is one less than the number of particles along each edge of the geometry.
 
 <span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/waves/plane-wave/index.html "View file as a web page." ) </span>
 <input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/waves/plane-wave/'; />
@@ -29,4 +29,4 @@ Plane waves are described by circular functions, sines and cosines, and so can b
 
 \\[ \sin ( kx \pm \omega t ) \hspace{.5in} \text{or} \hspace{.5in} \cos ( kx \pm \omega t ) \\]
 
-where <i>k</i> is the wave number and &omega; is the frequency of the wave.
+where <i>k</i> is the wave number and &omega; is the frequency of the wave. The first function is used in the code, with a wave number of one and a frequency equal to the variable named "speed".
