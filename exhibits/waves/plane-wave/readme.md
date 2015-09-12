@@ -27,4 +27,4 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 
 Plane waves are described by circular functions, sines and cosines, and so can be written
 
-\\[ sin(kx \pm \omega t)\\]
+\\[ \sin ( kx \pm \omega t ) \text{or} \cos ( kx \pm \omega t ) \\]
