@@ -26,4 +26,4 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 ### A Little Math
 <script src=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML></script>
 
-\[ -b \pm \sqrt{b^2 - 4ac} \over 2a \]
+`\[ -b \pm \sqrt{b^2 - 4ac} \over 2a \]'`
