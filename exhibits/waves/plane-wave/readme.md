@@ -25,6 +25,6 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 
 ### A Little Math
 
-<math><mi>x</mi><mo>=</mo><mn>2</mn></math>
+Plane waves are described by circular functions, sines and cosines, and so can be written
 
-\\[ -b \pm \sqrt{b^2 - 4ac} \over 2a \\]
+\\[ sin(kx \pm \omega t)\\]
