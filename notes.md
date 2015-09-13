@@ -9,7 +9,7 @@ Notes
 
 The coding style of an app should follow the style of the most-used library of the app.
 
-In the instance of a [Three.js]( http://threejs.org ) script, the style generally follows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob's-Code-Style%E2%84%A2 ).
+In the instance of a [Three.js]( http://threejs.org ) script, the style generally follows [Mr.doob Coding Style]( https://github.com/mrdoob/three.js/wiki/Mr.doob%27s-Code-Style%E2%84%A2 ).
 
 * Code generally follows the Three.js examples coding style more than the source code style
 	* Functions are functions not variables
@@ -17,6 +17,27 @@ In the instance of a [Three.js]( http://threejs.org ) script, the style generall
 	* Loads libraries from GitHub via a CDN
 	* No external js or css files other then standard Three.js files
 	* In other words, code for dummies
+
+
+### Browser Support
+
+Many of the scripts in Exploratoria are built using the Three.js library which in turn is based on WebGL.
+
+WebGL runs only on relatively recent computers and browsers
+
+See: <http://caniuse.com/#feat=webgl> for current browser support.
+
+Given the dependence on WebGL, it makes little sense for Exploratoria to support browsers that are not WebGL-enabled.
+
+Furthermore, the intent of Exploratoria is to entice youngsters and oldsters into the joys of programming.
+
+Writing scripts that contain work-arounds to support old browsers is one of the anti-joys of programming.
+
+Thus, we will write scripts for devices and OSs and browsers that support WebGL.
+
+We will leave out the cruft required by old browsers. We will code in a style that is as fresh and as modern as possible.
+
+
 
 ### Markdown
 
@@ -29,10 +50,12 @@ See [Markdown Basics]( https://help.github.com/articles/markdown-basics/ )
 
 The font used here is the the default 'monospace' font as determined by your browser. This is because it is the most common font used to write scripts.
 
+
 ### Versioning
 
 * Trying out [semantic versioning]( http://semver.org/ )
 * See [Version Manage]( http://exploratoria.github.io/sandbox/sandbox/version-manage/index.html ) project for more details
+
 
 ### Content Delivery Networks (CDN)
 
@@ -52,6 +75,7 @@ As in:
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js ></script>
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/libs/stats.min.js ></script>  
 ```
+
 
 ## Links of interest
 
@@ -104,3 +128,4 @@ Who do we like in terms of content, appearance and behavior?
 <https://code.org/>
 
 <https://scratch.mit.edu/>
+
