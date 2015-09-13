@@ -15,13 +15,13 @@ A cylindrical wave is a mathematical idealization because infinite lines do not 
 
 ### Things to Try
 
-* Rotate the graphic by holding down your mouse and dragging to see that the waves has a distinct axis
+* Rotate the graphic by holding down your mouse and dragging to see that the wave has a distinct axis
 
 * Click "random" to see the wave traveling through a random distribution of particles
 
 * Change the variable named "amplitude" in the displacement() function to alter the size of the oscillations
 
-* Change the minus sign before the time variable to make the wave move in the opposite direction
+* Change the minus sign before the time variable to plus to make the wave move in the opposite direction
  
 ### About the Code
 
@@ -32,8 +32,8 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 
 ### A Little Math
 
-Plane waves are described by circular functions, sines and cosines, and so can be written as the functions
+Writing the distance from the <i>z</i>-axis with the coordinates \\( \rho = \sqrt( x^2 + y^2 ) \\), cylindrical waves can be written as the functions
 
-\\[ \sin ( kx \pm \omega t ) \hspace{.5in} \text{or} \hspace{.5in} \cos ( kx \pm \omega t ) \\]
+\\[ \frac{\sin ( kx \pm \omega t )}{\rho} \hspace{.5in} \text{or} \hspace{.5in} \frac{\cos ( kx \pm \omega t )}{\rho} \\]
 
-where <i>k</i> is the wave number and &omega; is the frequency of the wave. The first function is used in the code, with a wave number of one and a frequency equal to the variable named "speed". The plus part of the plus-or-minus symbol indicates a wave traveling inwards and the minus part a wave traveling outwards.
+where <i>k</i> is the wave number and &omega; is the frequency of the wave. The first function is used in the code, with a wave number of one and a frequency of one. The plus part of the plus-or-minus symbol indicates a wave traveling inwards and the minus part a wave traveling outwards.
