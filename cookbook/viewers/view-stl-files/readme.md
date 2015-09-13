@@ -6,7 +6,7 @@ View STL Files Read Me
 <input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/viewers/view-stl-files/'; />
 
 <iframe id=view src="http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html" width=100% height=500px ></iframe>  
-_Code Snippet Edit View - build revision_ / [Full Screen]( http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html )
+_View STL Files - build revision_ / [Full Screen]( http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/cookbook/viewers/view-stl-files/view-stl-files-v-0-1-0.html )
 
 ## Concept
 This cookbook example opens and display [STL]( https://en.wikipedia.org/wiki/STL_(file_format) ) files in your browser. The STL file format is the most popular format used in 3D Printing
@@ -20,3 +20,5 @@ This cookbook example opens and display [STL]( https://en.wikipedia.org/wiki/STL
 ## Examples
 
 [View STL files - Sample 3D models - Working Example]( http://exploratoria.github.io/cookbook/models/index.html )
+
+[NASA 3D Objects Viewer Read Me]( http://exploratoria.github.io/sandbox/astronomy/nasa-3d-objects-viewer/index.html )
