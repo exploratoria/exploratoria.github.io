@@ -9,9 +9,10 @@
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/cylindrical-wave/cylindrical-wave.html width=100% height=500px></iframe>
 
 A <a href=http://scienceworld.wolfram.com/physics/CylindricalWave.html>cylindrical wave</a> is
-is an oscillatory motion of all particles along a fixed direction, in this case the <i>x</i> axis. Since all particles move back and forth in the same direction the wave consists of parallel planes. A plane wave is a solution to the <a href=https://en.wikipedia.org/wiki/Wave_equation#Scalar_wave_equation_in_one_space_dimension>wave equation</a> with one dimension of space.
+an oscillatory motion of all particles with respect to a fixed direction, in this case the <i>z</i>-axis. Since all particles move back and forth from the same line the wave consists of cynlinders. A cylindrical wave is a solution to the <a href=https://en.wikipedia.org/wiki/Wave_equation#Scalar_wave_equation_in_two_space_dimensions>wave equation</a> with two dimensions of space.
 
-A plane wave is a mathematical idealization because infinite parallel planes do not exist in reality.
+A cylindrical wave is a mathematical idealization because infinite lines do not exist in reality.
+
 ### Things to Try
 
 * Rotate the graphic by holding down your mouse and dragging to see that the waves has a distinct axis
