@@ -1,4 +1,4 @@
-[Markdown Read Me
+Markdown Read Me
 ===
 
 <!--
@@ -83,3 +83,4 @@ http://www.emoji-cheat-sheet.com/
 
 :large_blue_circle:
 
+<style>body {font: 12pt monospace; } </style>
