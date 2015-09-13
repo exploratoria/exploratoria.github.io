@@ -34,8 +34,8 @@ Since it is easier to modify a geometry in Three.js rather than recreate it, the
 
 ### A Little Math
 
-Writing the distance from the center point with the coordinates \\( r = \sqrt( x^2 + y^2 + z^2 ) \\), spherical waves can be written as the functions
+Writing the distance from the center point with the coordinates \\( r = \sqrt{ x^2 + y^2 + z^2 } \\), spherical waves can be written as the functions
 
-\\[ \frac{\sin ( kx \pm \omega t )}{r} \hspace{.5in} \text{or} \hspace{.5in} \frac{\cos ( kx \pm \omega t )}{r} \\]
+\\[ \frac{ \sin ( kx \pm \omega t ) }{ r } \hspace{.5in} \text{or} \hspace{.5in} \frac{ \cos ( kx \pm \omega t ) }{ r } \\]
 
 where <i>k</i> is the wave number and &omega; is the frequency of the wave. The first function is used in the code, with a wave number of one and a frequency of one. The plus part of the plus-or-minus symbol indicates a wave traveling inwards and the minus part a wave traveling outwards.
