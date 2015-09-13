@@ -3,6 +3,27 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+
+
+2015-09-12 ~ Theo
+
+## NASA STL 3D Objects Viewer
+
+[NASA STL 3D Objects Viewer Read Me - Web Page]( http://exploratoria.github.io/sandbox/astronomy/nasa-3d-objects-viewer/ )  
+[NASA STL 3D Objects Viewer Read Me - Source Code]( https://github.com/exploratoria/sandbox/tree/gh-pages/astronomy/nasa-3d-objects-viewer )  
+
+
+
+2015-09-11 ~ Theo
+
+HTML input tags with type = text | range | button etc are displayed by showdown.js but do not display on github.com
+
+## Code-Edit-View v1.1.0
+
+[Code-Edit-View Read Me - Web Page]( http://exploratoria.github.io/sandbox/lib/code-edit-view/index.html )  
+[Code-Edit-View Read Me - Source Code]( https://github.com/exploratoria/sandbox/tree/gh-pages/lib/code-edit-view/ )
+
+
 2015-09-10 ~ Theo
 
 * Cleaning up exploratoria/cookbook
