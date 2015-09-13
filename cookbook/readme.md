@@ -17,21 +17,17 @@ See also Christopher Alexander: A Pattern Language - https://en.wikipedia.org/wi
 
 -->
 
-
-### Code Snippet Edit View
-
-A simple file editor and viewer that is embeddable in HTML and Markdown pages
-
-[Code Snippet Edit View - Full Screen Demo]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/build/index.html )  
-
-[Code Snippet Edit View Read Me - Web Page]( http://exploratoria.github.io/cookbook/code-snippet-edit-view/index.html  )  
-[Code Snippet Edit View Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/code-snippet-edit-view/ )
-
 ### Models
 
 [Models Read Me - Web Page]( http://exploratoria.github.io/cookbook/models/index.html )  
 [Models Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/models/ )
   
+
+### Samples
+
+[Samples Read Me - Web Page]( http://exploratoria.github.io/cookbook/samples/index.html )  
+[Samples Read Me - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/samples/ )  
+
 
 ### Viewers
 

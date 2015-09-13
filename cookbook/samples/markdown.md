@@ -1,4 +1,14 @@
-[Markdown Reader]( ./markdown-reader.html )
+[Markdown Read Me
+===
+
+<!--
+
+This file could end up being a useful Markdown resource
+
+-->
+
+<https://help.github.com/articles/github-flavored-markdown/>  
+<https://help.github.com/articles/markdown-basics/>  
 
 Header Tags
 ===
@@ -24,15 +34,15 @@ Code
     // Code is just text indented a bit
     which(is_easy) to_remember();
 
-~~~
+```
 
 // Markdown extra adds un-indented code blocks too
 
 if (this_is_more_code == true && !indented) {
-    // tild wrapped code blocks, also not indented
+    // tilde wrapped code blocks, also not indented
 }
 
-~~~
+```
 
 ```
 GFM also supports fenced blocks
