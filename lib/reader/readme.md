@@ -10,3 +10,5 @@ Read Me Reader Read Me
 Loads a file named readme.md by default, converts Markdown to HTML and displays.
 
 Loads and displays any other Markdown file given the filename is included on location hash.
+
+An alternate version first loads MathJax configured to display LaTex.
