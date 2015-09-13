@@ -9,7 +9,7 @@
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/waves/cylindrical-wave/cylindrical-wave.html width=100% height=500px></iframe>
 
 A <a href=http://scienceworld.wolfram.com/physics/CylindricalWave.html>cylindrical wave</a> is
-an oscillatory motion of all particles with respect to an infinite line, in this case the <i>z</i>-axis. Since all particles move towards and away from the same line the wave consists of cylinders. A cylindrical wave is a solution to the <a href=https://en.wikipedia.org/wiki/Wave_equation#Scalar_wave_equation_in_two_space_dimensions>wave equation</a> with two dimensions of space.
+an oscillatory motion of all particles with respect to an infinite line, in this case the <i>z</i>-axis. Since all particles move towards and away from the same line, the wave consists of cylinders. A cylindrical wave is a solution to the <a href=https://en.wikipedia.org/wiki/Wave_equation#Scalar_wave_equation_in_two_space_dimensions>wave equation</a> with two dimensions of space.
 
 A cylindrical wave is a mathematical idealization because infinite lines do not exist in reality.
 
