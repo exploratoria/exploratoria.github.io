@@ -37,4 +37,4 @@ Plane waves are described by circular functions, sines and cosines, and so can b
 
 \\[ \sin ( kx \pm \omega t ) \hspace{.5in} \text{or} \hspace{.5in} \cos ( kx \pm \omega t ) \\]
 
-where <i>k</i> is the wave number and &omega; is the frequency of the wave. The first function is used in the code, with a wave number of one and a frequency equal to the variable named "speed". The plus part of the plus-or-minus symbol indicates a wave traveling outwards and the minus part a wave traveling inwards.
+where <i>k</i> is the wave number and &omega; is the frequency of the wave. The first function is used in the code, with a wave number of one and a frequency equal to the variable named "speed". The plus part of the plus-or-minus symbol indicates a wave traveling inwards and the minus part a wave traveling outwards.
