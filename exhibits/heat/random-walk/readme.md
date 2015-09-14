@@ -27,8 +27,9 @@ Once a geometry is added to a scene in Three.js it cannot be modified. That is w
 
 The end point of the line can be written as the vector sum \\( \textbf{L} = \sum\limits\_{i} \textbf{l}\_i \\) over the individual random steps of the path. The squared length of this vector is
 
-\\[ \textbf{L} \cdot \textbf{L} \\\\
-\textbf{L} \cdot \textbf{L} \\]
+\\[ \textbf{L} \cdot \textbf{L} = \[ \sum\_i \textbf{l}\_i \] \cdot \[  \] \\\\
+\phantom{ \textbf{L} \cdot \textbf{L} } =\\\\
+\textbf{L} \cdot \textbf{L} = \\]
 
 Since all directions are equally likely, the angle-dependent terms vanish in an average over angular variables
 
