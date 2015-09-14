@@ -30,7 +30,7 @@ The end point of the line can be written as the vector sum \\( \textbf{L} = \sum
 \\[ \begin{align}
 \textbf{L} \cdot \textbf{L} &= \left\[ \sum\_i \textbf{l}\_i \right\] \cdot \left\[ \sum\_j \textbf{l}\_i \right\] \\\\
 &= \sum\_i \textbf{l}\_i \cdot \textbf{l}\_i + \sum\_{ i \neq j } \textbf{l}\_i \cdot \textbf{l}\_j \\\\
-\textbf{L} \cdot \textbf{L} &= \sum\_i \textbf{l}\_i \cdot \textbf{l}\_i + \sum\_{ i \neq j } | \textbf{l}\_i | | \textbf{l}\_j \cos \gamma\_{ ij }
+\textbf{L} \cdot \textbf{L} &= \sum\_i \textbf{l}\_i \cdot \textbf{l}\_i + \sum\_{ i \neq j } | \textbf{l}\_i | | \textbf{l}\_j | \cos \gamma\_{ ij }
 \end{align} \\]
 
 Since all directions are equally likely, the angle-dependent terms vanish in an average over angular variables
