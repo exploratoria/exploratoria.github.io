@@ -35,4 +35,4 @@ Since all directions are equally likely, the angle-dependent terms vanish in an 
 
 For <i>N</i> steps of equal length <i>l</i>&nbsp;, the average path length is
 
-\\[ L = \sqrt{ \langle \textbf{L} \cdot \textbf{L} \rangle } = \sqrt{ N l^2 } = \sqrt{ N } \hspace{10pt} l \\]
+\\[ L = \sqrt{ \langle \textbf{L} \cdot \textbf{L} \rangle } = \sqrt{ N l^2 } = \sqrt{ N } l \\]
