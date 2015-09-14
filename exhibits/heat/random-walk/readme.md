@@ -25,7 +25,7 @@ Once a geometry is added to a scene in Three.js it cannot be modified. That is w
 
 ### A Little Math
 
-The end point of the line can be written as the vector sum
+The end point of the line can be written as the vector sum \\( \textbf{L} = \sum \textbf{l}_i \\)
 <nobr><math displaystyle="true">
 <mi mathvariant="bold">L</mi>
 <mo>=</mo><mo>&sum;</mo>
