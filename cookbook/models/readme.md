@@ -19,3 +19,7 @@ _Click any of the buttons below to to update the display with the indicated 3D m
 <button onclick=view.src="http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html#http://exploratoria.github.io/cookbook/models/Stardust_35.stl"; >Stardust 35.stl 708kb</button>  
 
 The above files are displayed using [View STL Files]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/ ) - a sample Exploratoria Cookbook file. 
+
+## Sources
+
+[Sources]( #sources.md )

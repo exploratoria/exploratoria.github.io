@@ -7,15 +7,14 @@ Welcome to the Exploratoria home page!
 
 Exploratoria is a GitHub Organization. Feel free to request an invitation to join. 
 
-_See also the [raw source code]( https://raw.githubusercontent.com/exploratoria/exploratoria.github.io/master/readme.md ) of this file for notes embedded as comments_
 
 ## Concept
 
 ### Mission  
 <!-- a statement of a rationale, applicable now as well as in the future -->
-* To supply free, open source scripts that help visualize scientific and mathematical concepts
+* To devise free, open source scripts that help visualize and further understanding of scientific and mathematical concepts
 
-* To supply scripts that help engineers and designers to create visualizations without having to be dedicated software programmers
+* To supply scripts that help engineers and designers to create experiments without having to be dedicated software programmers
 
 * To help youngsters and oldsters delve into new topics with a hands-on, active, 'I can play with this' approach
 
@@ -24,9 +23,10 @@ _See also the [raw source code]( https://raw.githubusercontent.com/exploratoria/
 ### Vision  
 <!--  a descriptive picture of a desired future state -->
 
-* To help create new types of visualizations
+* To help envision new types of visualizations
 
 * To help people understand, tackle and push the envelope with increasingly complicated tasks
+
 
 ## Exhibits
 
@@ -53,13 +53,14 @@ The intention is to provide scripts dealing with the following categories:
 * Sound & Hearing
 * Vision & Eye Logic
 * Water
-* Waves & Resonance
+* Waves & Resonance *
 * Weather
 
-
-<!-- this wording needs work -->
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
-This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. It attempts to achieve the best of what technology should do in the real world.
+This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. 
+It attempts to achieve the best of what technology should do in the real world.
+
+Asterisk indicates categories with exhibits 
 
 [Exhibits Read Me - web page view]( http://exploratoria.github.io/exhibits/ )  
 [Exhibits Read Me- source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/ )
@@ -72,18 +73,13 @@ Short coding samples - also called snippets - solutions to common tasks, 'presen
 [Cookbook - web page view]( http://exploratoria.github.io/cookbook/ )  
 [Cookbook - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/ )
 
+
 ## Templates
 
 These are the files we use to build this web site. You can use them too.
 
 [Templates - web page view]( http://exploratoria.github.io/templates/ )  
 [Templates - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/templates/ )
-
-## Current Status
-
-2015-09-05 ~ Still at a very early stage
-
-This home page will eventually become an attractive place to land on the site.
 
 
 <center>

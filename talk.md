@@ -4,6 +4,34 @@ Talk
 _Notes, discussions, agendas or whatever_
 
 
+2015-09-13 ~ Theo
+
+Breadcrumbs Pros & Cons  
+<http://marketingland.com/breadcrumb-links-good-user-experience-yes-97848>
+
+Tidied cookbook
+
+* samples has a readme
+* deleted unused links
+* updated markdown.md
+
+Need a format for standard Exhibit page
+
+Especially what should link to main app launcher look like and where should it be
+
+
+Cleaned up moon viewer
+
+cleaned up NASA STL
+
+[NASA STL 3D Objects Viewer Read Me - Web Page]( http://exploratoria.github.io/sandbox/astronomy/nasa-3d-objects-viewer/ ) 
+
+* Not dealing with files inside multiple sub-folders << fixed
+
+Star Spotter many updates
+
+* Add all of Paul's suggestions
+
 
 2015-09-12 ~ Theo
 
