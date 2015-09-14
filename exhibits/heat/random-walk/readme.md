@@ -36,7 +36,7 @@ The end point of the line can be written as the vector sum \\( \textbf{L} = \sum
 
 Since all directions are equally likely, the angle-dependent terms vanish in an average over angular variables
 
-\\[ \langle \textbf{L} \cdot \textbf{L} \rangle = \sum\_i \textbf{l}\_i \cdot \textbf{l}\_i \\]
+\\[ \langle \textbf{L} \cdot \textbf{L} \rangle = \sum\_i \langle \textbf{l}\_i \cdot \textbf{l}\_i \rangle \\]
 
 For <i>N</i> steps of equal length <i>l</i>&nbsp;, the average path length is
 
