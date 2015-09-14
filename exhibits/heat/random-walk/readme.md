@@ -25,13 +25,7 @@ Once a geometry is added to a scene in Three.js it cannot be modified. That is w
 
 ### A Little Math
 
-The end point of the line can be written as the vector sum \\( \textbf{L} = \sum \textbf{l}_i \\)
-<nobr><math displaystyle="true">
-<mi mathvariant="bold">L</mi>
-<mo>=</mo><mo>&sum;</mo>
-  <msub><mi mathvariant="bold">l</mi><mi>i</mi></msub>
-</math></nobr>
-over the individual random steps of the path. The squared length of this vector is
+The end point of the line can be written as the vector sum \\( \textbf{L} = \sum \textbf{l}_i \\) over the individual random steps of the path. The squared length of this vector is
 
 <p style="text-align: center">
 <math displaystyle="true"> 
