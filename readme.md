@@ -46,7 +46,7 @@ The intention is to provide scripts dealing with the following categories:
 * Language & Speech
 * Light
 * Materials
-* Mathematics & Patterns
+* Mathematics & Patterns *
 * Mechanics, Dynamics & Motion
 * Navigation & Mapping
 * Smell - Taste - Touch
