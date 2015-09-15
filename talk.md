@@ -3,6 +3,21 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+2015-09-14 ~ Theo
+
+* Minor fixes throughout exploratoria.github.io
+* Minor fixes sandbox
+
+* Moon Viewer v0.4.1
+	* Update links to rawgit
+	* add clearColor ( for Safari? )
+	* Add hamburger menu
+
+* Star Spotter v0.6.2
+	* Added hamburger menu
+
+* Read with iframe template
+	* Fixed issue with Firefox 
 
 2015-09-13 ~ Theo
 

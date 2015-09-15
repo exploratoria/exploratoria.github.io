@@ -41,7 +41,7 @@ The intention is to provide scripts dealing with the following categories:
 * Energy
 * Engineering & Structure
 * Geology
-* Heat & Temperature
+* Heat & Temperature *
 * Human Anatomy
 * Language & Speech
 * Light
@@ -60,7 +60,7 @@ Noticeably absent are categories pertaining to computers, the Internet, digital 
 This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. 
 It attempts to achieve the best of what technology should do in the real world.
 
-Asterisk indicates categories with exhibits 
+&#42; indicates categories with exhibits 
 
 [Exhibits Read Me - web page view]( http://exploratoria.github.io/exhibits/ )  
 [Exhibits Read Me- source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/ )
