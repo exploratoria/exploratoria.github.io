@@ -53,7 +53,7 @@ The intention is to provide scripts dealing with the following categories:
 * Sound & Hearing
 * Vision & Eye Logic
 * Water
-* Waves & Resonance
+* Waves & Resonance *
 * Weather
 
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
