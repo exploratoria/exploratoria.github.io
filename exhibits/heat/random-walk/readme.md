@@ -14,7 +14,7 @@ A random walk is the name for the movement of particles in <a href="https://en.w
 
 * Click "Update View" several times to see different random paths
 
-* Try decreasing the "countBeforeNewStep" variable in the code to make the motion faster
+* Decrease the "countBeforeNewStep" variable in the code to make the motion faster
  
 ### About the Code
 
