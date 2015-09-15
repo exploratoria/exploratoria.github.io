@@ -667,7 +667,7 @@
 
 	function addLights() {
 
-		renderer.shadowMapEnabled = true;
+		renderer.shadowMapEnabled = false;
 
 		var lightAmbient, lightDirectional, lightPoint;
 
