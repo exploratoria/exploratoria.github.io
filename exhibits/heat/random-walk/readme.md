@@ -5,6 +5,10 @@
 # Random Walk
 </center>
 
+<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]
+(http://exploratoria.github.io/exhibits/heat/random-walk/index.html 'View file as a web page') </span>
+<input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/random-walk/'; />
+
 <span style=display:none>_View as a web page to see the content of this iframe_</span>
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/heat/random-walk/random-walk.html width=100% height=500px></iframe>
 
@@ -19,9 +23,6 @@ A random walk is the name for the movement of particles in <a href="https://en.w
 ### About the Code
 
 Once a geometry is added to a scene in Three.js it cannot be modified. That is why all vertices of the line are created at once. At each step all vertices but one are moved by the same random vector.
-
-<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/heat/random-walk/index.html "View file as a web page." ) </span>
-<input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/random-walk/'; />
 
 ### A Little Math
 
