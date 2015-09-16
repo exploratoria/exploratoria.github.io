@@ -57,21 +57,16 @@
 			'opacity: 0.8; overflow: auto; padding: 0 10px; position: absolute; top: 20px; transition: left 1s; width: 260px; ';
 
 		menu.innerHTML = '<h2><a href="" >' + document.title + '</a> - ' +
-			'<a id=i href=http://exploratoria.github.io/sandbox/astronomy/star-spotter/ >&#x24D8;</a>' +
+			'<a id=i href=http://exploratoria.github.io/exhibits/astronomy/star-spotter/ >&#x24D8;</a>' +
 			'</h2>' +
 			'<div>Symbol <select id=selSprite ></select></div>' +
 			'<div>Time travel <input type=range id=inpTravel min=0 max=1 step= 0.01 value=0 onmousemove=drawStars(); /></div>' +
 			'<p><button onclick=setControlsFirstPerson(); >First Person Controls</button> ' +
 				'<button onclick=setControlsOrbit(); >Orbit Controls</button></p>' +
 			'<p><input type=checkbox id=chkFreeze > Freeze camera<br>' +
-//				'<input type=checkbox id=chkFrusta onclick=drawFrusta(); > Random frusta</p>' +
+			'<div id=msg1 >Loading the data for 119,614 stars...</div>' ;
 
-			'<div id=msg1 >Loading the data for 119,614 stars...</div>' +
-		'';
-
-//		var sprites = ['ball','circle','disc','snowflake1','snowflake2','snowflake3','snowflake4','snowflake5' ];
 		var sprites = ['ball','circle','disc' ];
-
 
 		for ( var i = 0; i < sprites.length; i++ ) {
 
@@ -82,7 +77,7 @@
 
 		selSprite.onchange = function() { 
 
-			texture = THREE.ImageUtils.loadTexture( './sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
+			texture = THREE.ImageUtils.loadTexture( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
 			drawStars();
 
 		};
@@ -175,47 +170,6 @@
 
 	}
 
-	function drawFrusta() {
-
-		scene.remove( frusta );
-
-		if ( chkFrusta.checked === true ) {
-
-			frusta = new THREE.Object3D();
-
-			for ( var i = 0; i < 15; i++ ) {
-
-				frusta.add ( drawFrustum( 2 * Math.PI * Math.random(), 0.2 * Math.PI * Math.random(),  Math.PI * Math.random(), 0.1 * Math.PI * Math.random(), 2, 250) )
-
-			}
-
-			scene.add( frusta );
-
-		}
-	}
-
-
-	function drawFrustum( theta, thetaDelta, phi, phiDelta, radiusNear, radiusFar ) {
-
-		geometry = new THREE.BoxGeometry( 10, 10, 10 );
-
-		geometry.vertices[ 0 ] = convertPosition( theta, phi, radiusFar );
-		geometry.vertices[ 1 ] = convertPosition( theta + thetaDelta, phi, radiusFar );
-		geometry.vertices[ 2 ] = convertPosition( theta, phi + phiDelta, radiusFar );
-		geometry.vertices[ 3 ] = convertPosition( theta + thetaDelta, phi + phiDelta, radiusFar );
-
-		geometry.vertices[ 4 ] = convertPosition( theta + thetaDelta, phi, radiusNear );
-		geometry.vertices[ 5 ] = convertPosition( theta, phi, radiusNear );
-		geometry.vertices[ 6 ] = convertPosition( theta + thetaDelta, phi + phiDelta, radiusNear );
-		geometry.vertices[ 7 ] = convertPosition( theta, phi + phiDelta, radiusNear );
-
-		material = new THREE.MeshNormalMaterial( { opacity: 0.5, side: 2, transparent: true } );
-		mesh = new THREE.Mesh( geometry, material );
-
-		return mesh;
-
-	}
-
 	function convertPosition( phi, theta, radius ) {
 
 		x = radius * Math.sin( theta ) * Math.cos( phi )
@@ -229,6 +183,7 @@
 	function v( x, y, z ){ return new THREE.Vector3( x, y, z ); };
 
 	function requestFile() {
+		
 		var start = 0;
 		var stop = 100000;
 		xmlHttp = new XMLHttpRequest();
@@ -334,14 +289,14 @@ max = test > max ? test : max;
 
 		var color = new THREE.Color();
 
-		if ( lum > 30000 )						color.set( 0x9db4ff );
+		if ( lum > 30000 )			color.set( 0x9db4ff );
 		else if ( lum > 25 && lum <= 30000 )	color.set( 0xbbccff );
-		else if ( lum > 5 && lum <= 25 )		color.set( 0xfbf8ff );
-		else if ( lum > 1.5 && lum <= 5 )		color.set( 0xffffed );
-		else if ( lum > 0.6 && lum <= 1.5 )		color.set( 0xffff00 );
+		else if ( lum > 5 && lum <= 25 )	color.set( 0xfbf8ff );
+		else if ( lum > 1.5 && lum <= 5 )	color.set( 0xffffed );
+		else if ( lum > 0.6 && lum <= 1.5 )	color.set( 0xffff00 );
 		else if ( lum > 0.08 && lum <= 0.6 )	color.set( 0xff9833 );
-		else if ( lum <= 0.08 )					color.set( 0xff0000 );
-		else									color.set( 0x000000 );
+		else if ( lum <= 0.08 )			color.set( 0xff0000 );
+		else					color.set( 0x000000 );
 
 		return color;
 
@@ -497,6 +452,7 @@ max = test > max ? test : max;
 		renderer.render( scene, camera );
 
 	}
+	
 </script>
 </body>
 </html>
