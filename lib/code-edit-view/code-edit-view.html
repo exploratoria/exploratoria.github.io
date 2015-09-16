@@ -46,7 +46,20 @@
 		window.addEventListener( 'hashchange', hashChange, false );
 
 		editor = ace.edit( 'edit' );
-		editor.$blockScrolling = Infinity
+		editor.$blockScrolling = Infinity;
+		
+		// iOS8 workaround
+
+		if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
+
+			view.addEventListener( 'load', function ( event ) {
+
+				view.contentWindow.innerWidth -= 10;
+				view.contentWindow.innerHeight -= 2;
+
+			} );
+
+		}
 
 		hashChange();
 
