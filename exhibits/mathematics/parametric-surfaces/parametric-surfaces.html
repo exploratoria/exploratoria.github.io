@@ -34,44 +34,34 @@
 
 		addMaterials();
 
-		if ( window.self === window.top ) {
+		menu = document.body.appendChild( document.createElement( 'div' ) );
+		menu.style.cssText = ' margin: 0 20px; max-height: ' + ( window.innerHeight - 50 ) + 'px; max-width: 270px; overflow: auto; position: absolute; ';
+		menu.innerHTML = '<h2 ><a href="" >' + document.title + '</a> ' +
+			'<a href=https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/ >&#x24D8;</a></h2>' +
 
-			menu = document.body.appendChild( document.createElement( 'div' ) );
-			menu.style.cssText = ' margin: 0 20px; max-height: ' + ( window.innerHeight - 50 ) + 'px; max-width: 270px; overflow: auto; position: absolute; ';
-			menu.innerHTML = '<h2 ><a href="" >' + document.title + '</a> ' +
-				'<a href=https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/ >&#x24D8;</a></h2>' +
+			'<p>Select an equation' +
+			'<br><select id=selEquation ></select><p>' +
 
-				'<p>Select an equation' +
-				'<br><select id=selEquation ></select><p>' +
+			'<p>Select a material' +
+			'<br><select id=selMaterial ></select></p>' +
 
-				'<p>Select a material' +
-				'<br><select id=selMaterial ></select></p>' +
+			'<p>Select a reflection' +
+			'<br><select id=selReflection ></select></p>' ;
 
-				'<p>Select a reflection' +
-				'<br><select id=selReflection ></select></p>' +
+		for ( var i = 0, node; i < equationsKeys.length ; i++ ) {
 
-			'';
-
-			for ( var i = 0, node; i < equationsKeys.length ; i++ ) {
-
-				node = document.createElement( 'option' );
-				selEquation.appendChild( node );
-				node.text = eqns.equations[ equationsKeys[ i ] ].title;
-
-			}
-
-			selEquation.selectedIndex = equationIndex;
-			selEquation.onchange = function() { drawEquation( selEquation.selectedIndex ); };
-
-			material = addSelMaterialOptions( selMaterial );
-
-			addSelReflectionOption( selReflection, selMaterial );
-
-		} else {
-
-			material = updateMaterial( 'texture1' );
+			node = document.createElement( 'option' );
+			selEquation.appendChild( node );
+			node.text = eqns.equations[ equationsKeys[ i ] ].title;
 
 		}
+
+		selEquation.selectedIndex = equationIndex;
+		selEquation.onchange = function() { drawEquation( selEquation.selectedIndex ); };
+
+		material = addSelMaterialOptions( selMaterial );
+
+		addSelReflectionOption( selReflection, selMaterial );
 
 		renderer = new THREE.WebGLRenderer( { alpha: 1, antialias: true, clearColor: 0xffffff }  );
 		renderer.setSize( window.innerWidth, window.innerHeight );
@@ -107,11 +97,7 @@
 
 		drawEquation( index );
 
-		if ( window.self === window.top ) {
-
-			selEquation.selectedIndex = index;
-
-		}
+		selEquation.selectedIndex = index;
 
 	}
 
