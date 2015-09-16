@@ -169,18 +169,6 @@
 
 	}
 
-	function convertPosition( phi, theta, radius ) {
-
-		x = radius * Math.sin( theta ) * Math.cos( phi )
-		z = radius * Math.sin( theta ) * Math.sin( phi )
-		y = radius * Math.cos( theta )
-
-		return v( x, y, z );
-
-	}
-
-	function v( x, y, z ){ return new THREE.Vector3( x, y, z ); };
-
 	function requestFile() {
 		
 		var start = 0;
@@ -350,7 +338,6 @@ max = test > max ? test : max;
 		return texture;
 
 	}
-
 
 	function onDocumentTouchStart( event ) {
 		
