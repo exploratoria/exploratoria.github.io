@@ -33,7 +33,7 @@ Exploratoria is a GitHub Organization. Feel free to request an invitation to joi
 The intention is to provide scripts dealing with the following categories:
 
 * Aerospace
-* Astronomy & Solar System
+* Astronomy & Solar System *
 * Biology
 * Chemistry
 * Color
