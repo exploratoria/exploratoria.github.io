@@ -1,6 +1,9 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo; [Exhibits]( http://exploratoria.github.io/exhibits/ ) &raquo;
 [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/ ) &raquo;
 
+<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html "View file as a web page." ) </span>
+<input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/'; />
+
 <center>
 # Parametric Surfaces
 </center>
@@ -19,7 +22,4 @@
 ### About the Code
 
 `abou here`
-
-<span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html "View file as a web page." ) </span>
-<input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/'; />
 
