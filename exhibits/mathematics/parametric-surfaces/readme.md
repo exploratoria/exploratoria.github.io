@@ -11,13 +11,13 @@
 <span style=display:none; >[You are now in GitHub source code view - Click here to view as a web page] (http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html 'View file as a web page') </span>
 <input type=button value='You are now in GitHub web page view - Click here to view as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/'; />
 
-`description here`
+[Parametric Surfaces - Full Screen](http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/parametric-surfaces.html)
 
 ### Things to Try
 
-* Click
+* Use the drop-down list to change the function visualized
 
-* Try dec
+* 
  
 ### About the Code
 
