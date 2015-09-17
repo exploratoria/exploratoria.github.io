@@ -15,10 +15,12 @@
 
 ### Things to Try
 
-* Click
+* Click on a star to see all of the data available for it
 
-* Try
+* Zoom into the center of the visualization to find our sun
+
+* What are the most common types of stars near us?
  
 ### About the Code
 
-`about`
+The color of stars is set according their luminosity becuase the physical color of a star is determined by its temperature. The values for colors are taken from the <a href='https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification'>Harvard spectral classification</a>.
