@@ -219,10 +219,14 @@
 			for ( var i = 0, j = 1; i < positions.length; i += 3 ) {
 
 				star = stars[ j++ ].split( ',' );
+				
+				var x = parseFloat( star[ 17 ] );
+				var y = parseFloat( star[ 18 ] );
+				var z = parseFloat( star[ 19 ] );
 
-				positions[ i ] = parseFloat( star[ 17 ] );
-				positions[ i + 1 ] = parseFloat( star[ 18 ] );
-				positions[ i + 2 ] = parseFloat( star[ 19 ] );
+				positions[ i ] = x;
+				positions[ i + 1 ] = y;
+				positions[ i + 2 ] = z;
 
 				color.set( colorFromLuminosity( star[ 33 ] ) );
 
@@ -232,7 +236,7 @@
 
 				if ( star[ 6 ] ) { 
 
-					drawPlacard( star[ 6 ], 0.01, '#0f0', x, y + 0.75, z);
+					drawPlacard( star[ 6 ], 0.01, '#0f7', x, y + 0.75, z);
 
 				}
 
