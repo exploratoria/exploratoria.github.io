@@ -191,7 +191,7 @@
 
 			drawStars();
 
-			msg1.innerHTML = 'Click on a star to view its data.<br>Data requests:' + count;
+			msg1.innerHTML = 'Click on a star to view its data.<br>Data requests:' + count++;
 
 		} else {
 
@@ -220,7 +220,6 @@
 
 			min = 10000000;
 			max = -100000000;
-			count = 0;
 
 			travel = 100000 * parseFloat( inpTravel.value );
 
@@ -250,7 +249,6 @@ max = test > max ? test : max;
 
 				if ( star[ 6 ] ) { 
 
-//					count++;
 					drawPlacard( star[ 6 ], 0.01, '#0f0', x, y + 0.75, z);
 
 				}
@@ -258,8 +256,6 @@ max = test > max ? test : max;
 // TBD: size, alpha etc
 
 			}
-
-//console.log( 'min', min, '\nmax', max, '\ncount', count );
 
 			geometry.addAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
 			geometry.addAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
