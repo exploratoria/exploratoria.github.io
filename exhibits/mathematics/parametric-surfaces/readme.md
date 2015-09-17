@@ -13,11 +13,17 @@
 
 [Parametric Surfaces - Full Screen](http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/parametric-surfaces.html)
 
+This exhibit loads a randomly selected parametric equation of a two-dimensional surface at start-up and whenever you click the title. It offers real-time 3D pan, rotate and zoom to make the visualization of mathematic equations faster, simpler and easier. It gives the user access to a full complement of materials, reflections, lights, shade and shadows.
+
+Many thanks to [Jürgen Meier]( http://www.3d-meier.de/ )!
+
 ### Things to Try
 
-* Use the drop-down list to change the function visualized
+* Use the drop-down list to change the equation visualized
 
-* 
+* Use the drop-down list to change the material of the surface
+
+* Use the drop-down list to choose an image reflected in the surface 
  
 ### About the Code
 
