@@ -32,4 +32,4 @@ Thank you David Nash!
  
 ### About the Code
 
-The color of stars is set according their luminosity becuase the physical color of a star is determined by its temperature. The values for colors are taken from the <a href='https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification'>Harvard spectral classification</a>.
+The colors of stars are set according their luminosity because the physical color of a star is determined by its temperature. The values for colors are taken from the <a href='https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification'>Harvard spectral classification</a>.
