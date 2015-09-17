@@ -65,7 +65,7 @@
 			'<p><input type=checkbox id=chkFreeze > Freeze camera<br>' +
 			'<div id=msg1 >Loading the data for 119,614 stars...</div>' ;
 
-		var sprites = ['ball','circle','disc' ];
+		var sprites = [ 'ball', 'circle', 'disc' ];
 
 		for ( var i = 0; i < sprites.length; i++ ) {
 
@@ -103,7 +103,7 @@
 		scene.add( axisHelper );
 
 // texture
-		texture = THREE.ImageUtils.loadTexture( './sprites/ball.png' );
+		texture = THREE.ImageUtils.loadTexture( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/ball.png' );
 
 // interaction
 		raycaster = new THREE.Raycaster();
@@ -112,6 +112,8 @@
 
 		renderer.domElement.addEventListener( 'mousedown', onDocumentMouseDown, false );
 		renderer.domElement.addEventListener( 'touchstart', onDocumentTouchStart, false ); // for mobile
+		
+		window.addEventListener( 'resize', onWindowResize, false );
 
 // get data / start spotting
 		requestFile();
@@ -417,6 +419,15 @@ max = test > max ? test : max;
 		hamburger.style.left = hamburger.style.left === '320px' ? 0 : '320px';
 		menu.style.left = menu.style.left === '20px' ? '-300px' : '20px';
 
+	}
+	
+	function onWindowResize() {
+		
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		
 	}
 
 	function animate() {
