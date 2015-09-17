@@ -177,7 +177,6 @@
 		var stop = 100000;
 		xmlHttp = new XMLHttpRequest();
 		xmlHttp.open( 'GET', fileName, true );
-//		xmlHttp.setRequestHeader('Range', 'bytes=' + start + '-' + stop );
 		xmlHttp.onreadystatechange = callback;
 		xmlHttp.send( null );
 
@@ -191,11 +190,11 @@
 
 			drawStars();
 
-			msg1.innerHTML = 'Click on a star to view its data.<br>Data requests:' + count++;
+			msg1.innerHTML = 'Click on a star to view its data<br><br>Data requests: ' + count++;
 
 		} else {
 
-			msg1.innerHTML = 'Loading the dats for 119,614 stars.<br>Data requests:' + count++ + ' of 13k to 25k probable requests on first load';
+			msg1.innerHTML = 'Loading the dats for 119,614 stars<br><br>Data requests: ' + count++;
 
 		}
 
