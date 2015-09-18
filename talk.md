@@ -3,6 +3,12 @@ Talk
 
 _Notes, discussions, agendas or whatever_
 
+2015-09-15 ~ theo
+
+[Category Home Page Template v0.1.1 Demo]( http://exploratoria.github.io/sandbox/sandbox/category-home-page-template/dev/index.html)  
+
+
+
 2015-09-14 ~ Theo
 
 * Minor fixes throughout exploratoria.github.io
