@@ -18,6 +18,8 @@ In the instance of a [Three.js]( http://threejs.org ) script, the style generall
 	* No external js or css files other then standard Three.js files
 	* In other words, code for dummies
 
+Absolute URLs are recommended for items that would otherwise have issues with loading into Code-Edit-View.
+
 
 ### Browser Support
 
