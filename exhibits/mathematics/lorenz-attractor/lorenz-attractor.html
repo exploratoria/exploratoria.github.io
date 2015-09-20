@@ -54,31 +54,44 @@
 		
 	} );
 	
-	var material = new THREE.LineBasicMaterial({ vertexColors: THREE.VertexColors }); 
-var geometry = new THREE.Geometry();
-for ( var i=0 ; i < steps ; i++ ) {
-  geometry.vertices.push( new THREE.Vector3( x, y, z ) );
-  var color = new THREE.Color();
-  geometry.colors[i] = color.setHSL( i/steps, 1, .5);
-}
-scene.add( new THREE.Line( geometry, material ) );
+	var geometry = new THREE.Geometry();
+	for ( var i=0 ; i < steps ; i++ ) {
+		
+		geometry.vertices.push( new THREE.Vector3( x, y, z ) );
+		var color = new THREE.Color();
+		geometry.colors[i] = color.setHSL( i/steps, 1, .5);
+		
+	}
+	
+	var material = new THREE.LineBasicMaterial( { vertexColors: THREE.VertexColors } ); 
+	scene.add( new THREE.Line( geometry, material ) );
 
-function addStep() {
-  var dx = sigma*(y - x) * dt;
-  var dy = ( x*(rho - z) - y ) * dt;
-  var dz = (x*y - beta*z) * dt;
-  x += dx;
-  y += dy;
-  z += dz;
-  for ( var i = current ; i < steps ; i++ ) {
-    geometry.vertices[i].set( x, y, z );
-  }
-  for ( var i = 0 ; i < current - shown ; i++ ) {
-    var v = geometry.vertices[current - shown];
-    geometry.vertices[i].set( v.x, v.y, v.z );
-  }
-  geometry.verticesNeedUpdate = true;
-  current++;
+	function addStep() {
+		
+		var dx = sigma * ( y - x ) * dt;
+		var dy = ( x * ( rho - z ) - y ) * dt;
+		var dz = ( x * y - beta * z ) * dt;
+  
+		x += dx;
+		y += dy;
+		z += dz;
+		
+		for ( var i = current ; i < steps ; i++ ) {
+			
+			geometry.vertices[i].set( x, y, z );
+			
+		}
+		
+		for ( var i = 0 ; i < current - shown ; i++ ) {
+			
+			var v = geometry.vertices[ current - shown ];
+			geometry.vertices[i].set( v.x, v.y, v.z );
+		
+		}
+		
+		geometry.verticesNeedUpdate = true;
+		current++;
+		
 	}
 
 	function render() {
