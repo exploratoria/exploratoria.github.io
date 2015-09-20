@@ -11,3 +11,7 @@ Mathematics & Patterns Read Me
 [Parametric Surfaces - Web Page]( http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html )  
 [Parametric Surfaces - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/ )
 
+## Lorenz Attractor
+
+[Lorenz Attractor - Web Page]( http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/index.html )  
+[Lorenz Attractor - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/lorenz-attractor/ )
