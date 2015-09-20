@@ -15,7 +15,7 @@
 <script>
 
 	var fileName ='http://exploratoria.github.io/exhibits/astronomy/star-spotter/data/hygdata_v3.csv';
-	var path = location.href.substr( 0, location.href.lastIndexOf( '/') + 1 );
+	var path;
 	var xmlHttp;
 	var count = 0;
 	var particleSystem;
@@ -35,6 +35,18 @@
 	animate();
 
 	function init() {
+
+		if ( window.self === window.top ) {
+
+			path = location.href.substr( 0, location.href.lastIndexOf( '/') + 1 );
+
+		} else {
+
+// assume in Code-Edit-View
+
+			path = '../../exhibits/astronomy/star-spotter/'
+
+		}
 
 		var css = document.body.appendChild( document.createElement('style') );
 		css.innerHTML = 'body { font: 12pt monospace; margin: 0; overflow: hidden; }' +
