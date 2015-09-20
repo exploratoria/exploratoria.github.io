@@ -8,7 +8,7 @@ Exhibits Read Me
 
 Exhibit Categories:
 
-* [Aerospace](exhibits/aerospace/index.html)
+* [Aerospace]( http://exploratoria.github.io/exhibits/aerospace/index.html )
 * [Astronomy & Solar System]( http://exploratoria.github.io/exhibits/astronomy/index.html )
 * [Biology]( http://exploratoria.github.io/exhibits/biology/index.html )
 * [Chemistry]( http://exploratoria.github.io/exhibits/chemistry/index.html )
