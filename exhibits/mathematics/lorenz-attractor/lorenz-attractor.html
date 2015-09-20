@@ -19,7 +19,20 @@
 
 <script>
 
-	// initialize common variables
+	var scale = 30;
+
+	var steps = 100000;
+	var current = 1;
+	var shown = 10000;
+
+	var beta = 8/3;
+	var rho = 28;
+	var sigma = 10;
+
+	var x = scale / 2 * Math.random();
+	var y = scale / 2 * Math.random();
+	var z = scale / 2 * Math.random();
+	var dt = .005;
 
 	var scene = new THREE.Scene();
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -27,11 +40,10 @@
 	renderer.setClearColor( 0x000000 );
 	document.body.appendChild( renderer.domElement ); 
 
-	scene.add( new THREE.AxisHelper( 2 ) );
-
 	var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); 
 	camera.up.set( 0, 0, 1 );
-	camera.position.set( 2, 2, 2 ); 
+	camera.position.set( 0, scale, scale );
+	scene.position.z = -scale;
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 	window.addEventListener( 'resize', function() {
@@ -42,7 +54,32 @@
 		
 	} );
 	
-	// initialize geometry and material
+	var material = new THREE.LineBasicMaterial({ vertexColors: THREE.VertexColors }); 
+var geometry = new THREE.Geometry();
+for ( var i=0 ; i < steps ; i++ ) {
+  geometry.vertices.push( new THREE.Vector3( x, y, z ) );
+  var color = new THREE.Color();
+  geometry.colors[i] = color.setHSL( i/steps, 1, .5);
+}
+scene.add( new THREE.Line( geometry, material ) );
+
+function addStep() {
+  var dx = sigma*(y - x) * dt;
+  var dy = ( x*(rho - z) - y ) * dt;
+  var dz = (x*y - beta*z) * dt;
+  x += dx;
+  y += dy;
+  z += dz;
+  for ( var i = current ; i < steps ; i++ ) {
+    geometry.vertices[i].set( x, y, z );
+  }
+  for ( var i = 0 ; i < current - shown ; i++ ) {
+    var v = geometry.vertices[current - shown];
+    geometry.vertices[i].set( v.x, v.y, v.z );
+  }
+  geometry.verticesNeedUpdate = true;
+  current++;
+	}
 
 	function render() {
 
@@ -50,9 +87,12 @@
 		renderer.render( scene, camera );
 		controls.update();
 
+		if ( current - shown < steps ) addStep();
+		count++;
+
 	}
 	
-	// initialize render
+	var count = 1;
 	render();
 
 </script>
