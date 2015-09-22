@@ -16,13 +16,16 @@
 
 ### Things to Try
 
-* 
+* Click the "Update View" button to see several instances of the attractor. The curve starts at a random point each time but the resulting figure looks the same. This is what is meant by an attractor.
 
-* 
+* Increase the variable named "multipler" to see the curve develop faster
 
-* 
+* Change the values of the parameters named "beta" (&beta;), "rho" (&rho;) and "sigma" (&sigma;) to alter the nature of the attractor. You may also need to change the value of "scale" in order to see the developing curve, or zoom the view out.
  
 ### About the Code
 
 
 ### A Little Math
+
+The Lorenz attractor is the solution of the coupled differential equations
+
