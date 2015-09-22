@@ -13,6 +13,7 @@
 
 [Lorenz Attractor - Full Screen](http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/lorenz-attractor.html)
 
+The 
 
 ### Things to Try
 
@@ -29,11 +30,11 @@
 
 The Lorenz attractor is the solution of the coupled differential equations
 
-\\[
+\\[ \begin{align}
 \frac{ dx }{ dt } &= \sigma ( y - x ) \\\\
 \frac{ dy }{ dt } &= x ( \rho - z ) - y \\\\
 \frac{ dz }{ dt } &= x y - \beta z
-\\]
+\end{align} \\]
 
 The fractions are derivates that describe the rate of change of coordinates along the curve. If you don't know what that means then not to worry! Use this trick: move the denominators of the fractions to the other sides of the equations
 
