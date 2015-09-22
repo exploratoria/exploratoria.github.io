@@ -31,6 +31,6 @@ The Lorenz attractor is the solution of the coupled differential equations
 
 \\[
 \frac{ dx }{ dt } = \sigma ( y - x ) \\\\
-\frac{ dy }{ dt } = \\\\
-\frac{ dz }{ dt } =
+\frac{ dy }{ dt } = x ( \rho - z ) -y \\\\
+\frac{ dz }{ dt } = xy - \beta z
 \\]
