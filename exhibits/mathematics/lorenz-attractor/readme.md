@@ -29,3 +29,7 @@
 
 The Lorenz attractor is the solution of the coupled differential equations
 
+\\[ \fract{ dx }{ dt } \\\\
+
+
+\\]
