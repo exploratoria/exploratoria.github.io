@@ -20,6 +20,7 @@
 <script>
 
 	var scale = 30;
+	var multiplier = 2; // integer
 
 	var steps = 100000;
 	var current = 1;
@@ -54,19 +55,20 @@
 		
 	} );
 	
-	var geometry = new THREE.Geometry();
-	for ( var i=0 ; i < steps ; i++ ) {
-		
-		geometry.vertices.push( new THREE.Vector3( x, y, z ) );
-		var color = new THREE.Color();
-		geometry.colors[i] = color.setHSL( i/steps, 1, .5);
-		
-	}
-	
-	var material = new THREE.LineBasicMaterial( { vertexColors: THREE.VertexColors } ); 
-	scene.add( new THREE.Line( geometry, material ) );
+	var visible = new THREE.Geometry();
 
-	function addStep() {
+	for ( var i=0 ; i < shown ; i++ ) {
+
+		visible.vertices.push( new THREE.Vector3( x, y, z ) );
+		visible.colors[i] = new THREE.Color( 0xff0000 );
+
+	}
+
+	var material = new THREE.LineBasicMaterial( { vertexColors: THREE.VertexColors } ); 
+	scene.add( new THREE.Line( visible, material ) );
+
+	var geometry = new THREE.Geometry();
+	for ( var i = 0 ; i < steps ; i++ ) {
 		
 		var dx = sigma * ( y - x ) * dt;
 		var dy = ( x * ( rho - z ) - y ) * dt;
@@ -75,21 +77,32 @@
 		x += dx;
 		y += dy;
 		z += dz;
+
+		geometry.vertices.push( new THREE.Vector3( x, y, z ) );
+		var color = new THREE.Color();
+		geometry.colors[i] = color.setHSL( i / steps, 1, .5);
 		
-		for ( var i = current ; i < steps ; i++ ) {
+	}
+	
+	function move() {
+
+		for ( var i = 0 ; i < shown ; i++ ) {
+
+			var j = current - i;
+			if ( ( j < steps ) && ( j >= 0 ) ) {
 			
-			geometry.vertices[i].set( x, y, z );
-			
+				var v = geometry.vertices[ j ];
+				visible.vertices[i].set( v.x, v.y, v.z );
+
+				var c = geometry.colors[ j ];
+				visible.colors[i].setRGB( c.r, c.g, c.b );
+
+			}
+
 		}
 		
-		for ( var i = 0 ; i < current - shown ; i++ ) {
-			
-			var v = geometry.vertices[ current - shown ];
-			geometry.vertices[i].set( v.x, v.y, v.z );
-		
-		}
-		
-		geometry.verticesNeedUpdate = true;
+		visible.verticesNeedUpdate = true;
+		visible.colorsNeedUpdate = true;
 		current++;
 		
 	}
@@ -102,12 +115,10 @@
 
 		scene.rotation.z += .001;
 
-		if ( current - shown < steps ) addStep();
-		count++;
+		for ( var k = 0 ; k < multiplier ; k++ ) move();
 
 	}
 	
-	var count = 1;
 	render();
 
 </script>
