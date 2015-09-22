@@ -30,7 +30,17 @@
 The Lorenz attractor is the solution of the coupled differential equations
 
 \\[
-\frac{ dx }{ dt } = \sigma ( y - x ) \\\\
-\frac{ dy }{ dt } = x ( \rho - z ) -y \\\\
-\frac{ dz }{ dt } = xy - \beta z
+\frac{ dx }{ dt } &= \sigma ( y - x ) \\\\
+\frac{ dy }{ dt } &= x ( \rho - z ) - y \\\\
+\frac{ dz }{ dt } &= x y - \beta z
 \\]
+
+The fractions are derivates that describe the rate of change of coordinates along the curve. If you don't know what that means then not to worry! Use this trick: move the denominators of the fractions to the other sides of the equations
+
+\\[
+dx &= \sigma ( y - x ) dt \\\\
+dy &= ( x ( \rho - z ) - y ) dt\\\\
+dz &= ( x y - \beta z ) dt
+\\]
+
+and think of the "d" as meaning difference or change in the coordinates. This is how the solution to the equation is found in the code.
