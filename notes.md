@@ -79,11 +79,37 @@ As in:
 ```
 
 
-## Links of interest
+## Links of Interest
 
-Who do we like in terms of content, appearance and behavior?
+Who and what do we like in terms of content, appearance and behavior?
 
-### Bricks and Mortar
+
+
+### JavaScript-based source code editors
+
+[Wikipedia: Comparison of JavaScript-based source code editors]( https://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors )
+
+[Ace]( https://ace.c9.io/ )
+
+	* [Projects using Ace]( https://ace.c9.io/#nav=production )
+
+[Orion]( https://orionhub.org/ )
+
+[CodeMirror]( http://codemirror.net/ )
+	* Supports [HTML mixed mode]( http://codemirror.net/mode/htmlmixed/ ) highlighting 
+	* [Real World Users]( http://codemirror.net/doc/realworld.html )
+
+[Google Trends Report]( https://www.google.com/trends/explore#q=%2Fm%2F0h3lvnt%2C%20orion%20open%20source%2C%20codemirror%2C%20codeenvy%2C%20codeanywhere&cmpt=q&tz=Etc%2FGMT%2B7 )
+
+See also these text editors
+
+[TinyMCE]( http://www.tinymce.com/ )
+
+[CK Editor]( http://ckeditor.com/ )
+
+
+
+### Bricks and Mortar Science
 
 [Wikipedia List of Science Museums]( https://en.wikipedia.org/wiki/List_of_science_museums )
 
@@ -91,7 +117,11 @@ Who do we like in terms of content, appearance and behavior?
 
 [List of citizen science projects]( https://en.wikipedia.org/wiki/List_of_citizen_science_projects)
 
-### Online
+
+
+
+
+### Online Science
 
 <http://www.msichicago.org/online-science/>
 
