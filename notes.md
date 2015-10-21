@@ -2,6 +2,10 @@
 Notes
 ===
 
+<span style=display:none; >[View as web page]( http://exploratoria.github.io/index.html#notes.md "View file as a web page." ) </span>
+<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/blob/master/notes.md'; />
+
+
 
 ## Coding Style & Colophon
 
@@ -91,13 +95,14 @@ Who and what do we like in terms of content, appearance and behavior?
 
 [Ace]( https://ace.c9.io/ )
 
-	* [Projects using Ace]( https://ace.c9.io/#nav=production )
+* [Projects using Ace]( https://ace.c9.io/#nav=production )
 
 [Orion]( https://orionhub.org/ )
 
 [CodeMirror]( http://codemirror.net/ )
-	* Supports [HTML mixed mode]( http://codemirror.net/mode/htmlmixed/ ) highlighting 
-	* [Real World Users]( http://codemirror.net/doc/realworld.html )
+
+* Supports [HTML mixed mode]( http://codemirror.net/mode/htmlmixed/ ) highlighting 
+* [Real World Users]( http://codemirror.net/doc/realworld.html )
 
 [Google Trends Report]( https://www.google.com/trends/explore#q=%2Fm%2F0h3lvnt%2C%20orion%20open%20source%2C%20codemirror%2C%20codeenvy%2C%20codeanywhere&cmpt=q&tz=Etc%2FGMT%2B7 )
 
@@ -107,6 +112,11 @@ See also these text editors
 
 [CK Editor]( http://ckeditor.com/ )
 
+### Online 3D Editors
+
+Mr.doob's [HTML Editor]( http://mrdoob.com/projects/htmleditor/ )
+
+Chris Strom's [ICE Code Editor]( http://gamingjs.com/ice/# )
 
 
 ### Bricks and Mortar Science
