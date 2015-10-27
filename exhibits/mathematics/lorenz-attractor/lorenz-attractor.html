@@ -17,35 +17,6 @@
 <script src=http://rawgit.com/mrdoob/three.js/r71/build/three.min.js></script>
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js></script>
 
-<script id=vertexShader type='x-shader/x-vertex'>
-
-	attribute float opacity;
-	varying vec3 vColor;
-	varying float vOpacity;
-
-	void main() {
-
-		vColor = color;
-		vOpacity = opacity;
-		gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1 );
-
-	}
-
-</script>
-
-<script id=fragmentShader type='x-shader/x-fragment'>
-
-	varying vec3 vColor;
-	varying float vOpacity;
-
-	void main() {
-
-		gl_FragColor = vec4( vColor, vOpacity );
-
-	}
-
-</script>
-
 <script>
 
 	var scale = 30;
@@ -85,44 +56,36 @@
 	} );
 	
 	var geometry = new THREE.Geometry();
-	var opacity = [];
-
-	for ( var i = 0 ; i < steps ; i++ ) {
-		
-		var dx = sigma * ( y - x ) * dt;
-		var dy = ( x * ( rho - z ) - y ) * dt;
-		var dz = ( x * y - beta * z ) * dt;
-  
-		x += dx;
-		y += dy;
-		z += dz;
-
-		geometry.vertices.push( new THREE.Vector3( x, y, z ) );
-		var color = new THREE.Color();
-		geometry.colors[i] = color.setHSL( i / steps, 1, .5);
-
-		opacity[i] = 0;
-		
-	}
-	
-	var material = new THREE.ShaderMaterial( { vertexColors: THREE.VertexColors, transparent: true,
-					attributes: { opacity: { type: 'f', value: opacity } } } );
-	material.vertexShader = document.getElementById( 'vertexShader' ).textContent;
-	material.fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-	material.depthTest = false; // critical for fully transparent rendering
-
-	scene.add( new THREE.Line( geometry, material ) );
+	var material = new THREE.LineBasicMaterial( { vertexColors: THREE.VertexColors } );
+	var line = new THREE.Line();
 
 	function move() {
 
-		if ( current < steps ) opacity[ current ] = 1; 
-		if ( current - shown >= 0 ) opacity[ current - shown ] = 0;
-
-		material.attributes.opacity.needsUpdate = true;
+		if ( current < steps ) {
 		
+			var dx = sigma * ( y - x ) * dt;
+			var dy = ( x * ( rho - z ) - y ) * dt;
+			var dz = ( x * y - beta * z ) * dt;
+  
+			x += dx;
+			y += dy;
+			z += dz;
+
+			geometry.vertices.push( new THREE.Vector3( x, y, z ) );
+			geometry.colors.push( new THREE.Color().setHSL( current / steps, 1, .5) );
+
+		}
+
+		if ( current > shown ) {
+
+			geometry.vertices.shift();
+			geometry.colors.shift();
+
+		}
+
 		if ( current < steps + shown ) current++;
 		else current = 0;
-		
+
 	}
 
 	function render() {
@@ -133,7 +96,16 @@
 
 		scene.rotation.z += .001;
 
+		scene.remove( line );
+
 		for ( var i = 0 ; i < multiplier ; i++ ) move();
+
+		geometry2 = geometry.clone();
+		geometry2.colors = geometry.colors; // clone doesn't copy colors!
+
+		line = new THREE.Line( geometry2, material );
+
+		scene.add( line );
 
 	}
 	
