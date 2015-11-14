@@ -18,7 +18,7 @@
 
 <div style='margin: .25in; position: absolute; color: gray'>
 Plane rotation: <input type=range id=planeRotation min=0 max=3.14 step=0.01 value=1.4 oninput='rotatePlane(planeRotation.value)'/><br/>
-<input type=button value='Derotate plane' onclick='if ( planeRotation.value > Math.PI / 2 ) planeRotation.value = Math.PI; else planeRotation.value = 0;'/>
+<input type=button value='Derotate plane' onclick='derotatePlane()'/>
 <input type=button value='Toggle axes' onclick='axes.visible = !axes.visible'/><br/>
 Scale X: <input type=range id=scaleX min=0 max=3 step=0.01 value=1 oninput='ellipse.scale.x = scaleX.value'/><br/>
 Scale Y: <input type=range id=scaleY min=0 max=3 step=0.01 value=1.7 oninput='ellipse.scale.y = scaleY.value'/><br/>
@@ -62,6 +62,13 @@ Scale Z: <input type=range id=scaleZ min=0 max=3 step=0.01 value=1 oninput='elli
 			plane.rotation.y = -angle;
 		
 		}
+		
+	}
+	
+	function derotatePlane() {
+		
+		if ( planeRotation.value > Math.PI / 2 ) planeRotation.value = Math.PI;
+		else planeRotation.value = 0;
 		
 	}
 
