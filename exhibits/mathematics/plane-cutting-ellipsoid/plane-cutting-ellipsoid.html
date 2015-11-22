@@ -62,6 +62,35 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='elli
 	ellipsoid.scale.y = scaleY.value;
 	ellipsoid.scale.z = scaleZ.value;
 	scene.add( ellipsoid );
+	
+	/* Ellipsoid parametrization:
+	
+		( scaleX * x )^2 + ( scaleY * y )^2 + ( scaleZ * z )^2 = 1
+		
+	   Normal to plane is z-axis rotated by eulerX and eulerY
+	   Plane parametrization:
+	   
+		normal.x * x + normal.y * y + normal.z * z = 0
+	
+	   Intersection is quadratic equation
+	   
+	   	a * y^2 + b * x * y + c * x^2 - 1 = 0
+	   
+	   formed by elimnating z-variable */
+	   
+	function findCut() {
+		
+		var normal = new THREE.Vector3( 0, 0, 1 );
+		normal.applyAxisAngle( new THREE.Vector3( 1, 0, 0 ), eulerX.value );
+		normal.applyAxisAngle( new THREE.Vector3( 0, 1, 0 ), eulerY.value );
+
+		var a = Math.pow( scaleY, 2 ) + Math.pow( scaleZ, 2 ) * Math.pow( normal.y, 2 ) / Math.pow( normal.z, 2 )
+		var b = 2 * Math.pow( scaleZ, 2 ) * normal.x * normal.y / Math.pow( normal.z, 2 )
+		var c = Math.pow( scaleX, 2 ) + Math.pow( scaleZ, 2 ) * Math.pow( normal.x, 2 ) / Math.pow( normal.z, 2 )
+		
+		
+		
+	}
 
 	function render() {
 		
@@ -69,9 +98,10 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='elli
 		renderer.render( scene, camera );
 		controls.update();
 		
+		findCut();
+		
 	}
 	
-	// initialize render
 	render();
 </script>
 
