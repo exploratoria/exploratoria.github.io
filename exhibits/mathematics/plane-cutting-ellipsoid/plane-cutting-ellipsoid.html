@@ -74,14 +74,14 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
 	
 	/* Ellipsoid parametrization:
 	
-		( scaleX * x )^2 + ( scaleY * y )^2 + ( scaleZ * z )^2 = 1
+		( x / scaleX )^2 + ( y / scaleY )^2 + ( z / scaleZ )^2 = 1
 		
 	   Normal to plane is z-axis rotated by eulerX and eulerY
 	   Plane parametrization:
 	   
 		n.x * x + n.y * y + n.z * z = 0
 	
-	   Intersection is quadratic equation
+	   Intersection is the quadratic equation
 	   
 	   	a * y^2 + 2 * b * x * y + c * x^2 - 1 = 0
 	   
@@ -93,9 +93,9 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
 		n.applyAxisAngle( new THREE.Vector3( 0, 1, 0 ), eulerY.value );
 		n.applyAxisAngle( new THREE.Vector3( 1, 0, 0 ), eulerX.value );
 
-		var a = Math.pow( scaleY.value, 2 ) + Math.pow( scaleZ.value, 2 ) * n.y * n.y / n.z / n.z;
-		var b = Math.pow( scaleZ.value, 2 ) * n.x * n.y / n.z / n.z;
-		var c = Math.pow( scaleX.value, 2 ) + Math.pow( scaleZ.value, 2 ) * n.x * n.x / n.z / n.z;
+		var a = Math.pow( scaleY.value, -2 ) + Math.pow( scaleZ.value, -2 ) * n.y * n.y / n.z / n.z;
+		var b = Math.pow( scaleZ.value, -2 ) * n.x * n.y / n.z / n.z;
+		var c = Math.pow( scaleX.value, -2 ) + Math.pow( scaleZ.value, -2 ) * n.x * n.x / n.z / n.z;
 		
 		var vertexPlus = [], vertexMinus = [];
 		
