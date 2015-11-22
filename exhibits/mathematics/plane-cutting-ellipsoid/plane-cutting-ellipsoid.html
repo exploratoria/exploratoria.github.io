@@ -17,13 +17,19 @@
 <script src=http://rawgit.com/mrdoob/three.js/r71/examples/js/controls/OrbitControls.js></script>
 
 <div style='margin: .25in; position: absolute; background-color: #fdd'>
-Plane Euler X: <input type=range id=eulerX min=0 max=3.14 step=0.01 value=2.4 oninput='plane.rotation.x = eulerX.value'/><br/>
-Plane Euler Y: <input type=range id=eulerY min=0 max=3.14 step=0.01 value=0.9 oninput='plane.rotation.y = eulerY.value'/><br/>
+Plane Euler X: <input type=range id=eulerX min=0 max=3.14 step=0.01 value=2.4
+			oninput='plane.rotation.x = eulerX.value; drawCut();'/><br/>
+Plane Euler Y: <input type=range id=eulerY min=0 max=3.14 step=0.01 value=0.9
+			oninput='plane.rotation.y = eulerY.value; drawCut();'/><br/>
+&nbsp; &nbsp; &nbsp;
 <input type=button value='Toggle ellipse' onclick='ellipsoid.visible = !ellipsoid.visible'/>
 <input type=button value='Toggle axes' onclick='axes.visible = !axes.visible'/><br/>
-Scale X: <input type=range id=scaleX min=1 max=3 step=0.01 value=1 oninput='ellipsoid.scale.x = scaleX.value'/><br/>
-Scale Y: <input type=range id=scaleY min=1 max=3 step=0.01 value=1.7 oninput='ellipsoid.scale.y = scaleY.value'/><br/>
-Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='ellipsoid.scale.z = scaleZ.value'/>
+Scale X: <input type=range id=scaleX min=1 max=3 step=0.01 value=1
+			oninput='ellipsoid.scale.x = scaleX.value; drawCut();'/><br/>
+Scale Y: <input type=range id=scaleY min=1 max=3 step=0.01 value=1.7
+			oninput='ellipsoid.scale.y = scaleY.value;  drawCut();'/><br/>
+Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
+			oninput='ellipsoid.scale.z = scaleZ.value; drawCut();'/>
 </div>
 
 <script>
@@ -63,6 +69,9 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='elli
 	ellipsoid.scale.z = scaleZ.value;
 	scene.add( ellipsoid );
 	
+	var cut;
+	drawCut();
+	
 	/* Ellipsoid parametrization:
 	
 		( scaleX * x )^2 + ( scaleY * y )^2 + ( scaleZ * z )^2 = 1
@@ -78,7 +87,7 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='elli
 	   
 	   formed by elimnating z-variable */
 	   
-	function findCut() {
+	function drawCut() {
 		
 		var n = new THREE.Vector3( 0, 0, 1 );
 		n.applyAxisAngle( new THREE.Vector3( 1, 0, 0 ), eulerX.value );
@@ -103,20 +112,21 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='elli
 
 		}
 		
-		var v = vertexPlus.concat( vertexMinus );
 		var geometry = new THREE.Geometry();
-		for ( var i = 0 ; i < v.length ; i++ ) {
-			
-			geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
-			geometry.vertices.push( v[i] );
-			geometry.vertices.push( v[i+1] );
-			
-			var l = geometry.vertices.length;
-			geometry.faces.push( geometry.vertices[l-3], geometry.vertices[l-2], geometry.vertices[l-1] );
+		var origin = [ new THREE.Vector3( 0, 0, 0 ) ];
+		geometry.vertices = origin.concat( vertexPlus.concat( vertexMinus ) );
+		
+		for ( var i = 1 ; i < geometry.vertices.length - 1 ; i++ ) {
+
+			geometry.faces.push( new THREE.Face3( 0, i, i+1 ) );
 			
 		}
+
+		geometry.faces.push( new THREE.Face3( 0, geometry.vertices.length - 1, 1 ) );
 		
-		return geometry;
+		scene.remove( cut );
+		var cut = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { color: 0xff0000, side: THREE.DoubleSide } ) );
+		scene.add( cut );
 		
 	}
 
@@ -125,10 +135,6 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1 oninput='elli
 		requestAnimationFrame( render ); 
 		renderer.render( scene, camera );
 		controls.update();
-		
-		scene.remove( cutting );
-		var cutting = new THREE.Mesh( findCut(), new THREE.MeshBasicMaterial( { color: 0xff0000, side: THREE.DoubleSide } ) );
-		scene.add( cutting );
 		
 	}
 	
