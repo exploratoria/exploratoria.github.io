@@ -39,6 +39,8 @@
 * Virtual Bucky Balls showing magnetic attractions in real time with and without gravity
 
 * View and edit a gallery of 3D parametric equations, marching cubes equations and more
+* 
+* Visualize library of functions with [Multiple Views R3]( http://jaanga.github.io/cookbook-threejs/functions/views-multiple/multiple-scenes/multiple-views-r3.html )
 
 * Visualize Lorenz attractors in 3D
 
