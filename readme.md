@@ -1,4 +1,4 @@
-exploratoria.github.io
+﻿exploratoria.github.io
 ===
 <span style=display:none; >[View as web page]( http://exploratoria.github.io/ "View file as a web page." ) </span>
 <input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/'; />
@@ -12,20 +12,23 @@ Exploratoria is a GitHub Organization. Feel free to request an invitation to joi
 
 ### Mission  
 <!-- a statement of a rationale, applicable now as well as in the future -->
-* To devise free, open source scripts that help visualize and further understanding of scientific and mathematical concepts
 
-* To supply scripts that help engineers and designers to create experiments without having to be dedicated software programmers
+* To devise [free, open source scripts]( https://en.wikipedia.org/wiki/Free_and_open-source_software )
+that help visualize and further understanding of scientific, technical, engineering and mathematical 
+([STEM]( https://en.wikipedia.org/wiki/Science,_Technology,_Engineering,_and_Mathematics ))concepts  
+* To supply simple yet powerful scripts that help engineers and designers to create experiments without having to be dedicated software '[full stack programmers]( https://www.quora.com/What-does-the-term-full-stack-programmer-mean )'  
+* To help youngsters and oldsters delve into new topics with a hands-on, active, 'I can play with this' approach  
+<!-- link to pedagogy page / code edit view / things to try -->
 
-* To help youngsters and oldsters delve into new topics with a hands-on, active, 'I can play with this' approach
-
-* To create apps that work not just on computers but also on mobile devices such as phones and tablets
+* To create apps that work not just on computers but also on mobile devices such as phones and tablets  
+<!-- Internet of things / hack the hardware / link back to physical exhibits / add AR to physical exhibits -->
 
 ### Vision  
 <!--  a descriptive picture of a desired future state -->
 
 * To help envision new types of visualizations
 
-* To help people understand, tackle and push the envelope with increasingly complicated tasks
+* To help people understand, tackle and push the envelope with increasingly complicated tasks based on the [scientific method]( https://en.wikipedia.org/wiki/Scientific_method )
 
 
 ## Exhibits
@@ -83,7 +86,7 @@ These are the files we use to build this web site. You can use them too.
 
 
 <center>
-# &#x2766;
+# <a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > ❦ </a>
 
 [ideas]( #ideas.md ) ~ [notes]( #notes.md ) ~ [talk]( #talk.md ) ~ [sandbox]( #./sandbox/readme.md )
 </center>
