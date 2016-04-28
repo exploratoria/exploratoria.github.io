@@ -11,6 +11,11 @@ Mathematics & Patterns Read Me
 [Parametric Surfaces - Web Page]( http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html )  
 [Parametric Surfaces - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/parametric-surfaces/ )
 
+## Plane Cutting an Ellipse
+
+[Plane Cutting an Ellipse - Web Page]( http://exploratoria.github.io/exhibits/mathematics/plane-cutting-ellipse/index.html )  
+[Plane Cutting an Ellipse - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/plane-cutting-ellipse/ )
+
 ## Lorenz Attractor
 
 [Lorenz Attractor - Web Page]( http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/index.html )  
