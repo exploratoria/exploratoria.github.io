@@ -2,7 +2,7 @@
 [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/ ) &raquo;
 
 <center>
-# Plane Cutting an Ellipsoid
+# Plane Cutting Ellipsoid
 </center>
 
 <span style=display:none>_View as a web page to see the content of this iframe_</span>
