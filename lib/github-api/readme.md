@@ -7,7 +7,7 @@ Github API Read Me
 <input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/'; />
 
 
-Github API tools
+A miscellany of Github API tools
 
 ## A Simple Sitemap Generator
 
