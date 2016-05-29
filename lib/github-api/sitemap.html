@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang=en>
+<head>
+<title></title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+</head>
+<body style='margin: 1in'>
+
+<p style='text-align: center'><b>Simple Utility to Produce Sitemaps</b></p><br/>
+
+<table style='width: 50%; margin: auto; vertical-align: top'><tr><td>
+Organization to scan:</td><td><input id=organization style='width: 2in'/>
+</td></tr><tr><td>
+Repository to scan:</td><td><input id=repository style='width: 2in'/>
+</td></tr><tr><td>
+Extension to locate:</td><td><input id=extension style='width: 1in'/>
+</td></tr><tr><td>
+<button onclick='scan()'>Scan</button>
+</td></tr></table>
+
+<script>
+
+function scan() {
+
+	var urlAPIContents = 'https://api.github.com/repos/' + organization.value
+                              + '/' + repository.value + '/git/trees/gh-pages?recursive=1';
+	var urlBase = 'http://' + organization.value + '.github.io/' + repository.value + '/';
+
+	var xhr = new XMLHttpRequest();
+	xhr.open( 'GET', urlAPIContents, true );
+	xhr.onload = callback;
+	xhr.send( null );
+
+	function callback() {
+
+		var response, file;
+
+		response = JSON.parse( xhr.response );
+		files = [];
+
+		for ( var i = 0; i < response.tree.length; i++ ) {
+
+			file = response.tree[ i ].path;
+
+			if ( file.indexOf( extension.value ) === -1 ) { continue; }
+
+			files.push( file );
+
+		}
+
+		var s = '';
+
+		for ( var i = 0; i < files.length ; i ++ ) {
+
+			s += urlBase + files[i] + '<br/>';
+
+		}
+
+		document.body.innerHTML = s;
+
+	}
+
+}
+
+</script>
+
+</body>
+</html>

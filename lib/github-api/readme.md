@@ -8,3 +8,9 @@ Github API Read Me
 
 
 Github API tools
+
+## A Simple Sitemap Generator
+
+[Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap.html )
+
+[Sitemap Generator - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/sitemap.html )
