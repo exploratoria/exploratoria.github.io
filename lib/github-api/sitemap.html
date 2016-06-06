@@ -1,31 +1,96 @@
 <!doctype html>
 <html lang=en>
 <head>
-<title></title>
 <meta charset=utf-8>
 <meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<title>Sitemap for Google Webmaster Tools</title>
+<style>
+
+	#input { width: 50%; margin: auto; vertical-align: top }
+	#output { width: 80%; height: 4in; margin: auto;
+			white-space: nowrap; overflow-y: scroll }
+
+</style>
 </head>
 <body style='margin: 1in'>
 
 <p style='text-align: center'><b>Simple Utility to Produce Sitemaps</b></p><br/>
 
-<table style='width: 50%; margin: auto; vertical-align: top'><tr><td>
-Organization to scan:</td><td><input id=organization style='width: 2in'/>
-</td></tr><tr><td>
-Repository to scan:</td><td><input id=repository style='width: 2in'/>
-</td></tr><tr><td>
-Extension to locate:</td><td><input id=extension style='width: 1in'/>
-</td></tr><tr><td>
-<button onclick='scan()'>Scan</button>
-</td></tr></table>
+<table id='input'>
+	<tr>
+		<td>
+			Organization to scan:
+		</td>
+		<td>
+			<input id='organization' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Repository to scan:
+		</td>
+		<td>
+			<input id='repository' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Directory (optional):
+		</td>
+		<td>
+			<input id='directory' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Extension to locate:
+		</td>
+		<td>
+			<input id='extension' style='width: 1in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Redirection (optional):
+		</td>
+		<td>
+			<input id='redirection' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button id='scanButton' onclick='scan()'>Initiate Scan</button>
+		</td>
+	</tr>
+</table>
+
+<br/><br/><div id='output'>Output will appear here</div>
 
 <script>
 
 function scan() {
 
+	scanButton.innerHTML = 'Running Scan';
+
 	var urlAPIContents = 'https://api.github.com/repos/' + organization.value
                               + '/' + repository.value + '/git/trees/gh-pages?recursive=1';
-	var urlBase = 'http://' + organization.value + '.github.io/' + repository.value + '/';
+
+	var urlBase;
+
+	if ( redirection.value.length === 0 ) {
+
+		urlBase = 'http://' + organization.value + '.github.io/' + repository.value + '/';
+
+	} else {
+
+		urlBase = 'http://' + redirection.value + '/';
+
+	}
 
 	var xhr = new XMLHttpRequest();
 	xhr.open( 'GET', urlAPIContents, true );
@@ -43,9 +108,19 @@ function scan() {
 
 			file = response.tree[ i ].path;
 
-			if ( file.indexOf( extension.value ) === -1 ) { continue; }
+			if ( file.endsWith( extension.value ) ) {
 
-			files.push( file );
+				if ( directory.value.length === 0 ) {
+
+					files.push( file );
+
+				} else if ( file.startsWith( directory.value ) ) {
+
+					files.push( file );
+
+				}
+
+			}
 
 		}
 
@@ -53,11 +128,21 @@ function scan() {
 
 		for ( var i = 0; i < files.length ; i ++ ) {
 
-			s += urlBase + files[i] + '<br/>';
+			s += urlBase + files[ i ] + '<br/>';
 
 		}
 
-		document.body.innerHTML = s;
+		scanButton.innerHTML = 'Scan Complete';
+
+		if ( s.length === 0 ) {
+
+			output.innerHTML = 'No files found';
+
+		} else {
+
+			output.innerHTML = s;
+
+		}
 
 	}
 
