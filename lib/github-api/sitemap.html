@@ -6,6 +6,7 @@
 <title>Sitemap for Google Webmaster Tools</title>
 <style>
 
+	body, input, button { font-family: monospace }
 	#input { width: 50%; margin: auto; vertical-align: top }
 	#output { width: 80%; height: 4in; margin: auto;
 			white-space: nowrap; overflow-y: scroll }
@@ -14,7 +15,9 @@
 </head>
 <body style='margin: 1in'>
 
-<p style='text-align: center'><b>Simple Utility to Produce Sitemaps</b></p><br/>
+<script src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
+
+<h2 style='text-align: center'><b>Simple Utility to Produce Sitemaps for Github Pages</b></h2><br>
 
 <table id='input'>
 	<tr>
@@ -64,12 +67,17 @@
 	</tr>
 	<tr>
 		<td>
-			<button id='scanButton' onclick='scan()'>Initiate Scan</button>
+			<button id='scanButton' style='width: 1.5in'
+				 onclick='scan()'>Initiate Scan</button>
+		</td>
+		<td>
+			<button id='saveButton' style='width: 1.5in'
+				 onclick='save()'>Save Output</button>
 		</td>
 	</tr>
 </table>
 
-<br/><br/><div id='output'>Output will appear here</div>
+<br><br><div id='output'>Output will appear here</div>
 
 <script>
 
@@ -92,63 +100,102 @@ function scan() {
 
 	}
 
-	var xhr = new XMLHttpRequest();
-	xhr.open( 'GET', urlAPIContents, true );
-	xhr.onload = callback;
-	xhr.send( null );
+	if ( directory.value.length > 0 && !directory.value.endsWith('/') ) {
 
-	function callback() {
+		directory.value += '/';
+
+	}
+
+	if ( !extension.value.startsWith('.') ) {
+
+		extension.value = '.' + extension.value;
+
+	}
+
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function() {
 
 		var response, file;
 
 		response = JSON.parse( xhr.response );
 		files = [];
 
-		for ( var i = 0; i < response.tree.length; i++ ) {
+		if ( response.tree ) {
 
-			file = response.tree[ i ].path;
+			for ( var i = 0; i < response.tree.length; i++ ) {
 
-			if ( file.endsWith( extension.value ) ) {
+				file = response.tree[ i ].path;
 
-				if ( directory.value.length === 0 ) {
+				if ( file.endsWith( extension.value ) ) {
 
-					files.push( file );
+					if ( directory.value.length === 0 ) {
 
-				} else if ( file.startsWith( directory.value ) ) {
+						files.push( file );
 
-					files.push( file );
+					} else if ( file.startsWith( directory.value ) ) {
+
+						files.push( file );
+
+					}
 
 				}
 
 			}
 
-		}
+			var s = '';
 
-		var s = '';
+			for ( var i = 0; i < files.length ; i ++ ) {
 
-		for ( var i = 0; i < files.length ; i ++ ) {
+				s += urlBase + files[ i ] + '<br>';
 
-			s += urlBase + files[ i ] + '<br/>';
+			}
 
-		}
+			scanButton.innerHTML = 'Scan Complete';
 
-		scanButton.innerHTML = 'Scan Complete';
+			if ( s.length === 0 ) {
 
-		if ( s.length === 0 ) {
+				output.innerHTML = 'No files found';
 
-			output.innerHTML = 'No files found';
+			} else {
+
+				output.innerHTML = s;
+
+			}
 
 		} else {
 
-			output.innerHTML = s;
+			scanButton.innerHTML = 'Initiate Scan';
+			output.innerHTML = 'Please correct the information entered';
 
 		}
 
-	}
+	};
+
+	xhr.open( 'GET', urlAPIContents, true );
+	xhr.send( null );
+
+}
+
+function save() {
+
+	var text = output.innerHTML.replace( /<br>/g, '\r\n' );
+
+	var blob = new Blob([ text ]);
+	saveAs( blob, 'File name here' )
 
 }
 
 </script>
+
+<br><div style='margin-left: 1in'>
+<h3><b>Usage Notes:</b></h3>
+
+<blockquote>The optional directory input restricts searching to a single directory in the repository. The directory can have an arbitrary number of levels.</blockquote>
+
+<blockquote>The optional redirection input replaces the default &lt;repository&gt;.github.io domain with any desired domain or subdomain.</blockquote>
+
+<p><a href='https://github.com/exploratoria/exploratoria.github.io/blob/master/lib/github-api/sitemap.html'>Source code</a> on Github.
+</div>
 
 </body>
 </html>
