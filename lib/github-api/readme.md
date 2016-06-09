@@ -1,6 +1,6 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo; [Lib]( http://exploratoria.github.io/lib/ ) &raquo;
 
-Github API Read Me
+GitHub API Read Me
 ====
 
 <span style=display:none; >[You are now in GitHub source code view - Click here to view Read Me file as a web page]( http://exploratoria.github.io/lib/github-api/index.html "View file as a web page." ) </span>
