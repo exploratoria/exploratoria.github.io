@@ -7,11 +7,11 @@ Github API Read Me
 <input type=button value='You are now in GitHub web page view - Click here to view Read Me file as source code' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/'; />
 
 
-A miscellany of Github API tools
+A miscellany of GitHub API tools
 
 ## A Simple Sitemap Generator
 
-A sitemap directs Google to the important files on a website, making it easier to index the website. This can improve the ranks of indexed pages in searches. The generator produces a flat text file of all files in a Github.io repository with a given extension.
+A sitemap directs a search engine to the important files on a website, making it easier to index the website. This can improve the ranks of indexed pages in searches. The generator produces a flat text file of all files in a github.io repository with a given extension.
 
 [Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap.html )  
 [Sitemap Generator - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/sitemap.html )
