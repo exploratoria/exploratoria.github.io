@@ -15,8 +15,6 @@
 </head>
 <body style='margin: 1in'>
 
-<script src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
-
 <h2 style='text-align: center'><b>Simple Utility to Produce Sitemaps for Github Pages</b></h2><br>
 
 <table id='input'>
@@ -181,9 +179,13 @@ function scan() {
 function save() {
 
 	var text = output.innerHTML.replace( /<br>/g, '\r\n' );
-
 	var blob = new Blob([ text ]);
-	saveAs( blob, 'File name here' )
+
+	var a = document.body.appendChild( document.createElement( 'a' ) );
+	a.href = window.URL.createObjectURL( blob );
+	a.download = 'sitemap.txt';
+	a.click();
+	delete a;
 
 }
 
@@ -195,6 +197,8 @@ function save() {
 <blockquote>The optional directory input restricts searching to a single directory in the repository. The directory can have an arbitrary number of levels.</blockquote>
 
 <blockquote>The optional redirection input replaces the default &lt;repository&gt;.github.io domain with any desired domain or subdomain.</blockquote>
+
+<blockquote>The function to save the file will only work on Safari when Apple supports the <a href="http://caniuse.com/#feat=download">download</a> attribute for anchors</blockquote>
 
 <p><a href='https://github.com/exploratoria/exploratoria.github.io/blob/master/lib/github-api/sitemap.html'>Source code</a> on Github.
 </div>
