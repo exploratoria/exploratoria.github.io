@@ -11,6 +11,7 @@ A miscellany of Github API tools
 
 ## A Simple Sitemap Generator
 
-[Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap.html )
+A sitemap directs Google to the important files on a website, making it easier to index the website. This can improve the ranks of indexed pages in searches. The generator produces a flat text file of all files in a Github.io repository with a given extension.
 
+[Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap.html )  
 [Sitemap Generator - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/sitemap.html )
