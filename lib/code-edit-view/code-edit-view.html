@@ -48,16 +48,13 @@
 		editor = ace.edit( 'edit' );
 		editor.$blockScrolling = Infinity;
 		
-// iOS8 workaround
+		// iOS iframe auto-resize workaround
 
 		if ( /(iPad|iPhone|iPod)/g.test( navigator.userAgent ) ) {
 
-			view.addEventListener( 'load', function ( event ) {
-
-				view.contentWindow.innerWidth -= 10;
-				view.contentWindow.innerHeight -= 2;
-
-			} );
+			view.style.width = getComputedStyle( view ).width;
+			view.style.height = getComputedStyle( view ).height;
+			view.setAttribute( 'scrolling', 'no' );
 
 		}
 
