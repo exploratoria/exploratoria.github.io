@@ -277,7 +277,7 @@
 	function drawPlacard ( text, scale, color, x, y, z) {
 
 		var texture = canvasText( text, color );
-		var spriteMaterial = new THREE.SpriteMaterial( { map: texture, useScreenCoordinates: false, opacity: 1 } );
+		var spriteMaterial = new THREE.SpriteMaterial( { map: texture, opacity: 1 } );
 		var sprite = new THREE.Sprite( spriteMaterial );
 		sprite.position.set( x, y, z ) ;
 		sprite.scale.set( scale * texture.image.width, scale * texture.image.height );
