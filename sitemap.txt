@@ -6,4 +6,3 @@ http://exploratoria.github.io/exploratoria.github.io/exhibits/mathematics/plane-
 http://exploratoria.github.io/exploratoria.github.io/exhibits/waves/cylindrical-wave/cylindrical-wave.html
 http://exploratoria.github.io/exploratoria.github.io/exhibits/waves/plane-wave/plane-wave.html
 http://exploratoria.github.io/exploratoria.github.io/exhibits/waves/spherical-wave/spherical-wave.html
-http://exploratoria.github.io/exploratoria.github.io/lib/github-api/sitemap.html
