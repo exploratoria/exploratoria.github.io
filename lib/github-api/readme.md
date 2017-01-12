@@ -15,3 +15,8 @@ A sitemap directs a search engine to the important files on a website, making it
 
 [Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap.html )  
 [Sitemap Generator - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/sitemap.html )
+
+For cases where the website files are not stored in default locations, use this generator:
+
+[Custom Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap-custom.html )  
+[Custom Sitemap Generator - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/sitemap-custom.html )

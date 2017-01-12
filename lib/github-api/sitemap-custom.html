@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<title>Sitemap for Google Webmaster Tools</title>
+<style>
+
+	body, input, button { font-family: monospace }
+	#input { width: 4.5in; margin: auto; vertical-align: top }
+	#output { width: 6in; height: 4in; margin: auto;
+			white-space: nowrap; overflow-y: scroll }
+
+</style>
+</head>
+<body style='margin: 1in'>
+
+<h2 style='text-align: center'><b>Utility to Produce Sitemaps for GitHub Websites</b></h2><br>
+
+<table id='input'>
+	<tr>
+		<td>
+			Organization to scan:
+		</td>
+		<td>
+			<input id='organization' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Repository to scan:
+		</td>
+		<td>
+			<input id='repository' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Branch to scan:
+		</td>
+		<td>
+			<input id='branch' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Directory to scan:
+		</td>
+		<td>
+			<input id='directory' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Extension to locate:
+		</td>
+		<td>
+			<input id='extension' style='width: 1in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Redirection:
+		</td>
+		<td>
+			<input id='redirection' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;
+		</td>
+		<td/>
+	</tr>
+	<tr>
+		<td>
+			<button id='scanButton' style='width: 1.5in'
+				 onclick='scan()'>Initiate Scan</button>
+		</td>
+		<td>
+			<button id='saveButton' style='width: 1.5in'
+				 onclick='save()'>Save Output</button>
+		</td>
+	</tr>
+</table>
+
+<br><br><div id='output'>Output will appear here</div>
+
+<script>
+
+function scan() {
+
+	scanButton.innerHTML = 'Running Scan';
+
+	var urlAPIContents = 'https://api.github.com/repos/' + organization.value
+                              + '/' + repository.value + '/git/trees/' + branch.value + '?recursive=1';
+
+	var urlBase = 'http://' + redirection.value + '/';
+
+	if ( directory.value.length > 0 && !directory.value.endsWith('/') ) {
+
+		directory.value += '/';
+
+	}
+
+	if ( !extension.value.startsWith('.') ) {
+
+		extension.value = '.' + extension.value;
+
+	}
+
+	var xhr = new XMLHttpRequest();
+	xhr.onload = function() {
+
+		var response, file;
+
+		response = JSON.parse( xhr.response );
+		files = [];
+
+		if ( response.tree ) {
+
+			for ( var i = 0; i < response.tree.length; i++ ) {
+
+				file = response.tree[ i ].path;
+
+				if ( file.endsWith( extension.value ) ) {
+
+					if ( directory.value.length === 0 ) {
+
+						files.push( file );
+
+					} else if ( file.startsWith( directory.value ) ) {
+
+						files.push( file.substr( directory.value.length ) );
+
+					}
+
+				}
+
+			}
+
+			var s = '';
+
+			for ( var i = 0; i < files.length ; i ++ ) {
+
+				s += urlBase + files[ i ] + '<br>';
+
+			}
+
+			scanButton.innerHTML = 'Scan Complete';
+
+			if ( s.length === 0 ) {
+
+				output.innerHTML = 'No files found';
+
+			} else {
+
+				output.innerHTML = s;
+
+			}
+
+		} else {
+
+			scanButton.innerHTML = 'Initiate Scan';
+			output.innerHTML = 'Please correct the information entered';
+
+		}
+
+	};
+
+	xhr.open( 'GET', urlAPIContents, true );
+	xhr.send( null );
+
+}
+
+function save() {
+
+	var text = output.innerHTML.replace( /<br>/g, '\r\n' );
+	var blob = new Blob([ text ]);
+
+	var a = document.body.appendChild( document.createElement( 'a' ) );
+	a.href = window.URL.createObjectURL( blob );
+	a.download = 'sitemap.txt';
+	a.click();
+	delete a;
+
+}
+
+</script>
+
+<br><div style='margin-left: 1in'>
+<h3><b>Usage Notes:</b></h3>
+
+<blockquote>The directory input restricts searching to a single directory in the repository. The directory can have an arbitrary number of levels.</blockquote>
+
+<blockquote>The redirection input specifies the desired domain or subdomain.</blockquote>
+
+<blockquote>The function to save the file will only work on Safari when Apple supports the <a href="http://caniuse.com/#feat=download">download</a> attribute for anchors</blockquote>
+
+<br><a href='https://github.com/exploratoria/exploratoria.github.io/blob/master/lib/github-api/sitemap-custom.html'>Source code</a> on Github.
+</div>
+
+</body>
+</html>
