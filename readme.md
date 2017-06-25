@@ -1,7 +1,7 @@
 ﻿exploratoria.github.io
 ===
-<span style=display:none; >[View as web page]( http://exploratoria.github.io/ "View file as a web page." ) </span>
-<input type=button value='View file as source code on GitHub' onclick=window.location.href='https://github.com/exploratoria/exploratoria.github.io/'; />
+<span style="display: none"> [View as web page]( http://exploratoria.github.io/ 'View file as a web page') </span>
+<input type=button value="View file as source code on GitHub" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/'" />
 
 Welcome to the Exploratoria home page!
 
