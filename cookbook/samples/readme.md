@@ -16,7 +16,7 @@ To supply sample files to use in examples and for testing.
 
 ## Samples
 
-<span style=display:none; >[For the following samples to display view this Read Me file as a web page]( http://exploratoria.github.io/sandbox/lib/code-edit-view/ "View file as a web page." ) </span>
+<span style="display: none"> [For the following samples to display view this Read Me file as a web page]( http://exploratoria.github.io/sandbox/lib/code-edit-view/ 'View file as a web page' ) </span>
 
 <button onclick="view.src='http://exploratoria.github.io/sandbox/lib/code-edit-view/dev/index.html#http://exploratoria.github.io/cookbook/samples/code-snippet.html'">code-snippet-threejs.html</button>  
 <button onclick="view.src='http://exploratoria.github.io/sandbox/lib/code-edit-view/dev/index.html#http://exploratoria.github.io/cookbook/samples/code-snippet-threejs.html'">code-snippet-threejs.html</button>  
