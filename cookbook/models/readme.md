@@ -4,7 +4,7 @@ Models Read Me
 
 <iframe id=view src="http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html" width=100% height=500px ></iframe>
 
-_View STL Files - build revision_ / [Full Screen]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html )_
+_View STL Files - build revision_ / [Full Screen]( http://exploratoria.github.io/cookbook/viewers/view-stl-files/build/index.html )
 
 ## Sample 3D Models
 
