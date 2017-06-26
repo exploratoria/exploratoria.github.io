@@ -4,6 +4,7 @@ Code-Edit-View Read Me
 ====
 
 <iframe src=code-edit-view.html width=100% height=500px></iframe>
+
 <span style="display:none">_View as a web page to see the content of this iframe_</span>
 
 <span style="display: none"> [You are now in GitHub source code view - Click here to view Read Me file as a web page]( http://exploratoria.github.io/lib/code-edit-view/index.html 'View file as a web page' ) </span>
