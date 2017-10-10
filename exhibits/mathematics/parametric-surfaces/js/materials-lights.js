@@ -3,7 +3,7 @@
 
 	var materialDefault = 36;
 
-	var reflectionCubes = [ 'No relections', 'Bridge2', 'Escher', 'MilkyWay', 'Park2', 'Park3Med', 'pisa', 'skybox', 'SwedishRoyalCastle' ];
+	var reflectionCubes = [ 'No reflections', 'Bridge2', 'Escher', 'MilkyWay', 'Park2', 'Park3Med', 'pisa', 'skybox', 'SwedishRoyalCastle' ];
 
 	var reflectionIndex = reflectionDefault = 7; // skybox
 
@@ -625,7 +625,7 @@
 
 		if ( reflectionIndex > 0 ) {
 
-			var r = 'http://mrdoob.github.io/three.js/examples/textures/cube/' + reflectionCubes[ reflectionIndex ] + '/';
+			var r = 'https://threejs.org/examples/textures/cube/' + reflectionCubes[ reflectionIndex ] + '/';
 
 			if ( reflectionIndex === 1 || reflectionIndex === 4 ) {
 
