@@ -35,4 +35,4 @@ Their intersection is the solution of the quadratic equation
 
 \\[ \left[ \frac{1}{\text{scaleX}^2} + \frac{n\_x^2}{n\_z^2 \text{scaleZ}^2} \right] x^2 + \frac{2 n\_x n\_y}{n_z^2 \text{scaleZ}^2} x y + \left[ \frac{1}{\text{scaleY}^2} + \frac{n\_y^2}{n\_z^2 \text{scaleZ}^2} \right] y^2 - 1 = 0 \\]
 
-formed by eliminating the z-variable.
+formed by eliminating the z-variable, and a quadratic equation in general represents a conic section.
