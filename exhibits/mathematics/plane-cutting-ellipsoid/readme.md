@@ -23,3 +23,16 @@ A plane cutting an ellipsoid always produces an ellipse!
 
 ### A Little Math
 
+The ellipsoid parametrization is
+	
+\\[ ( \frac{x}{scaleX} )^2 + ( \frac{y}{scaleY} )^2 + ( \frac{z}{scaleZ} )^2 = 1 \\]
+		
+The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane parametrization is
+	   
+\\[ n_x x + n_y y + n_z z = 0 \\]
+	
+Their intersection is the solution of the quadratic equation
+	   
+\\[ a y^2 + 2 b x y + c x^2 - 1 = 0 \\]
+	   
+formed by eliminating the z-variable.
