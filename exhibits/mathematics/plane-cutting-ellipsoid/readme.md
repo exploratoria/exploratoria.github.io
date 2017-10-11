@@ -29,5 +29,12 @@ The ellipsoid parametrization is
 
 The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane parametrization is
 
-	   
+\\[ n_x x + n_y y + n_z z = 0 \\]
+
+Their intersection is the solution of the quadratic equation
+
+\\[ \left[ \frac{1}{\text{scaleX}^2} + \frac{n_x^2}{n_z^2 \text{scaleZ}^2} \right] x^2 \\\\
+  + \frac{2 n_x n_y}{n_z^2 \text{scaleZ}^2} x y \\\\
+  + \left[ \frac{1}{\text{scaleY}^2} + \frac{n_y^2}{n_z^2 \text{scaleZ}^2} \right] y^2 - 1 = 0 \\]
+
 formed by eliminating the z-variable.
