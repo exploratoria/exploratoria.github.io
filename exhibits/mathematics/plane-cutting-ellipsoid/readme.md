@@ -29,7 +29,7 @@ The ellipsoid parametrization is
 
 The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane parametrization is
 
-\\[ n_x x + n_y y + n_z z = 0 \\]
+\\( n_x x + n_y y + n_z z = 0 \\)
 
 Their intersection is the solution of the quadratic equation
 
