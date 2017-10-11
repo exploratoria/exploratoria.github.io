@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=author content=''>
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+  
+</style>
+</head>
+
+<body>
+
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	// initialize common variables
+
+	var scene = new THREE.Scene();
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement ); 
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 ); 
+	camera.up.set( 1, 0, 0 );
+	camera.position.set( 0, 2, 2 ); 
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+	window.addEventListener( 'resize', function() {
+		
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		
+	} );
+
+	var twoPi = 2 * Math.PI;
+	var ratio = .75;
+
+	for ( var f = 0 ; f < twoPi ; f += twoPi / 60 ) {
+
+		var a = ratio * Math.cos(f);
+		var b = ratio * Math.sin(f);
+		var c = Math.sqrt( 1 - a**2 - b**2 );
+
+		var alpha = Math.sqrt( (1+c)/2 );
+		var beta = Math.sqrt( (1-c)/2 );
+
+		var geometry = new THREE.Geometry();
+
+		for ( var t = 0 ; t < twoPi ; t += .01 ) {
+
+			var theta = Math.atan2( b, -a ) - t;
+
+			var w = alpha * Math.cos(theta);
+			var x = alpha * Math.sin(theta);
+			var y = beta * Math.cos(t);
+			var z = beta * Math.sin(t);
+
+			var r = Math.acos(w) / Math.PI / Math.sqrt( 1 - w**2 );
+
+			geometry.vertices.push( new THREE.Vector3( r*x, r*y, r*z ) );
+
+		}
+
+		var material = new THREE.LineBasicMaterial( { color: new THREE.Color().setHSL( f / twoPi, 1, .5 ) } );
+
+		scene.add( new THREE.Line( geometry, material ) );
+
+	}
+
+	function render() {
+
+		requestAnimationFrame( render ); 
+		renderer.render( scene, camera );
+
+		scene.children.forEach( child => child.rotation.x += .01 );
+
+	}
+	
+	render();
+
+</script>
+
+</body>
+</html>

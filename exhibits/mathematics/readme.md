@@ -16,6 +16,11 @@ Mathematics & Patterns Read Me
 [Plane Cutting Ellipsoid - Web Page]( http://exploratoria.github.io/exhibits/mathematics/plane-cutting-ellipsoid/index.html )  
 [Plane Cutting Ellipsoid - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/plane-cutting-ellipsoid/ )
 
+## Hopf Fibration
+
+[Hopf Fibration - Web Page]( http://exploratoria.github.io/exhibits/mathematics/hopf-fibration/index.html )  
+[Hopf Fibration - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/hopf-fibration/ )
+
 ## Lorenz Attractor
 
 [Lorenz Attractor - Web Page]( http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/index.html )  
