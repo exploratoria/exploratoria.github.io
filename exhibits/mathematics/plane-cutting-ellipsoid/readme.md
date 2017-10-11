@@ -33,6 +33,6 @@ The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane pa
 
 Their intersection is the solution of the quadratic equation
 
-\\[ a y^2 + 2 b x y + c x^2 - 1 = 0 \\]
+\\[ \left[ \frac{1}{\text{scaleX}^2} + \frac{n_x^2}{n_z^2 \text{scaleZ}^2} \right] y^2 + 2 b x y + c x^2 - 1 = 0 \\]
 	   
 formed by eliminating the z-variable.
