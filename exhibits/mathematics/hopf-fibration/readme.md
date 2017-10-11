@@ -20,14 +20,14 @@ If a single point corresponds to a circle with the Hopf fibration, a collection 
 
 * Replace the variable "r" multiplying the coordinates of the vertices of the geometry with the combination "1/(1-w)" to see a standard stereogrphic projection
 
-* Replace the variable "r" multiplying the coordinates of the vertices of the geometry with other combinations
+* Replace the variable "r" multiplying the coordinates of the vertices of the geometry with "w" for a completely different shape
  
 ### About the Code
 
 Parametrizations are taken from a combination of these two sources:
 
-https://nilesjohnson.net/hopf-articles/Lyons_Elem-intro-Hopf-fibration.pdf  
-https://nilesjohnson.net/hopf-production.html
+[An Elementary Introduction to the Hopf Fibration](https://nilesjohnson.net/hopf-articles/Lyons_Elem-intro-Hopf-fibration.pdf)  
+[Parametrization of Fibers](https://nilesjohnson.net/hopf-production.html)
 
 The modified stereographic projection in the second source keeps the resulting graphic about the same size when input parameters change.
 
