@@ -25,7 +25,7 @@ A plane cutting an ellipsoid always produces an ellipse!
 
 The ellipsoid parametrization is
 	
-\\[ \left( \frac{x}\mathrm{scaleX} \right)^2 + \left( \frac{y}\mathrm{scaleY} \right)^2 + \left( \frac{z}\mathrm{scaleZ} \right)^2 = 1 \\]
+\\[ \left( \frac{x}{\text{scaleX}} \right)^2 + \left( \frac{y}{\text{scaleY}} \right)^2 + \left( \frac{z}{\text{scaleZ}} \right)^2 = 1 \\]
 
 The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane parametrization is
 
