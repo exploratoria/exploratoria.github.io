@@ -67,27 +67,12 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
 	ellipsoid.scale.y = scaleY.value;
 	ellipsoid.scale.z = scaleZ.value;
 	scene.add( ellipsoid );
+
+	var raycaster = new THREE.Raycaster();
 	
-	drawCuts();
+//	drawCuts();
 	
-	/*
-	
-	The ellipsoid parametrization is
-	
-		( x / scaleX )^2 + ( y / scaleY )^2 + ( z / scaleZ )^2 = 1
-		
-	The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane parametrization is
-	   
-		n.x * x + n.y * y + n.z * z = 0
-	
-	Their intersection is the solution of the quadratic equation
-	   
-	   	a * y^2 + 2 * b * x * y + c * x^2 - 1 = 0
-	   
-	formed by elimnating the z-variable.
-	   
-	*/
-	   
+
 	function drawCuts() {
 
 		drawCut( .01, 'cutUp' );
