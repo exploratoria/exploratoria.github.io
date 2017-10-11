@@ -24,14 +24,13 @@ If a single point corresponds to a circle with the Hopf fibration, a collection 
  
 ### About the Code
 
-Parametrizations taken from a combination of these two sources:
+Parametrizations are taken from a combination of these two sources:
 
-https://nilesjohnson.net/hopf-articles/Lyons_Elem-intro-Hopf-fibration.pdf
-
+https://nilesjohnson.net/hopf-articles/Lyons_Elem-intro-Hopf-fibration.pdf  
 https://nilesjohnson.net/hopf-production.html
 
 The modified stereographic projection in the second source keeps the resulting graphic about the same size when input parameters change.
 
 ### A Little Math
 
-See the second source for all the gritty details!
+See the second source for all the lovely details!
