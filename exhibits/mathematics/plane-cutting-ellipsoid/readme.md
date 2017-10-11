@@ -24,17 +24,15 @@ A plane cutting an ellipsoid always produces an ellipse!
 ### A Little Math
 
 The ellipsoid parametrization is
-	
+
 \\[ \left( \frac{x}{\text{scaleX}} \right)^2 + \left( \frac{y}{\text{scaleY}} \right)^2 + \left( \frac{z}{\text{scaleZ}} \right)^2 = 1 \\]
 
 The normal to the plane is the z-axis rotated by eulerX and eulerY. The plane parametrization is
 
-\\[ n _x x + n _y y + n_z z = 0 \\]
+\\[ n\_x x + n\_y y + n\_z z = 0 \\]
 
 Their intersection is the solution of the quadratic equation
 
-\\[ \left[ \frac{1}{\text{scaleX}^2} + \frac{n_x^2}{n_z^2 \text{scaleZ}^2} \right] x^2 \\\\
-  + \frac{2 n_x n_y}{n_z^2 \text{scaleZ}^2} x y \\\\
-  + \left[ \frac{1}{\text{scaleY}^2} + \frac{n_y^2}{n_z^2 \text{scaleZ}^2} \right] y^2 - 1 = 0 \\]
+\\[ \left[ \frac{1}{\text{scaleX}^2} + \frac{n\_x^2}{n\_z^2 \text{scaleZ}^2} \right] x^2 + \frac{2 n\_x n\_y}{n_z^2 \text{scaleZ}^2} x y + \left[ \frac{1}{\text{scaleY}^2} + \frac{n\_y^2}{n\_z^2 \text{scaleZ}^2} \right] y^2 - 1 = 0 \\]
 
 formed by eliminating the z-variable.
