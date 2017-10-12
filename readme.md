@@ -1,4 +1,4 @@
-﻿exploratoria.github.io
+exploratoria.github.io
 ===
 <span style="display: none"> [View as web page]( http://exploratoria.github.io/ 'View file as a web page' ) </span>
 <input type=button value="View file as source code on GitHub" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/'" />
@@ -38,7 +38,7 @@ that help visualize and further understanding of scientific, technical, engineer
 The intention is to provide scripts dealing with the following categories:
 
 * Aerospace
-* Astronomy & Solar System *
+* [Astronomy & Solar System]( http://exploratoria.github.io/exhibits/astronomy/index.html )
 * Biology
 * Chemistry
 * Color
@@ -46,29 +46,27 @@ The intention is to provide scripts dealing with the following categories:
 * Energy
 * Engineering & Structure
 * Geology
-* Heat & Temperature *
+* [Heat & Temperature]( http://exploratoria.github.io/exhibits/heat/index.html )
 * Human Anatomy
 * Language & Speech
 * Light
 * Materials
-* Mathematics & Patterns *
+* [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/index.html )
 * Mechanics, Dynamics & Motion
 * Navigation & Mapping
 * Smell - Taste - Touch
 * Sound & Hearing
 * Vision & Eye Logic
 * Water
-* Waves & Resonance *
+* [Waves & Resonance]( http://exploratoria.github.io/exhibits/waves/index.html )
 * Weather
 
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
 This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. 
 It attempts to achieve the best of what technology should do in the real world.
 
-&#42; indicates categories with exhibits 
-
 [Exhibits Read Me - web page view]( http://exploratoria.github.io/exhibits/ )  
-[Exhibits Read Me- source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/ )
+[Exhibits Read Me - source code view]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/ )
 
 
 ## Cookbook
