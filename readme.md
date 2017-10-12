@@ -20,7 +20,7 @@ that help visualize and further understanding of scientific, technical, engineer
 * To supply simple yet powerful scripts that help engineers and designers to create experiments without having to be dedicated software '[full stack programmers]( https://www.quora.com/What-does-the-term-full-stack-programmer-mean )'
 
 * To help youngsters and oldsters delve into new topics with a hands-on, active, 'I can play with this' approach  
-<!-- link to pedagogy page / code edit view / things to try -->
+<!-- link to pedagogy page / code edit view / things to try -->  
 
 * To create apps that work not just on computers but also on mobile devices such as phones and tablets  
 <!-- Internet of things / hack the hardware / link back to physical exhibits / add AR to physical exhibits -->
