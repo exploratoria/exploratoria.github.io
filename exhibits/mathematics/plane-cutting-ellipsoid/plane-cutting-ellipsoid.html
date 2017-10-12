@@ -18,17 +18,17 @@
 
 <div style='margin: .25in; position: absolute; background-color: #fdd'>
 Plane Euler X: <input type=range id=eulerX min=0 max=3.14 step=0.01 value=2.4
-			oninput='plane.rotation.x = eulerX.value; drawCuts();'/><br/>
+			oninput='plane.rotation.x = eulerX.value; update = true'/><br/>
 Plane Euler Y: <input type=range id=eulerY min=0 max=3.14 step=0.01 value=0.9
-			oninput='plane.rotation.y = eulerY.value; drawCuts();'/><br/><br/>
+			oninput='plane.rotation.y = eulerY.value; update = true'/><br/><br/>
 <input type=button value='Toggle ellipsoid' onclick='ellipsoid.visible = !ellipsoid.visible'/>
 <input type=button value='Toggle axes' onclick='axes.visible = !axes.visible'/><br/><br/>
 Scale X: <input type=range id=scaleX min=1 max=3 step=0.01 value=1
-			oninput='ellipsoid.scale.x = scaleX.value; drawCuts();'/><br/>
+			oninput='ellipsoid.scale.x = scaleX.value; update = true'/><br/>
 Scale Y: <input type=range id=scaleY min=1 max=3 step=0.01 value=1.7
-			oninput='ellipsoid.scale.y = scaleY.value;  drawCuts();'/><br/>
+			oninput='ellipsoid.scale.y = scaleY.value; update = true'/><br/>
 Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
-			oninput='ellipsoid.scale.z = scaleZ.value; drawCuts();'/>
+			oninput='ellipsoid.scale.z = scaleZ.value; update = true'/>
 </div>
 
 <script>
@@ -48,7 +48,8 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 	
 	var planeGeometry = new THREE.PlaneGeometry( 5, 5 );
-	var plane = new THREE.Mesh( planeGeometry, new THREE.MeshBasicMaterial( { color: 0x000000, side: THREE.DoubleSide } ) );
+	var plane = new THREE.Mesh( planeGeometry,
+			new THREE.MeshBasicMaterial( { color: 0x000000, side: THREE.DoubleSide } ) );
 	plane.rotation.x = eulerX.value;
 	plane.rotation.y = eulerY.value;
 	scene.add( plane );
@@ -61,86 +62,70 @@ Scale Z: <input type=range id=scaleZ min=1 max=3 step=0.01 value=1
 		
 	} );
 	
+	// material must be double sided for raycasting from the origin
 	var ellipsoidGeometry = new THREE.SphereGeometry( 1, 100, 50 );
-	var ellipsoid = new THREE.Mesh( ellipsoidGeometry, new THREE.MeshNormalMaterial() );
+	var ellipsoid = new THREE.Mesh( ellipsoidGeometry,
+			new THREE.MeshNormalMaterial( { side: THREE.DoubleSide } ) );
 	ellipsoid.scale.x = scaleX.value;
 	ellipsoid.scale.y = scaleY.value;
 	ellipsoid.scale.z = scaleZ.value;
+
 	scene.add( ellipsoid );
 
-	var raycaster = new THREE.Raycaster();
-	
-//	drawCuts();
-	
+	var raycaster = new THREE.Raycaster( );
 
-	function drawCuts() {
+	function drawIntersection() {
 
-		drawCut( .01, 'cutUp' );
-		drawCut( -.01, 'cutDown' );
+		var points = [], lastVisible = ellipsoid.visible;
+		ellipsoid.visible = true // need for raycaster
 
-	}
-
-	function drawCut( shift, label ) {
-		
 		var n = new THREE.Vector3( 0, 0, 1 );
 		n.applyAxisAngle( new THREE.Vector3( 0, 1, 0 ), eulerY.value );
 		n.applyAxisAngle( new THREE.Vector3( 1, 0, 0 ), eulerX.value );
 
-		var a = Math.pow( scaleY.value, -2 ) + Math.pow( scaleZ.value, -2 ) * n.y * n.y / n.z / n.z;
-		var b = Math.pow( scaleZ.value, -2 ) * n.x * n.y / n.z / n.z;
-		var c = Math.pow( scaleX.value, -2 ) + Math.pow( scaleZ.value, -2 ) * n.x * n.x / n.z / n.z;
-		
-		var vertexPlus = [], vertexMinus = [];
-		
-		var limit = Math.sqrt( a / ( a * c - b * b ) );
+		var t = new THREE.Vector3( 1, 0, 0 );
+		t.applyAxisAngle( new THREE.Vector3( 0, 1, 0 ), eulerY.value );
+		t.applyAxisAngle( new THREE.Vector3( 1, 0, 0 ), eulerX.value );
 
-		for ( var i = -limit + .005 ; i < limit ; i += .01 ) {
-			
-			j = ( -b * i + Math.sqrt( i * i * ( b * b - a * c) + a ) ) / a;
-			k = -( n.x * i + n.y * j ) / n.z;
-			vertexPlus.push( new THREE.Vector3( i, j, k ).addScaledVector( n, shift ) );
+		for ( var phi = 0 ; phi < 2*Math.PI ; phi += 2*Math.PI/50 ) {
 
-			j = ( -b * i - Math.sqrt( i * i * ( b * b - a * c) + a ) ) / a;
-			k = -( n.x * i + n.y * j ) / n.z;
-			vertexMinus.push( new THREE.Vector3( i, j, k ).addScaledVector( n, shift ) );
+			var v = t.clone().applyAxisAngle( n, phi );
+			raycaster.ray.direction.set( v.x, v.y, v.z );
 
-		}
-		
-		var geometry = new THREE.Geometry();
-		geometry.vertices.push( new THREE.Vector3( 0, 0, 0 ) );
-
-		for ( var i = 0 ; i < vertexPlus.length; i++ ) {
-
-			geometry.vertices.push( vertexPlus[i] );
+			var p = raycaster.intersectObject( ellipsoid );
+			if ( p.length > 0 ) {
+				var v = p[0].point;
+				points.push( new THREE.Vector3().set( v.x, v.y, v.z ) );
+			}
 
 		}
 
-		for ( var i = vertexMinus.length - 1; i >= 0; i-- ) {
+		points.push( points[0] );
 
-			geometry.vertices.push( vertexMinus[i] );
+		var curve = new THREE.CatmullRomCurve3( points );
+		var geometry = new THREE.TubeGeometry( curve, 100, .015 );
+		var material = new THREE.MeshBasicMaterial( {color: 'red' } );
 
-		}
-
-		for ( var i = 1 ; i < geometry.vertices.length - 1 ; i++ ) {
-
-			geometry.faces.push( new THREE.Face3( 0, i, i+1 ) );
-			
-		}
-
-		geometry.faces.push( new THREE.Face3( 0, geometry.vertices.length - 1, 1 ) );
-		
-		var mesh = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { color: 0xff0000, side: THREE.DoubleSide } ) );
-		mesh.name = label;
-	
-		scene.remove( scene.getObjectByName( label ) );
+		var mesh =  new THREE.Mesh( geometry, material ) ;
+		mesh.name = 'intersection';
+		scene.remove( scene.getObjectByName( 'intersection' ) );
 		scene.add( mesh );
-		
+
+		ellipsoid.visible = lastVisible;
+
 	}
+
+	var update = true;
 
 	function render() {
 		
 		requestAnimationFrame( render ); 
 		renderer.render( scene, camera );
+
+		if ( update ) {
+			drawIntersection();
+			update = false;
+		}
 		
 	}
 	
