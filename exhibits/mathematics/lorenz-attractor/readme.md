@@ -24,6 +24,9 @@ The <a href=https://en.wikipedia.org/wiki/Lorenz_system>Lorenz attractor</a>
  
 ### About the Code
 
+Intergration of the differential equations is done with a simple Euler method with a small step size. It is important to calculate all of the changes in spatial coordinates before evaluting the coordinates themselves, since the changes are determined by more than one coordinate value at each step.
+
+Rather than recreate all of the geometry at each step, the JavaScript function shift() is used to remove the first vertex in the geometry on each interation. That saves a lot of computation.
 
 ### A Little Math
 
