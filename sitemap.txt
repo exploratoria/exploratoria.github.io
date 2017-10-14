@@ -21,7 +21,7 @@ http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/index.html
 http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html
 http://exploratoria.github.io/exhibits/mathematics/plane-cutting-ellipsoid/index.html
 http://exploratoria.github.io/exhibits/mechanics/index.html
-http://exploratoria.github.io/exhibits/mechanics/elastic-collisions-3d/index.html
+http://exploratoria.github.io/exhibits/mechanics/elastic-collisions-in-3d/index.html
 http://exploratoria.github.io/exhibits/navigation/index.html
 http://exploratoria.github.io/exhibits/smell-taste-touch/index.html
 http://exploratoria.github.io/exhibits/sound/index.html
