@@ -88,34 +88,34 @@
 
 		for ( var i = 0 ; i < count ; i++ ) {
 
-			var bi = balls[i];
+			var b1 = balls[i];
 
-			var plus = bi.position.clone().addScalar( radius ).add( bi.v );
-			var minus = bi.position.clone().subScalar( radius ).add( bi.v );
+			var plus = b1.position.clone().addScalar( radius ).add( b1.v );
+			var minus = b1.position.clone().subScalar( radius ).add( b1.v );
 
 			// reverse velocity components at walls
 
-			if ( plus.x > range || minus.x < -range ) bi.v.x = -bi.v.x;
-			if ( plus.y > range || minus.y < -range ) bi.v.y = -bi.v.y;
-			if ( plus.z > range || minus.z < -range ) bi.v.z = -bi.v.z;
+			if ( plus.x > range || minus.x < -range ) b1.v.x = -b1.v.x;
+			if ( plus.y > range || minus.y < -range ) b1.v.y = -b1.v.y;
+			if ( plus.z > range || minus.z < -range ) b1.v.z = -b1.v.z;
 
 			for ( var j = i + 1 ; j < count ; j++ ) { 
 
-				var bj = balls[j];
-				var separation = bi.position.clone().add( bi.v ).sub( bj.position ).sub( bj.v ).length();
+				var b2 = balls[j];
+				var separation = b1.position.clone().add( b1.v ).sub( b2.position ).sub( b2.v ).length();
 
 				// exchange normal velocities for collision, leave tangential alone
 				if ( separation < 2 * radius ) {
 
-					var normal = bi.position.clone().sub( bj.position ).normalize();
+					var normal = b1.position.clone().sub( b2.position ).normalize();
 
-					var relativeVelocity = bi.v.clone().sub( bj.v );
+					var relativeVelocity = b1.v.clone().sub( b2.v );
 					var dot = relativeVelocity.dot( normal );
 
 					normal = normal.multiplyScalar( dot );
 
-					bi.v.sub( normal );
-					bj.v.add( normal );
+					b1.v.sub( normal );
+					b2.v.add( normal );
 
 				}
 
