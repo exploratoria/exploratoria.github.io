@@ -1,4 +1,4 @@
-exploratoria.github.io
+﻿exploratoria.github.io
 ===
 <span style="display: none"> [View as web page]( http://exploratoria.github.io/ 'View file as a web page' ) </span>
 <input type=button value="View file as source code on GitHub" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/'" />
@@ -52,7 +52,7 @@ The intention is to provide scripts dealing with the following categories:
 * Light
 * Materials
 * [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/index.html )
-* Mechanics, Dynamics & Motion
+* [Mechanics, Dynamics & Motion]( http://exploratoria.github.io/exhibits/mechanics/index.html )
 * Navigation & Mapping
 * Smell - Taste - Touch
 * Sound & Hearing

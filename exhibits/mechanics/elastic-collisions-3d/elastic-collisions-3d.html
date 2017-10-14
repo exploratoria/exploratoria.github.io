@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elastic Collisions 3D</title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=author content=''>
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+
+</style>
+</head>
+
+<body>
+
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	var count = 30; // integer
+	var radius = .25; // size of balls
+	var range = 5;  // size of enclosing box
+
+	var scene = new THREE.Scene();
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement );
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 2*range, 1.5*range, 1.5*range );
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+	window.addEventListener( 'resize', function() {
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
+
+	var box = new THREE.Geometry();
+	box.vertices.push( new THREE.Vector3( -range, -range, -range ) );
+	box.vertices.push( new THREE.Vector3( range, range, range ) );
+	var boxMesh = new THREE.Line( box );
+	scene.add( new THREE.BoxHelper( boxMesh, 'white' ) );
+
+	var light = new THREE.DirectionalLight( 0xffffff, .8 );
+	light.position.set( -range, range, 0 );
+	camera.add( light );
+	scene.add( camera )
+
+	var ambient = new THREE.AmbientLight( 0x555555 );
+	scene.add( ambient );
+
+	var balls = [];
+
+	for ( var i = 0 ; i < count ; i++ ) {
+
+		var geometry = new THREE.SphereGeometry( radius, 20, 20 );
+		var material = new THREE.MeshPhongMaterial();
+		material.color = new THREE.Color().setHSL( Math.random(), 1, .5 )
+		var ball = new THREE.Mesh( geometry, material );
+
+		// random position
+		ball.position.set( ( range - radius ) * ( .5 - Math.random() ),
+					( range - radius ) * ( .5 - Math.random() ),
+					( range - radius ) * ( .5 - Math.random() ) );
+
+		// random velocity
+		var speed = .2;
+		ball.v = new THREE.Vector3( speed * ( .5 - Math.random() ),
+						speed * ( .5 - Math.random() ),
+						speed * ( .5 - Math.random() ) );
+
+		balls.push( ball );
+		scene.add( ball );
+
+	}
+	
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+
+		for ( var i = 0 ; i < count ; i++ ) {
+
+			var bi = balls[i];
+
+			var plus = bi.position.clone().addScalar( radius ).add( bi.v );
+			var minus = bi.position.clone().subScalar( radius ).add( bi.v );
+
+			// reverse velocity components at walls
+
+			if ( plus.x > range || minus.x < -range ) bi.v.x = -bi.v.x;
+			if ( plus.y > range || minus.y < -range ) bi.v.y = -bi.v.y;
+			if ( plus.z > range || minus.z < -range ) bi.v.z = -bi.v.z;
+
+			for ( var j = i + 1 ; j < count ; j++ ) { 
+
+				var bj = balls[j];
+				var separation = bi.position.clone().add( bi.v ).sub( bj.position ).sub( bj.v ).length();
+
+				// exchange normal velocities for collision, leave tangential alone
+				if ( separation < 2 * radius ) {
+
+					var normal = bi.position.clone().sub( bj.position ).normalize();
+
+					var relativeVelocity = bi.v.clone().sub( bj.v );
+					var dot = relativeVelocity.dot( normal );
+
+					normal = normal.multiplyScalar( dot );
+
+					bi.v.sub( normal );
+					bj.v.add( normal );
+
+				}
+
+			}			
+
+			balls[i].position.add( balls[i].v );
+
+		}
+
+	}
+
+	render();
+
+</script>
+
+</body>
+</html>
