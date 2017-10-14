@@ -66,15 +66,15 @@
 		var ball = new THREE.Mesh( geometry, material );
 
 		// random position
-		ball.position.set( ( range - radius ) * ( .5 - Math.random() ),
-					( range - radius ) * ( .5 - Math.random() ),
-					( range - radius ) * ( .5 - Math.random() ) );
+		ball.position.set( ( range - radius ) * ( 2 * Math.random() - 1 ),
+					( range - radius ) * ( 2 * Math.random() - 1 ),
+					( range - radius ) * ( 2 * Math.random() - 1 ) );
 
 		// random velocity
 		var speed = .2;
-		ball.v = new THREE.Vector3( speed * ( .5 - Math.random() ),
-						speed * ( .5 - Math.random() ),
-						speed * ( .5 - Math.random() ) );
+		ball.v = new THREE.Vector3( speed * ( 2 * Math.random() - 1 ),
+						speed * ( 2 * Math.random() - 1 ),
+						speed * ( 2 * Math.random() - 1 ) );
 
 		balls.push( ball );
 		scene.add( ball );
