@@ -19,10 +19,14 @@ The word "elastic" in this context means that total linear momentum, the measure
 * Click "Update View" several times to see different sets of balls
 
 * Change the variables "count", "radius" and "speed" to alter the initial parameters of the graphic
+
+* Kinetic energy is one half of the sum of squares of all velocity components: calculate it in the render loop to demonstrate that energy is conserved for this system up to JavaScript rounding errors
  
 ### About the Code
 
-Ball sometimes stick together...
+In the render loop, each ball is checked for bouncing against each wall and then against each ball with a higher array index. Checking only higher indices prevents double counting bounces against other balls.
+
+The directional light is attached to the camera in this example to prevent excessive shadowing of the back sides of balls as the graphic is rotated. The camera needs to be added to the scene explicitly for this to function.
 
 ### A Little Math
 
