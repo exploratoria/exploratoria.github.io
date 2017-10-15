@@ -12,7 +12,7 @@
 
 A bunch of bouncing balls elastically colliding with the walls and one another!
 
-The word "elastic" in this context means that total linear momentum, the measure of the motion of objects in straight lines, is conserved and does not change. This simulation will run on and on and on.
+The word "elastic" in this context means that total kinetic energy, the measure of the motion of objects, is conserved and does not change. This simulation will run on and on and on.
 
 ### Things to Try
 
