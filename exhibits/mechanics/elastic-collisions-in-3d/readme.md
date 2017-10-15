@@ -20,7 +20,7 @@ The word "elastic" in this context means that total kinetic energy, the measure 
 
 * Change the variables "count", "radius" and "speed" to alter the initial parameters of the graphic
 
-* Kinetic energy is one half of the sum of squares of all velocity components: calculate it in the render loop to demonstrate that energy is conserved for this system up to JavaScript rounding errors
+* Kinetic energy is proportional to the sum of the squares of all velocity components: calculate it in the render loop to demonstrate that energy is conserved for this system up to JavaScript rounding errors
  
 ### About the Code
 
