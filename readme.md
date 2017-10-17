@@ -41,7 +41,6 @@ The intention is to provide scripts dealing with the following categories:
 * [Astronomy & Solar System]( http://exploratoria.github.io/exhibits/astronomy/index.html )
 * Biology
 * Chemistry
-* Color
 * Electricity & Magnetism
 * Energy
 * Engineering & Structure
@@ -49,7 +48,7 @@ The intention is to provide scripts dealing with the following categories:
 * [Heat & Temperature]( http://exploratoria.github.io/exhibits/heat/index.html )
 * Human Anatomy
 * Language & Speech
-* Light
+* Light & Color
 * Materials
 * [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/index.html )
 * [Mechanics, Dynamics & Motion]( http://exploratoria.github.io/exhibits/mechanics/index.html )
@@ -57,9 +56,8 @@ The intention is to provide scripts dealing with the following categories:
 * Smell - Taste - Touch
 * Sound & Hearing
 * Vision & Eye Logic
-* Water
 * [Waves & Resonance]( http://exploratoria.github.io/exhibits/waves/index.html )
-* Weather
+* Weather & Water
 
 Noticeably absent are categories pertaining to computers, the Internet, digital media and the like. 
 This website uses technology to explain, show and demonstrate the physical and theoretical aspects of our world. 

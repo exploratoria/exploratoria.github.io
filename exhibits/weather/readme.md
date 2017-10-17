@@ -1,6 +1,6 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo; [Exhibits]( http://exploratoria.github.io/exhibits/ ) &raquo;
 
-Weather Read Me
+Weather & Water Read Me
 ====
 
 <span style="display: none"> [You are now in GitHub source code view - Click here to view Read Me file as a web page]( http://exploratoria.github.io/exhibits/weather/index.html 'View file as a web page' ) </span>
