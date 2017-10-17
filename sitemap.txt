@@ -3,7 +3,6 @@ http://exploratoria.github.io/exhibits/astronomy/index.html
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/index.html
 http://exploratoria.github.io/exhibits/biology/index.html
 http://exploratoria.github.io/exhibits/chemistry/index.html
-http://exploratoria.github.io/exhibits/color/index.html
 http://exploratoria.github.io/exhibits/electromagnetism/index.html
 http://exploratoria.github.io/exhibits/energy/index.html
 http://exploratoria.github.io/exhibits/engineering/index.html
@@ -26,7 +25,6 @@ http://exploratoria.github.io/exhibits/navigation/index.html
 http://exploratoria.github.io/exhibits/smell-taste-touch/index.html
 http://exploratoria.github.io/exhibits/sound/index.html
 http://exploratoria.github.io/exhibits/vision/index.html
-http://exploratoria.github.io/exhibits/water/index.html
 http://exploratoria.github.io/exhibits/waves/cylindrical-wave/index.html
 http://exploratoria.github.io/exhibits/waves/index.html
 http://exploratoria.github.io/exhibits/waves/plane-wave/index.html
