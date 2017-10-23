@@ -15,3 +15,8 @@ Mechanics, Dynamics & Motion Read Me
 
 [Elastic Collisions in 3D - Web Page]( http://exploratoria.github.io/exhibits/mechanics/elastic-collisions-in-3d/index.html )  
 [Elastic Collisions in 3D - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mechanics/elastic-collisions-in-3d/ )
+
+## Elastic Collisions in Flatland
+
+[Elastic Collisions in Flatland - Web Page]( http://exploratoria.github.io/exhibits/mechanics/elastic-collisions-in-flatland/index.html )  
+[Elastic Collisions in Flatland - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mechanics/elastic-collisions-in-flatland/ )

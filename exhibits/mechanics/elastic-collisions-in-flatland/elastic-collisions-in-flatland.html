@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elastic Collisions in Flatland</title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=author content='Paul Masson'>
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+	#inputs { position: absolute; top: 2%; left: 2%; color: white }
+
+</style>
+</head>
+
+<body>
+
+<span id=inputs>
+Location of Flatland:<br>
+&nbsp;<input id=flatland type=range min=-1 max=1 step=.01 oninput=drawFlatland() ><br>
+Show balls: <input type=checkbox oninput=toggleBalls() >
+</span>
+
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	var count = 30; // integer
+	var radius = .25; // size of balls
+	var range = 5;  // size of enclosing box
+
+	var scene = new THREE.Scene();
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement );
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 2*range, 1.5*range, 1.5*range );
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+	window.addEventListener( 'resize', function() {
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
+
+	var box = new THREE.Geometry();
+	box.vertices.push( new THREE.Vector3( -range, -range, -range ) );
+	box.vertices.push( new THREE.Vector3( range, range, range ) );
+	var boxMesh = new THREE.Line( box );
+	scene.add( new THREE.BoxHelper( boxMesh, 'white' ) );
+
+	var light = new THREE.DirectionalLight( 0xffffff, .8 );
+	light.position.set( -range, range, 0 );
+	camera.add( light );
+	scene.add( camera )
+
+	var ambient = new THREE.AmbientLight( 0x555555 );
+	scene.add( ambient );
+
+	var balls = [], intersections = [];
+
+	for ( var i = 0 ; i < count ; i++ ) {
+
+		var geometry = new THREE.SphereGeometry( radius, 20, 20 );
+		var material = new THREE.MeshPhongMaterial( { side: THREE.DoubleSide } );
+		material.color = new THREE.Color().setHSL( Math.random(), 1, .5 )
+		var ball = new THREE.Mesh( geometry, material );
+
+		// random position
+		ball.position.set( ( range - radius ) * ( 2 * Math.random() - 1 ),
+					( range - radius ) * ( 2 * Math.random() - 1 ),
+					( range - radius ) * ( 2 * Math.random() - 1 ) );
+
+		// random velocity
+		var speed = .1;
+		ball.v = new THREE.Vector3( speed * ( 2 * Math.random() - 1 ),
+						speed * ( 2 * Math.random() - 1 ),
+						speed * ( 2 * Math.random() - 1 ) );
+		ball.visible = false;
+
+		balls.push( ball );
+		scene.add( ball );
+
+	}
+
+	function drawFlatland() {
+
+		scene.remove( scene.getObjectByName( 'flatland' ) );
+
+		var geometry = new THREE.PlaneGeometry( 2 * range, 2 * range );
+		var material = new THREE.MeshBasicMaterial( { transparent: true, opacity: .2, side: THREE.DoubleSide } );
+
+		var mesh = new THREE.Mesh( geometry, material );
+		mesh.position.z = flatland.value;
+		mesh.name = 'flatland';
+		scene.add( mesh );
+
+	}
+
+	function findIntersections() {
+
+		intersections.forEach( intersection => scene.remove( intersection ) );
+
+		balls.forEach( ball => {
+
+			var deltaZ = ball.position.z - flatland.value;
+
+			if ( Math.abs( deltaZ ) < radius ) {
+
+				var geometry = new THREE.CircleGeometry( Math.sqrt( radius**2 - deltaZ**2 ), 50 );
+
+				var intersection = new THREE.Mesh( geometry, ball.material );
+				intersection.position.set( ball.position.x, ball.position.y, flatland.value );
+
+				intersections.push( intersection );
+				scene.add( intersection );
+
+			}
+
+		} );
+
+	}
+
+	function toggleBalls() {
+
+		balls.forEach( b => b.visible = !b.visible );
+
+	}
+	
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+
+		findIntersections();
+
+		for ( var i = 0 ; i < count ; i++ ) {
+
+			var b1 = balls[i];
+
+			var plus = b1.position.clone().addScalar( radius ).add( b1.v );
+			var minus = b1.position.clone().subScalar( radius ).add( b1.v );
+
+			// reverse velocity components at walls
+
+			if ( plus.x > range || minus.x < -range ) b1.v.x = -b1.v.x;
+			if ( plus.y > range || minus.y < -range ) b1.v.y = -b1.v.y;
+			if ( plus.z > range || minus.z < -range ) b1.v.z = -b1.v.z;
+
+			for ( var j = i + 1 ; j < count ; j++ ) { 
+
+				var b2 = balls[j];
+				var separation = b1.position.clone().add( b1.v ).sub( b2.position ).sub( b2.v ).length();
+
+				// exchange normal velocities for collision, leave tangential alone
+				if ( separation < 2 * radius ) {
+
+					var normal = b1.position.clone().sub( b2.position ).normalize();
+
+					var relativeVelocity = b1.v.clone().sub( b2.v );
+					var dot = relativeVelocity.dot( normal );
+
+					normal = normal.multiplyScalar( dot );
+
+					b1.v.sub( normal );
+					b2.v.add( normal );
+
+				}
+
+			}			
+
+			b1.position.add( balls[i].v );
+
+		}
+
+	}
+
+	drawFlatland();
+	render();
+
+</script>
+
+</body>
+</html>
