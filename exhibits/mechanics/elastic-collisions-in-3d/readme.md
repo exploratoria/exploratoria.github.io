@@ -30,7 +30,7 @@ The directional light is attached to the camera in this example to prevent exces
 
 ### A Little Math
 
-A collision in two or three dimensions can be treated like the one-dimensional case by working with quantities "normal" to the collision. For collisions with the walls, that just means along the regular Cartesian coordinate directions. For collisions between balls, that mean quantities with respect to the line joining the centers of the two balls.
+A collision in two or three dimensions can be treated like the one-dimensional case by working with quantities "normal" to the collision. For collisions with the walls, that just means along the regular Cartesian coordinate directions. For collisions between balls, that means quantities with respect to the line joining the centers of the two balls.
 
 If positions are denoted by vectors <b>x</b><sub>1</sub> and <b>x</b><sub>2</sub>, the normal vector between two balls is
 
