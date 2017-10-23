@@ -18,7 +18,7 @@
 <span id=inputs>
 Location of Flatland:<br>
 &nbsp;<input id=flatland type=range min=-1 max=1 step=.01 oninput=drawFlatland() ><br>
-Show balls: <input type=checkbox oninput=toggleBalls() >
+Show balls: <input type=checkbox onclick=toggleBalls() >
 </span>
 
 <script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>
@@ -106,6 +106,7 @@ Show balls: <input type=checkbox oninput=toggleBalls() >
 	function findIntersections() {
 
 		intersections.forEach( intersection => scene.remove( intersection ) );
+		intersections = [];
 
 		balls.forEach( ball => {
 
