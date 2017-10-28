@@ -18,7 +18,7 @@ If a single point corresponds to a circle with the Hopf fibration, a collection 
 
 * Change the value of the variable "ratio" to see its effect on the shape
 
-* Replace the variable "r" multiplying the coordinates of the vertices of the geometry with the combination "1/(1-w)" to see a standard stereogrphic projection
+* Replace the variable "r" multiplying the coordinates of the vertices of the geometry with the combination "1/(1-w)" to see a standard stereographic projection
 
 * Replace the variable "r" multiplying the coordinates of the vertices of the geometry with other combinations
  
