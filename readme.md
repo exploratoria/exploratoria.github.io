@@ -40,7 +40,7 @@ The intention is to provide scripts dealing with the following categories:
 * Aerospace
 * [Astronomy & Solar System]( http://exploratoria.github.io/exhibits/astronomy/index.html )
 * Biology
-* Chemistry
+* [Chemistry]( http://exploratoria.github.io/exhibits/chemistry/index.html )
 * Electricity & Magnetism
 * Energy
 * Engineering & Structure
