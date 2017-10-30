@@ -16,6 +16,11 @@ Mathematics & Patterns Read Me
 [Lorenz Attractor - Web Page]( http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/index.html )  
 [Lorenz Attractor - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/lorenz-attractor/ )
 
+## Modular Fibration
+
+[Modular Fibration - Web Page]( http://exploratoria.github.io/exhibits/mathematics/modular-fibration/index.html )  
+[Modular Fibration - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/mathematics/modular-fibration/ )
+
 ## Parametric Surfaces
 
 [Parametric Surfaces - Web Page]( http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/index.html )  
