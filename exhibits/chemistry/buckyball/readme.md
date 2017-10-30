@@ -26,7 +26,7 @@ Rather than hard coding the ninety cylinders representing bonds, a simple distan
 
 ### A Little Math
 
-With the notation \\( \phi = \frac{ 1 + \sqrt{5} }{2} \\) for the "golden mean", the vertices of a truncated icosahedron are located at the positions
+With the notation \\( \phi = \frac{ 1 + \sqrt{5} }{2} \\) for the [golden ratio](https://en.wikipedia.org/wiki/Golden_ratio), the vertices of a truncated icosahedron are located at the positions
 
 \\[ [ 0, \pm1, \pm3\phi ] \; , \; [ \pm1, \pm(2+\phi), \pm2\phi ] \; , \; [ \pm2, \pm(1+2\phi), \pm\phi ] \\]
 
