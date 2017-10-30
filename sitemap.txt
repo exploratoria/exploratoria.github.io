@@ -5,6 +5,7 @@ http://exploratoria.github.io/exhibits/astronomy/
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/
 http://exploratoria.github.io/exhibits/biology/
 http://exploratoria.github.io/exhibits/chemistry/
+http://exploratoria.github.io/exhibits/chemistry/buckyball/
 http://exploratoria.github.io/exhibits/electromagnetism/
 http://exploratoria.github.io/exhibits/energy/
 http://exploratoria.github.io/exhibits/engineering/
