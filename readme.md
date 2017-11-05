@@ -15,7 +15,7 @@ Exploratoria is a GitHub Organization. Feel free to request an invitation to joi
 
 * To devise [free, open source scripts]( https://en.wikipedia.org/wiki/Free_and_open-source_software )
 that help visualize and further understanding of scientific, technical, engineering and mathematical 
-([STEM]( https://en.wikipedia.org/wiki/Science,_Technology,_Engineering,_and_Mathematics ))concepts
+([STEM]( https://en.wikipedia.org/wiki/Science,_Technology,_Engineering,_and_Mathematics )) concepts
 
 * To supply simple yet powerful scripts that help engineers and designers to create experiments without having to be dedicated software '[full stack programmers]( https://www.quora.com/What-does-the-term-full-stack-programmer-mean )'
 
