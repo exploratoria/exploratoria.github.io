@@ -48,7 +48,7 @@ The intention is to provide scripts dealing with the following categories:
 * [Heat & Temperature]( http://exploratoria.github.io/exhibits/heat/index.html )
 * Human Anatomy
 * Language & Speech
-* Light & Color
+* [Light & Color]( http://exploratoria.github.io/exhibits/light/index.html )
 * Materials
 * [Mathematics & Patterns]( http://exploratoria.github.io/exhibits/mathematics/index.html )
 * [Mechanics, Dynamics & Motion]( http://exploratoria.github.io/exhibits/mechanics/index.html )
