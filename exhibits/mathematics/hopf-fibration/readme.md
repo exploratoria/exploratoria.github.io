@@ -20,7 +20,7 @@ If a single point corresponds to a circle with the Hopf fibration, a collection 
 
 * Replace the variable "r" multiplying the coordinates of the vertices of the geometry with the combination "1/(1-w)" to see a standard stereographic projection
 
-* Replace the variable "r" multiplying the coordinates of the vertices of the geometry with other combinations
+* Reduce the number of interlocking circles and stop the rotation to see that each circle links with all other circles: any two circles form a [Hopf link](https://en.wikipedia.org/wiki/Hopf_link)
  
 ### About the Code
 
