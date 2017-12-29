@@ -98,8 +98,7 @@ function scan() {
 
 	scanButton.innerHTML = 'Running Scan';
 
-	var urlAPIContents = 'https://api.github.com/repos/' + organization.value
-                              + '/' + repository.value + '/git/trees/' + branch.value + '?recursive=1';
+	var urlAPIContents = 'https://api.github.com/repos/' + organization.value + '/' + repository.value + '/git/trees/' + branch.value + '?recursive=1';
 
 	var urlBase = 'http://' + redirection.value + '/';
 

@@ -91,8 +91,7 @@ function scan() {
 
 	var branch = repository.value.match( 'github.io' ) ? 'master' : 'gh-pages';
 
-	var urlAPIContents = 'https://api.github.com/repos/' + organization.value
-                              + '/' + repository.value + '/git/trees/' + branch + '?recursive=1';
+	var urlAPIContents = 'https://api.github.com/repos/' + organization.value + '/' + repository.value + '/git/trees/' + branch + '?recursive=1';
 
 	var urlBase;
 
