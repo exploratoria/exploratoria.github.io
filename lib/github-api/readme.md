@@ -20,3 +20,9 @@ For cases where the website files are not stored in default locations, use this 
 
 [Custom Sitemap Generator - Web Page]( http://exploratoria.github.io/lib/github-api/sitemap-custom.html )  
 [Custom Sitemap Generator - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/sitemap-custom.html )
+
+## Stars for GitHub Repository by Date
+
+[Stars by Date - Web Page]( http://exploratoria.github.io/lib/github-api/stars-by-date.html )  
+[Stars by Date - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/github-api/stars-by-date.html )
+

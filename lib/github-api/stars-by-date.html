@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<title>GitHub Stars by Date</title>
+<style>
+
+	body, input, button { font-family: monospace }
+	#input { width: 4.5in; margin: auto; vertical-align: top }
+	#output { width: 6in; height: 4in; margin: auto;
+			white-space: nowrap; overflow-y: scroll }
+
+</style>
+</head>
+<body style='margin: 1in'>
+
+<h2 style='text-align: center'><b>Stars for GitHub Repository by Date</b></h2><br>
+
+<table id='input'>
+	<tr>
+		<td>
+			Organization to scan:
+		</td>
+		<td>
+			<input id='organization' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Repository to scan:
+		</td>
+		<td>
+			<input id='repository' style='width: 2in'
+				oninput='scanButton.innerHTML="Initiate Scan"'/>
+		</td>
+	</tr>
+	<tr>
+		<td style='text-align: center'>
+			<input id='newest' name='order' type='radio' value='newest' checked
+				oninput='scanButton.innerHTML="Initiate Scan"'>
+			<label for='newest'>Newest First</label></input>
+		</td>
+		<td style='text-align: center'>
+			<input id='oldest' name='order' type='radio' value='oldest'
+				oninput='scanButton.innerHTML="Initiate Scan"'>
+			<label for='oldest'>Oldest First</label></input>
+		</td>
+	<tr>
+		<td>
+			&nbsp;
+		</td>
+		<td/>
+	</tr>
+	<tr>
+		<td>
+			<button id='scanButton' style='width: 1.5in'
+				 onclick='scan()'>Initiate Scan</button>
+		</td>
+		<td>
+			<button id='saveButton' style='width: 1.5in'
+				 onclick='save()'>Save Output</button>
+		</td>
+	</tr>
+</table>
+
+<br><br><div id='output'>Output will appear here</div>
+
+<script>
+
+function scan() {
+
+	scanButton.innerHTML = 'Running Scan';
+
+	var branch = repository.value.match( 'github.io' ) ? 'master' : 'gh-pages';
+
+	var urlAPIContents = 'https://api.github.com/repos/' + organization.value + '/' + repository.value + '/stargazers?per_page=100';
+
+	var xhr = new XMLHttpRequest();
+
+	xhr.onload = function() {
+
+		var response = JSON.parse( xhr.response );
+		var stars = [];
+
+		if ( !response.message ) {
+
+			for ( var i = 0; i < response.length; i++ ) {
+
+				var star = response[ i ].starred_at + ' ' + response[ i ].user.login;
+
+				stars.push( star );
+
+			}
+
+			if ( xhr.getResponseHeader( 'Link' ) ) {
+
+				var last = +xhr.getResponseHeader( 'Link' ).match( /&page=(\d*)>; rel="last"/ )[1];
+
+				var xhrs = [];
+
+				for ( var page = 2 ; page <= last ; page++ ) {
+
+					xhrs[ page ] = new XMLHttpRequest();
+
+					xhrs[ page ].onload = function() {
+
+						var response = JSON.parse( this.response );
+
+						for ( var i = 0; i < response.length; i++ ) {
+
+							var star = response[ i ].starred_at + ' ' + response[ i ].user.login;
+
+							stars.push( star );
+
+						}
+
+						if ( page === last + 1 ) displayOutput();
+
+					};
+
+					xhrs[ page ].open( 'GET', urlAPIContents + '&page=' + page, true );
+					xhrs[ page ].setRequestHeader( 'Accept', 'application/vnd.github.v3.star+json' );
+					xhrs[ page ].send();
+
+				}
+
+			} else {
+
+				displayOutput();
+
+			}
+
+			function displayOutput() {
+
+				stars.sort();
+
+				if ( document.querySelector( 'input[name=order]:checked' ).value === 'newest' ) {
+
+					stars.reverse();
+
+				}
+
+				var s = '';
+
+				for ( var i = 0; i < stars.length ; i ++ ) {
+
+					s += stars[ i ] + '<br>';
+
+				}
+
+				scanButton.innerHTML = 'Scan Complete';
+
+				if ( s.length === 0 ) {
+
+					output.innerHTML = 'No stars found';
+
+				} else {
+
+					output.innerHTML = s + '<br>' + stars.length + ' total stars';
+
+				}
+
+			}
+
+		} else {
+
+			scanButton.innerHTML = 'Initiate Scan';
+			output.innerHTML = 'Please correct the information entered';
+
+		}
+
+	};
+
+	xhr.open( 'GET', urlAPIContents, true );
+	xhr.setRequestHeader( 'Accept', 'application/vnd.github.v3.star+json' );
+	xhr.send();
+
+}
+
+function save() {
+
+	var text = output.innerHTML.replace( /<br>/g, '\r\n' );
+	var blob = new Blob([ text ]);
+
+	var a = document.body.appendChild( document.createElement( 'a' ) );
+	a.href = window.URL.createObjectURL( blob );
+	a.download = 'sitemap.txt';
+	a.click();
+	delete a;
+
+}
+
+</script>
+
+<br><div style='width: 6in; margin: auto; text-align: justify'>
+
+<p>Since stargazers data is paginated, the URL is set to retrieve the maximum number of records per page currently allowed, which is 100. Unauthenticated GitHub API requests are limited to 60 per hour. That means scanning a repository with more than 6000 stars, or scanning multiple repositories totaling 6000 stars, will exceed rate limits for the current hour. Limitations in place for the current user IP are available <a href="https://api.github.com/rate_limit" target="_blank">here</a>.</p>
+
+<p>The function to save the file will only work on Safari when Apple supports the <a href="http://caniuse.com/#feat=download">download</a> attribute for anchors</p>
+
+<br><a href='https://github.com/exploratoria/exploratoria.github.io/blob/master/lib/github-api/stars-by-date.html'>Source code</a> on Github.
+</div>
+
+</body>
+</html>
