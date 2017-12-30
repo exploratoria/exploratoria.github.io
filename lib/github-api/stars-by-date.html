@@ -98,7 +98,7 @@ function scan() {
 
 				var last = +xhr.getResponseHeader( 'Link' ).match( /&page=(\d*)>; rel="last"/ )[1];
 
-				var xhrs = [];
+				var xhrs = [], pages = 1;
 
 				for ( var page = 2 ; page <= last ; page++ ) {
 
@@ -116,7 +116,9 @@ function scan() {
 
 						}
 
-						if ( page === last + 1 ) displayOutput();
+						pages++;
+
+						if ( pages === last ) displayOutput();
 
 					};
 
