@@ -92,7 +92,8 @@ Supporting files and miscellaneous utilities
 
 
 <center>
-<a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > ❦ </a>
+<a href=javascript:window.scrollTo(0,0); style=text-decoration:none; >
+<span style=font-size:large; > ❦ </span></a>
 
 [ideas]( #ideas.md ) ~ [notes]( #notes.md ) ~ [talk]( #talk.md ) ~ [sandbox]( #./sandbox/readme.md )
 </center>
