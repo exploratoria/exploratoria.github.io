@@ -83,8 +83,16 @@ These are the files we use to build this web site. You can use them too.
 [Templates - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/templates/ )
 
 
+## Library
+
+Supporting files and miscellaneous utilities
+
+[Library - web page view]( http://exploratoria.github.io/lib/ )  
+[Library - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/ )
+
+
 <center>
-# <a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > ❦ </a>
+<a href=javascript:window.scrollTo(0,0); style=text-decoration:none; > ❦ </a>
 
 [ideas]( #ideas.md ) ~ [notes]( #notes.md ) ~ [talk]( #talk.md ) ~ [sandbox]( #./sandbox/readme.md )
 </center>
