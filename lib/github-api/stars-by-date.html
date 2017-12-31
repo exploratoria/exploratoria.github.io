@@ -198,7 +198,7 @@ function save() {
 
 <br><div style='width: 6in; margin: auto; text-align: justify'>
 
-<p>Since stargazers data is paginated, the URL is set to retrieve the maximum number of records per page currently allowed, which is 100. Unauthenticated GitHub API requests are limited to 60 per hour. That means scanning a repository with more than 6000 stars, or scanning multiple repositories totaling 6000 stars, will exceed rate limits for the current hour. Limitations in place for the current user IP are available <a href="https://api.github.com/rate_limit" target="_blank">here</a>.</p>
+<p>Since stargazers data is paginated, this utility retrieves the maximum number of records per page currently allowed, which is 100. Unauthenticated GitHub API requests are limited to 60 per hour. That means scanning a repository with more than 6000 stars, or scanning multiple repositories totaling 6000 stars, will exceed rate limits for the current hour. Limitations in place for the current user IP are available <a href="https://api.github.com/rate_limit" target="_blank">here</a>.</p>
 
 <p>The function to save the file will only work on Safari when Apple supports the <a href="http://caniuse.com/#feat=download">download</a> attribute for anchors</p>
 
