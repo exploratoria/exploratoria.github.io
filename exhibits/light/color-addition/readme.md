@@ -20,7 +20,7 @@ White light and other colors are created by addition of primary colors!
 
 ### About the Code
 
-The spot lights start at the corners of an equilateral triangle with sides of length three positioned the same height about the horizontal plane.
+The spot lights start at the corners of an equilateral triangle with sides of length three positioned the same height above the horizontal plane.
 
 Rotation in three dimensions is inhibited by a setting on the controls. This shows how three-dimensional software can be adapted to two-dimensional displays.
 
