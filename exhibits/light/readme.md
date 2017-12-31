@@ -11,3 +11,7 @@ Light & Color Read Me
 [Color Addition - Web Page]( http://exploratoria.github.io/exhibits/light/color-addition/index.html )  
 [Color Addition - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/light/color-addition/ )
 
+## Color Subtraction
+
+[Color Subtraction - Web Page]( http://exploratoria.github.io/exhibits/light/color-subtraction/index.html )  
+[Color Subtraction - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/light/color-subtraction/ )

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Subtraction</title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=author content=''>
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+
+</style>
+</head>
+
+<body>
+
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	var scene = new THREE.Scene();
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement );
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 0, 0, 5 );
+
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+	controls.enableRotate = false;
+
+	window.addEventListener( 'resize', function() {
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
+
+	var background = new THREE.PlaneGeometry( 5, 5 );
+	var material = new THREE.MeshBasicMaterial( { color: 'white' } );
+	var plane = new THREE.Mesh( background, material );
+	plane.position.set( 0, 0, -.1 );
+	scene.add( plane );
+
+	var zAxis = new THREE.Vector3( 0, 0, 1 );
+
+	var circle = new THREE.CircleGeometry( 1.25, 50 );
+
+	// subtractive materials need to be defined by RGB values for accurate results
+	// transparent set to true is critical for blending
+
+	var subGreen = new THREE.MeshBasicMaterial( { color: 0x00ff00, transparent: true,
+							blending: THREE.SubtractiveBlending } );
+	var magenta = new THREE.Mesh( circle, subGreen );
+	magenta.position.set( 0, 3/4, .1 )
+	scene.add( magenta );
+
+	var subBlue = new THREE.MeshBasicMaterial( { color: 0x0000ff, transparent: true,
+							blending: THREE.SubtractiveBlending } );
+	var yellow = new THREE.Mesh( circle, subBlue );
+	yellow.position.set( -3*Math.sqrt(3)/8, -3/8, .2 );
+	scene.add( yellow );
+
+	var subRed = new THREE.MeshBasicMaterial( { color: 0xff0000, transparent: true,
+							blending: THREE.SubtractiveBlending } );
+	var cyan = new THREE.Mesh( circle, subRed );
+	cyan.position.set( 3*Math.sqrt(3)/8, -3/8, .3 );
+	scene.add( cyan );
+
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+
+		magenta.position.applyAxisAngle( zAxis, .02 );
+		yellow.position.applyAxisAngle( zAxis, -.035 );
+		cyan.position.applyAxisAngle( zAxis, .03 );
+
+	}
+
+	render();
+
+</script>
+
+</body>
+</html>
