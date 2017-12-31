@@ -17,7 +17,7 @@ White light and other colors are created by addition of primary colors!
 * Alter the speeds with which the lights move or set them on other parametric paths
 
 * Change the colors of the spot lights for other mixing results
- 
+
 ### About the Code
 
 The spot lights start at the corners of an equilateral triangle with sides of length three positioned the same height about the horizontal plane.
