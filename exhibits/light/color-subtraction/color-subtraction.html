@@ -41,7 +41,7 @@
 	} );
 
 	var background = new THREE.PlaneGeometry( 5, 5 );
-	var material = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+	var material = new THREE.MeshBasicMaterial( { color: 'rgb( 255, 255, 255 )' } );
 	var plane = new THREE.Mesh( background, material );
 	plane.position.set( 0, 0, -.1 );
 	scene.add( plane );
@@ -53,19 +53,19 @@
 	// subtractive materials need to be defined by RGB values for accurate results
 	// transparent set to true is critical for blending
 
-	var subGreen = new THREE.MeshBasicMaterial( { color: 0x00ff00, transparent: true,
+	var subGreen = new THREE.MeshBasicMaterial( { color: 'rgb( 0, 255, 0 )', transparent: true,
 							blending: THREE.SubtractiveBlending } );
 	var magenta = new THREE.Mesh( circle, subGreen );
 	magenta.position.set( 0, 3/4, .1 )
 	scene.add( magenta );
 
-	var subBlue = new THREE.MeshBasicMaterial( { color: 0x0000ff, transparent: true,
+	var subBlue = new THREE.MeshBasicMaterial( { color: 'rgb( 0, 0, 255 )', transparent: true,
 							blending: THREE.SubtractiveBlending } );
 	var yellow = new THREE.Mesh( circle, subBlue );
 	yellow.position.set( -3*Math.sqrt(3)/8, -3/8, .2 );
 	scene.add( yellow );
 
-	var subRed = new THREE.MeshBasicMaterial( { color: 0xff0000, transparent: true,
+	var subRed = new THREE.MeshBasicMaterial( { color: 'rgb( 255, 0, 0 )', transparent: true,
 							blending: THREE.SubtractiveBlending } );
 	var cyan = new THREE.Mesh( circle, subRed );
 	cyan.position.set( 3*Math.sqrt(3)/8, -3/8, .3 );

@@ -16,7 +16,7 @@ Primary colors and black are created by subtraction of frequencies. That's how p
 
 * Alter the speeds with which the spots move or set them on other parametric paths
 
-* Change the color of the background for other mixing results
+* Change the colors of the spots and the background for other mixing results
  
 ### About the Code
 
