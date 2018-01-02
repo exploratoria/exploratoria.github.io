@@ -8,5 +8,5 @@ Engineering & Structure Read Me
 
 ## Rotating Tesseract
 
-[Rotating Tesseract - Web Page]( http://exploratoria.github.io/exhibits/heat/rotating-tesseract/index.html )  
-[Rotating Tesseract - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/rotating-tesseract/ )
+[Rotating Tesseract - Web Page]( http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/index.html )  
+[Rotating Tesseract - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/rotating-tesseract/ )

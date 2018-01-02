@@ -43,7 +43,7 @@ The intention is to provide scripts dealing with the following categories:
 * [Chemistry]( http://exploratoria.github.io/exhibits/chemistry/index.html )
 * Electricity & Magnetism
 * Energy
-* Engineering & Structure
+* [Engineering & Structure]( http://exploratoria.github.io/exhibits/engineering/index.html )
 * Geology
 * [Heat & Temperature]( http://exploratoria.github.io/exhibits/heat/index.html )
 * Human Anatomy
