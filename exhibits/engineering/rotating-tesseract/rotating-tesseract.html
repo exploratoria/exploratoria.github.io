@@ -60,11 +60,6 @@
 	for ( var i = 0 ; i < vertices.length ; i++ ) {
 
 		var mesh = new THREE.Mesh( geometry, material );
-
-		var v = vertices[i];
-		var r = 1 / ( 1 - v[3] );
-		mesh.position.set( r*v[0], r*v[1], r*v[2] );
-
 		vertexMeshs.push( mesh );
 		scene.add( mesh );
 
