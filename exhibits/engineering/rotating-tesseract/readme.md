@@ -36,4 +36,4 @@ The four-dimensional vectors are then reduced to three-dimensional positions wit
 
 \\[ \left[ \frac{x'}{1-w'} \;,\; \frac{y'}{1-w'} \;,\; \frac{z'}{1-w'} \right] \\]
 
-The transformed vertices are connected by straight geometric structures to finish the visualization. This is not completely accurate, since straight-line edges of the original four-dimensional object generally become curves under stereographic projection. The shortcut is used here to match visualizations one commonly encounters on the Internet.
+The transformed vertices are connected by straight geometric structures to finish the visualization.
