@@ -55,12 +55,12 @@
 
 	var geometry = new THREE.SphereGeometry( .05, 20, 20 );
 	var material = new THREE.MeshNormalMaterial();
-	var vertexMeshs = [], edgeMeshs = [];
+	var vertexMeshes = [], edgeMeshes = [];
 
 	for ( var i = 0 ; i < vertices.length ; i++ ) {
 
 		var mesh = new THREE.Mesh( geometry, material );
-		vertexMeshs.push( mesh );
+		vertexMeshes.push( mesh );
 		scene.add( mesh );
 
 	}
@@ -82,17 +82,17 @@
 			var vw = Math.sin(t) * v[0] + Math.cos(t) * v[3];
 
 			var r = 1 / ( 1 - vw );
-			vertexMeshs[i].position.set( r*vx, r*v[1], r*v[2] );
+			vertexMeshes[i].position.set( r*vx, r*v[1], r*v[2] );
 
 		}
 
-		edgeMeshs.forEach( e => { e.geometry.dispose(); scene.remove(e) } );
-		edgeMeshs = [];
+		edgeMeshes.forEach( e => { e.geometry.dispose(); scene.remove(e) } );
+		edgeMeshes = [];
 
 		for ( var i = 0 ; i < edges.length ; i++ ) {
 
-			var v1 = vertexMeshs[ edges[i][0] ];
-			var v2 = vertexMeshs[ edges[i][1] ];
+			var v1 = vertexMeshes[ edges[i][0] ];
+			var v2 = vertexMeshes[ edges[i][1] ];
 			var d = v1.position.clone().sub( v2.position );
 
 			var geometry = new THREE.CylinderGeometry( .04, .04, d.length() );
@@ -107,7 +107,7 @@
 			var norm = d.cross( yAxis ).normalize();
 			mesh.geometry.vertices.forEach( v => v.applyAxisAngle( norm, -angle ) );
 
-			edgeMeshs.push( mesh );
+			edgeMeshes.push( mesh );
 			scene.add( mesh );
 
 		}
