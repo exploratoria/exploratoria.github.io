@@ -8,7 +8,7 @@
 <span style="display: none">_View as a web page to see the content of this iframe_</span>
 
 <span style="display: none"> [You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/index.html 'View file as a web page' ) </span>
-<input type=button value="You are now in GitHub web page view - Click here to view as source code" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/enginnering/rotating-tesseract/'" />
+<input type=button value="You are now in GitHub web page view - Click here to view as source code" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/rotating-tesseract/'" />
 
 A tesseract is the four-dimensional equivalent of a three-dimensional cube. This one is rotating in four dimensions in the _xw_-plane. Since we cannot see four-dimensional objects as they really might be, a projection down to our three physical dimensions is necessary. The one used here is a stereographic projection of the vertices of the four-dimensional object, which are then connected by cylinders.
 

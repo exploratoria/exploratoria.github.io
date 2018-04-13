@@ -8,7 +8,7 @@
 <span style="display: none">_View as a web page to see the content of this iframe_</span>
 
 <span style="display: none"> [You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/engineering/catenoid-to-helicoid/index.html 'View file as a web page' ) </span>
-<input type=button value="You are now in GitHub web page view - Click here to view as source code" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/enginnering/catenoid-to-helicoid/'" />
+<input type=button value="You are now in GitHub web page view - Click here to view as source code" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/catenoid-to-helicoid/'" />
 
 A catenoid is formed by rotating the path of a chain suspended from two points, a caternary, about the vertical axis. A helicoid is a screw-like shape consisting of concentric helixes. The two surfaces have the same intrinsic geometry, and as a result can be transformed into each other without changing the curvature of the surface.
 
