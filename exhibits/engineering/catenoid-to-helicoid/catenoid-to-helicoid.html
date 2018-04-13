@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Catenoid to Helicoid</title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=author content='Paul Masson'>
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+
+</style>
+</head>
+
+<body>
+
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>
+<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	var scene = new THREE.Scene();
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement );
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 7, 7, 4 );
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+	window.addEventListener( 'resize', function() {
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
+
+	function parametrization( u, v ) {
+
+		// u and v run from 0 to 1 for ParametricGeometry
+		// both need to be rescaled to appropriate values
+
+		u = Math.PI * ( 2 * u - 1 );
+		v = 1.5 * ( 2 * v - 1 );
+
+		var x = Math.cos(theta) * Math.sinh(v) * Math.sin(u)
+				+ Math.sin(theta) * Math.cosh(v) * Math.cos(u);
+		var y = - Math.cos(theta) * Math.sinh(v) * Math.cos(u)
+				+ Math.sin(theta) * Math.cosh(v) * Math.sin(u);
+		var z = u * Math.cos(theta) + v * Math.sin(theta);
+
+		return new THREE.Vector3( x, y, z );
+
+	}
+
+	var theta = Math.PI / 2;
+
+	var slices = 50;
+	var stacks = 50;
+
+	var geometry = new THREE.ParametricGeometry( parametrization, slices, stacks );
+	var material = new THREE.MeshNormalMaterial( { side: THREE.DoubleSide } );
+	var mesh = new THREE.Mesh( geometry, material );
+	scene.add( mesh );
+
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+
+		theta += .01;
+
+		// from source code for ParametricGeometry
+
+		for ( var i = 0 ; i <= stacks ; i++ ) {
+
+			var v = i / stacks;
+
+			for ( var j = 0 ; j <= slices ; j++ ) {
+
+				var u = j / slices;
+
+				var param = parametrization( u, v );
+				var vector = geometry.vertices[ i*(slices+1) + j ];
+
+				vector.x = param.x;
+				vector.y = param.y;
+				vector.z = param.z;
+
+			}
+		}
+
+		geometry.verticesNeedUpdate = true;
+
+	}
+
+	render();
+
+</script>
+
+</body>
+</html>
