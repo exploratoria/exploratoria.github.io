@@ -80,6 +80,13 @@
 		scene.add( ball );
 
 	}
+
+	// declare once and modify
+	var plus = new THREE.Vector3();
+	var minus = new THREE.Vector3();
+	var separation = new THREE.Vector3();
+	var normal = new THREE.Vector3();
+	var relativeVelocity = new THREE.Vector3();
 	
 	function render() {
 
@@ -90,8 +97,8 @@
 
 			var b1 = balls[i];
 
-			var plus = b1.position.clone().addScalar( radius ).add( b1.v );
-			var minus = b1.position.clone().subScalar( radius ).add( b1.v );
+			plus.copy( b1.position ).addScalar( radius ).add( b1.v );
+			minus.copy( b1.position ).subScalar( radius ).add( b1.v );
 
 			// reverse velocity components at walls
 
@@ -102,14 +109,14 @@
 			for ( var j = i + 1 ; j < count ; j++ ) { 
 
 				var b2 = balls[j];
-				var separation = b1.position.clone().add( b1.v ).sub( b2.position ).sub( b2.v ).length();
+				separation.copy( b1.position ).add( b1.v ).sub( b2.position ).sub( b2.v );
 
 				// exchange normal velocities for collision, leave tangential alone
-				if ( separation < 2 * radius ) {
+				if ( separation.length() < 2 * radius ) {
 
-					var normal = b1.position.clone().sub( b2.position ).normalize();
+					normal.copy( b1.position ).sub( b2.position ).normalize();
 
-					var relativeVelocity = b1.v.clone().sub( b2.v );
+					relativeVelocity.copy( b1.v ).sub( b2.v );
 					var dot = relativeVelocity.dot( normal );
 
 					normal = normal.multiplyScalar( dot );
@@ -121,7 +128,7 @@
 
 			}			
 
-			b1.position.add( balls[i].v );
+			b1.position.add( b1.v );
 
 		}
 
