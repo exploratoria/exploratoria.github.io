@@ -12,7 +12,7 @@
 
 This is an <i>n</i>-body system where the masses interact through gravitational forces. It can represent a group of planets, stars or globular galaxies, all of equal mass.
 
-Since there are no external forces acting on the system, the displayed total energy should remain constant. It does not do so exactly due to roundoff errors in JavaScript. The difference of the current energy from the initial value is a measure of the accuracy of the numerical evolution.
+Since there are no external forces acting on the system, the displayed total energy should remain constant. It does not do so exactly due to errors inherent in any numerical approximation of an exact system. The difference of the current energy from the initial value is a measure of the accuracy of the numerical evaluation.
 
 ### Things to Try
 
