@@ -12,7 +12,7 @@
 
 [Lorenz Attractor - Full Screen](http://exploratoria.github.io/exhibits/mathematics/lorenz-attractor/lorenz-attractor.html)
 
-The <a href=https://en.wikipedia.org/wiki/Lorenz_system>Lorenz attractor</a>
+The famous <a href=https://en.wikipedia.org/wiki/Lorenz_system>Lorenz attractor</a>, a chaotic system that resembles a butterfly.
 
 ### Things to Try
 
@@ -47,3 +47,18 @@ dz &= ( x y - \beta z ) dt
 \end{align} \\]
 
 and think of the "d" as meaning difference or change in the coordinates. This is how the solution to the equation is found in the code.
+
+The "critical points" of the system are found by setting the right-hand sides of the differential equations equal to zero:
+
+\\[ \begin{split}
+\sigma ( y - x ) &= 0 \\\\
+x ( \rho - z ) - y &= 0 \\\\
+x y - \beta z &= 0
+\end{split}
+\hspace{.5in} \to \hspace{.5in}
+\begin{split}
+x = y &= \pm\sqrt{ \beta ( \rho - 1 ) } \\\\
+z &= \rho - 1
+\end{split} \\]
+
+The locations of the two butterfly wings are most strongly determined by the parameter &rho;.
