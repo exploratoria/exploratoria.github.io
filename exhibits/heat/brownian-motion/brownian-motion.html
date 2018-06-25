@@ -152,6 +152,16 @@
 
 			b1.position.add( b1.v );
 
+			// keep balls in box
+
+			if ( b1.position.x > range ) b1.position.x = .99 * range;
+			if ( b1.position.y > range ) b1.position.y = .99 * range;
+			if ( b1.position.z > range ) b1.position.z = .99 * range;
+
+			if ( b1.position.x < -range ) b1.position.x = -.99 * range;
+			if ( b1.position.y < -range ) b1.position.y = -.99 * range;
+			if ( b1.position.z < -range ) b1.position.z = -.99 * range;
+
 		}
 
 	}
