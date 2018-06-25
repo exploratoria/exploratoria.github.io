@@ -1,5 +1,5 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo; [Exhibits]( http://exploratoria.github.io/exhibits/ ) &raquo;
-[Mechanics, Dynamics & Motion]( http://exploratoria.github.io/exhibits/mechanics/ ) &raquo;
+[Heat & Temperature]( http://exploratoria.github.io/exhibits/heat/ ) &raquo;
 
 # Brownian Motion
 
