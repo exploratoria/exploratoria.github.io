@@ -29,7 +29,7 @@
 	renderer.setClearColor( 0x000000, 1 );
 	document.body.appendChild( renderer.domElement );
 
-	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
 	camera.up.set( 0, 0, 1 );
 	camera.position.set( 2*range, 1.5*range, .5*range );
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );

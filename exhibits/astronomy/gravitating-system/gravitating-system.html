@@ -33,7 +33,7 @@
 
 	scene.add( new THREE.AxisHelper( 1 ) );
 
-	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
 	camera.up.set( 0, 0, 1 );
 	camera.position.set( 2, 2, 2 );
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
