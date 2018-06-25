@@ -52,7 +52,7 @@
 	var light = new THREE.DirectionalLight( 0xffffff, .8 );
 	light.position.set( -range, range, 0 );
 	camera.add( light );
-	scene.add( camera )
+	scene.add( camera );
 
 	var ambient = new THREE.AmbientLight( 0x555555 );
 	scene.add( ambient );
@@ -62,7 +62,7 @@
 	// first the big ball!
 	var geometry = new THREE.SphereGeometry( largeRadius, 50, 50 );
 	var material = new THREE.MeshPhongMaterial();
-	material.color = new THREE.Color().setHSL( Math.random(), 1, .5 )
+	material.color = new THREE.Color().setHSL( Math.random(), 1, .5 );
 	var ball = new THREE.Mesh( geometry, material );
 
 	ball.v = new THREE.Vector3();
@@ -124,7 +124,7 @@
 			if ( plus.y > range || minus.y < -range ) b1.v.y = -b1.v.y;
 			if ( plus.z > range || minus.z < -range ) b1.v.z = -b1.v.z;
 
-			for ( var j = i + 1 ; j < count ; j++ ) { 
+			for ( var j = i + 1 ; j < count ; j++ ) {
 
 				var b2 = balls[j];
 				separation.copy( b1.position ).add( b1.v ).sub( b2.position ).sub( b2.v );
@@ -148,7 +148,7 @@
 
 				}
 
-			}			
+			}
 
 			b1.position.add( b1.v );
 
