@@ -10,6 +10,8 @@
 <span style="display: none"> [You are now in GitHub source code view - Click here to view as a web page]( http://exploratoria.github.io/exhibits/heat/brownian-motion/index.html 'View file as a web page' ) </span>
 <input type=button value="You are now in GitHub web page view - Click here to view as source code" onclick="window.location.href='https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/heat/brownian-motion/'" />
 
+[Brownian Motion - Full Screen](http://exploratoria.github.io/exhibits/heat/brownian-motion/brownian-motion.html)
+
 Brownian motion is the random movement of a relatively large particle suspended in a fluid. It results from the many collisions of the small particles of the fluid with the large particle. In this exhibit the large particle starts off at the origin and moves slowly about the box on a random path.
 
 ### Things to Try

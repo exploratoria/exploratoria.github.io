@@ -19,7 +19,7 @@
 
 <script>
 
-	var count = 100; // integer
+	var count = 200; // integer
 	var radius = .05; // size of molecules
 	var largeRadius = .5;
 	var range = 5;  // size of enclosing box
@@ -74,7 +74,7 @@
 
 	for ( var i = 1 ; i < count ; i++ ) {
 
-		var geometry = new THREE.SphereGeometry( radius, 20, 20 );
+		var geometry = new THREE.SphereGeometry( radius );
 		var material = new THREE.MeshPhongMaterial();
 		material.color = new THREE.Color();
 		var ball = new THREE.Mesh( geometry, material );
