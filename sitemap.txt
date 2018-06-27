@@ -2,6 +2,7 @@ http://exploratoria.github.io/
 http://exploratoria.github.io/exhibits/
 http://exploratoria.github.io/exhibits/aerospace/
 http://exploratoria.github.io/exhibits/astronomy/
+http://exploratoria.github.io/exhibits/astronomy/gravitating-system/
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/
 http://exploratoria.github.io/exhibits/biology/
 http://exploratoria.github.io/exhibits/chemistry/
@@ -13,6 +14,7 @@ http://exploratoria.github.io/exhibits/engineering/catenoid-to-helicoid/
 http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/
 http://exploratoria.github.io/exhibits/geology/
 http://exploratoria.github.io/exhibits/heat/
+http://exploratoria.github.io/exhibits/heat/brownian-motion/
 http://exploratoria.github.io/exhibits/heat/random-walk/
 http://exploratoria.github.io/exhibits/human-anatomy/
 http://exploratoria.github.io/exhibits/language/
