@@ -38,6 +38,14 @@
 	camera.position.set( 2, 2, 2 );
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
+	var light = new THREE.DirectionalLight( 0xffffff, .8 );
+	light.position.set( -1, 1, 0 );
+	camera.add( light );
+	scene.add( camera );
+
+	var ambient = new THREE.AmbientLight( 0x555555 );
+	scene.add( ambient );
+
 	window.addEventListener( 'resize', function() {
 
 		renderer.setSize( window.innerWidth, window.innerHeight );
@@ -65,7 +73,8 @@
 
 		var geometry = new THREE.SphereGeometry( radius, 20, 20 );
 
-		var material = new THREE.MeshBasicMaterial( { color: 'hsl(' + 360*Math.random() + ',100%,50%)' } );
+		var material = new THREE.MeshPhongMaterial();
+		material.color = new THREE.Color().setHSL( Math.random(), 1, .5 );
 
 		var mesh = new THREE.Mesh( geometry, material );
 		spheres.push( mesh );
