@@ -36,6 +36,7 @@
 	var dt = .005;
 
 	var scene = new THREE.Scene();
+
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setClearColor( 0x000000, 1 );
@@ -45,6 +46,7 @@
 	camera.up.set( 0, 0, 1 );
 	camera.position.set( 0, 1.5*scale, 1.5*scale );
 	scene.position.z = -scale;
+
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 	window.addEventListener( 'resize', function() {

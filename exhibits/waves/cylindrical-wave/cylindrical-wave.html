@@ -32,6 +32,7 @@
                'rgb(255,0,255)', 'rgb(255,0,127)', 'rgb(255,255,0)', 'rgb(0,255,127)' ]; 
                
 	var scene = new THREE.Scene();
+
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setClearColor( 0x000000, 1 );
@@ -39,7 +40,8 @@
 
 	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 ); 
 	camera.up.set( 0, 1, 0 );
-	camera.position.set( 0, 0, 1.8 * balls ); 
+	camera.position.set( 0, 0, 1.8 * balls );
+
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 	window.addEventListener( 'resize', function() {
