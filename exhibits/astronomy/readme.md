@@ -11,10 +11,10 @@ Astronomy & Solar System Read Me
 [Gravitating System - Web Page]( http://exploratoria.github.io/exhibits/astronomy/gravitating-system/index.html )  
 [Gravitating System - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/astronomy/gravitating-system/ )
 
-## Gravitating System - WebVR Version
+## Gravitating System WebVR
 
-[Gravitating System - Web Page]( http://exploratoria.github.io/exhibits/astronomy/gravitating-system-webvr/index.html )  
-[Gravitating System - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/astronomy/gravitating-system-webvr/ )
+[Gravitating System WebVR - Web Page]( http://exploratoria.github.io/exhibits/astronomy/gravitating-system-webvr/index.html )  
+[Gravitating System WebVR - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/astronomy/gravitating-system-webvr/ )
 
 ## Star Spotter
 
