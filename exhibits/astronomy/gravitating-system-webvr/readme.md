@@ -1,7 +1,7 @@
 [Exploratoria]( http://exploratoria.github.io ) &raquo; [Exhibits]( http://exploratoria.github.io/exhibits/ ) &raquo;
 [Astronomy]( http://exploratoria.github.io/exhibits/astronomy/ ) &raquo;
 
-# Gravitating System
+# Gravitating System - WebVR Version
 
 <iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/astronomy/gravitating-system-webvr/gravitating-system-webvr.html width=100% height=500px></iframe>
 
