@@ -3,6 +3,7 @@ http://exploratoria.github.io/exhibits/
 http://exploratoria.github.io/exhibits/aerospace/
 http://exploratoria.github.io/exhibits/astronomy/
 http://exploratoria.github.io/exhibits/astronomy/gravitating-system/
+http://exploratoria.github.io/exhibits/astronomy/gravitating-system-webvr/
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/
 http://exploratoria.github.io/exhibits/biology/
 http://exploratoria.github.io/exhibits/chemistry/
