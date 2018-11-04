@@ -71,15 +71,15 @@ CDNs used:
 
 * [CDNJS]( https://cdnjs.com/ )
 	* <https://cdnjs.com/libraries/three.js>
-* [RawGit]( https://rawgit.com/ )
-	* Example: <https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js>
+* [jsDelivr]( https://jsdelivr.com/ )
+	* Example: <https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/examples/js/controls/OrbitControls.js>
 
 As in:
 
 ```
-<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/build/three.min.js></script>  
-<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/controls/OrbitControls.js></script>
-<script src=https://cdn.rawgit.com/mrdoob/three.js/r80/examples/js/libs/stats.min.js></script>  
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/build/three.min.js></script>  
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/examples/js/controls/OrbitControls.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/examples/js/libs/stats.min.js></script>  
 ```
 
 
