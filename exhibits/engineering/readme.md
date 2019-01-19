@@ -11,6 +11,11 @@ Engineering & Structure Read Me
 [Catenoid to Helicoid - Web Page]( http://exploratoria.github.io/exhibits/engineering/catenoid-to-helicoid/index.html )  
 [Catenoid to Helicoid - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/catenoid-to-helicoid/ )
 
+## Platonic Solids
+
+[Platonic Solids - Web Page]( http://exploratoria.github.io/exhibits/engineering/platonic-solids/index.html )  
+[Platonic Solids - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/platonic-solids/ )
+
 ## Rotating Tesseract
 
 [Rotating Tesseract - Web Page]( http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/index.html )  

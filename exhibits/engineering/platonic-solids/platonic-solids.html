@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Platonic Solids</title>
+<meta charset=utf-8>
+<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=author content='Paul Masson'>
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+
+</style>
+</head>
+
+<body>
+
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r90/build/three.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r90/examples/js/controls/OrbitControls.js></script>
+
+<script>
+
+	// initialize common variables
+
+	var scene = new THREE.Scene();
+
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement );
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 0, 8, 8 );
+
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+	window.addEventListener( 'resize', function() {
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
+
+	// initialize geometry and material
+
+	function randomVector() {
+
+		var scale = .01;
+
+		return new THREE.Vector3().set( scale * ( 1 - 2 * Math.random() ),
+						scale * ( 1 - 2 * Math.random() ),
+						scale * ( 1 - 2 * Math.random() ) )
+
+	}
+
+	function randomColorMaterial() {
+
+		var color = new THREE.Color().setHSL( Math.random(), 1, .5 );
+
+		return new THREE.MeshStandardMaterial( { color: color } );
+
+	}
+
+	var tetrahedron = new THREE.Mesh( new THREE.TetrahedronGeometry(), randomColorMaterial() );
+	tetrahedron.position.set( 6, 0, 0 );
+	tetrahedron.rotationData = randomVector();
+	scene.add( tetrahedron );
+
+	var cube = new THREE.Mesh( new THREE.BoxGeometry(), randomColorMaterial() );
+	cube.position.set( 3, 0, 0 );
+	cube.rotationData = randomVector();
+	scene.add( cube );
+
+	var octahedron = new THREE.Mesh( new THREE.OctahedronGeometry(), randomColorMaterial() );
+	octahedron.rotationData = randomVector();
+	scene.add( octahedron );
+
+	var dodecahedron = new THREE.Mesh( new THREE.DodecahedronGeometry(), randomColorMaterial() );
+	dodecahedron.position.set( -3, 0, 0 );
+	dodecahedron.rotationData = randomVector();
+	scene.add( dodecahedron );
+
+	var icosahedron = new THREE.Mesh( new THREE.IcosahedronGeometry(), randomColorMaterial() );
+	icosahedron.position.set( -6, 0, 0 );
+	icosahedron.rotationData = randomVector();
+	scene.add( icosahedron );
+
+	var ambient = new THREE.AmbientLight();
+	scene.add( ambient );
+
+	var lightDown = new THREE.DirectionalLight();
+	lightDown.position.set( 0, 0, 1 );
+	scene.add( lightDown );
+
+	var lightUp = new THREE.DirectionalLight();
+	lightUp.position.set( 0, 0, -1 );
+	scene.add( lightUp );
+
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+
+		tetrahedron.rotation.x += tetrahedron.rotationData.x;
+		tetrahedron.rotation.y += tetrahedron.rotationData.y;
+		tetrahedron.rotation.z += tetrahedron.rotationData.z;
+
+		cube.rotation.x += cube.rotationData.x;
+		cube.rotation.y += cube.rotationData.y;
+		cube.rotation.z += cube.rotationData.z;
+
+		octahedron.rotation.x += octahedron.rotationData.x;
+		octahedron.rotation.y += octahedron.rotationData.y;
+		octahedron.rotation.z += octahedron.rotationData.z;
+
+		dodecahedron.rotation.x += dodecahedron.rotationData.x;
+		dodecahedron.rotation.y += dodecahedron.rotationData.y;
+		dodecahedron.rotation.z += dodecahedron.rotationData.z;
+
+		icosahedron.rotation.x += icosahedron.rotationData.x;
+		icosahedron.rotation.y += icosahedron.rotationData.y;
+		icosahedron.rotation.z += icosahedron.rotationData.z;
+
+	}
+
+	// initialize render
+	render();
+
+</script>
+
+</body>
+</html>
