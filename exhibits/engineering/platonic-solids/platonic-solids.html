@@ -30,7 +30,7 @@
 
 	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
 	camera.up.set( 0, 0, 1 );
-	camera.position.set( 0, 8, 8 );
+	camera.position.set( 0, 10, 0 );
 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
@@ -63,26 +63,27 @@
 	}
 
 	var tetrahedron = new THREE.Mesh( new THREE.TetrahedronGeometry(), randomColorMaterial() );
-	tetrahedron.position.set( 6, 0, 0 );
+	tetrahedron.position.set( 1.5, 0, 1.5 );
 	tetrahedron.rotationData = randomVector();
 	scene.add( tetrahedron );
 
 	var cube = new THREE.Mesh( new THREE.BoxGeometry(), randomColorMaterial() );
-	cube.position.set( 3, 0, 0 );
+	cube.position.set( -1.5, 0, 1.5 );
 	cube.rotationData = randomVector();
 	scene.add( cube );
 
 	var octahedron = new THREE.Mesh( new THREE.OctahedronGeometry(), randomColorMaterial() );
+	octahedron.position.set( 3, 0, -1.5 );
 	octahedron.rotationData = randomVector();
 	scene.add( octahedron );
 
 	var dodecahedron = new THREE.Mesh( new THREE.DodecahedronGeometry(), randomColorMaterial() );
-	dodecahedron.position.set( -3, 0, 0 );
+	dodecahedron.position.set( 0, 0, -1.5 );
 	dodecahedron.rotationData = randomVector();
 	scene.add( dodecahedron );
 
 	var icosahedron = new THREE.Mesh( new THREE.IcosahedronGeometry(), randomColorMaterial() );
-	icosahedron.position.set( -6, 0, 0 );
+	icosahedron.position.set( -3, 0, -1.5 );
 	icosahedron.rotationData = randomVector();
 	scene.add( icosahedron );
 
