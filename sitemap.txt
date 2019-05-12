@@ -12,6 +12,7 @@ http://exploratoria.github.io/exhibits/electromagnetism/
 http://exploratoria.github.io/exhibits/energy/
 http://exploratoria.github.io/exhibits/engineering/
 http://exploratoria.github.io/exhibits/engineering/catenoid-to-helicoid/
+http://exploratoria.github.io/exhibits/engineering/platonic-solids/
 http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/
 http://exploratoria.github.io/exhibits/geology/
 http://exploratoria.github.io/exhibits/heat/
