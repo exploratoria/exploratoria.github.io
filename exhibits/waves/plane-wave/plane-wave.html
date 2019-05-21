@@ -3,8 +3,8 @@
 <head>
 <title>Plane Wave</title>
 <meta charset=utf-8>
-<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-<meta name=author content='Paul Masson'>
+<meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name=author content="Paul Masson">
 <style>
 
 	body { margin: 0px; overflow: hidden; }
@@ -20,8 +20,8 @@
 		<button onclick=updateScene(false)>random</button>
 	</div>
 
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/build/three.min.js></script>
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/controls/OrbitControls.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js></script>
 
 <script>
 
@@ -92,8 +92,8 @@
 	var texture = new THREE.Texture( canvas );
 	texture.needsUpdate = true; // critical for using canvas as texture
 
-	var material = new THREE.PointCloudMaterial( { size: size, map: texture, transparent: true, alphaTest: .1 } );
-	scene.add( new THREE.PointCloud( geometry, material ) );
+	var material = new THREE.PointsMaterial( { size: size, map: texture, transparent: true, alphaTest: .1 } );
+	scene.add( new THREE.Points( geometry, material ) );
 
 	function updateScene( useLattice ) {
 		
