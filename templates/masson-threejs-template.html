@@ -3,8 +3,8 @@
 <head>
 <title></title>
 <meta charset=utf-8>
-<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-<meta name=author content=''>
+<meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name=author content="">
 <style>
 
 	body { margin: 0px; overflow: hidden; }
@@ -14,8 +14,8 @@
 
 <body>
 
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/build/three.min.js></script>
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/examples/js/controls/OrbitControls.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js></script>
 
 <script>
 
@@ -28,7 +28,7 @@
 	renderer.setClearColor( 0x000000, 1 );
 	document.body.appendChild( renderer.domElement );
 
-	scene.add( new THREE.AxisHelper( 1 ) );
+	scene.add( new THREE.AxesHelper( 1 ) );
 
 	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
 	camera.up.set( 0, 0, 1 );
