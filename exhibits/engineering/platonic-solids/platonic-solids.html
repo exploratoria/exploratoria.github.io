@@ -3,8 +3,8 @@
 <head>
 <title>Platonic Solids</title>
 <meta charset=utf-8>
-<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-<meta name=author content='Paul Masson'>
+<meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name=author content="Paul Masson">
 <style>
 
 	body { margin: 0px; overflow: hidden; }
@@ -14,12 +14,10 @@
 
 <body>
 
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r90/build/three.min.js></script>
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r90/examples/js/controls/OrbitControls.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js></script>
 
 <script>
-
-	// initialize common variables
 
 	var scene = new THREE.Scene();
 
@@ -41,8 +39,6 @@
 		camera.updateProjectionMatrix();
 
 	} );
-
-	// initialize geometry and material
 
 	function randomVector() {
 
@@ -125,7 +121,6 @@
 
 	}
 
-	// initialize render
 	render();
 
 </script>

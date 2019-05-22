@@ -3,8 +3,8 @@
 <head>
 <title>Catenoid to Helicoid</title>
 <meta charset=utf-8>
-<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-<meta name=author content='Paul Masson'>
+<meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name=author content="Paul Masson">
 <style>
 
 	body { margin: 0px; overflow: hidden; }
@@ -14,8 +14,8 @@
 
 <body>
 
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/build/three.min.js></script>
-<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r80/examples/js/controls/OrbitControls.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js></script>
 
 <script>
 
@@ -40,7 +40,9 @@
 
 	} );
 
-	function parametrization( u, v ) {
+	var target = new THREE.Vector3();
+
+	function parametrization( u, v, target ) {
 
 		// u and v run from 0 to 1 for ParametricGeometry
 		// both need to be rescaled to appropriate values
@@ -54,7 +56,7 @@
 				+ Math.sin(theta) * Math.cosh(v) * Math.sin(u);
 		var z = u * Math.cos(theta) + v * Math.sin(theta);
 
-		return new THREE.Vector3( x, y, z );
+		target.set( x, y, z );
 
 	}
 
@@ -63,7 +65,10 @@
 	var slices = 50;
 	var stacks = 50;
 
-	var geometry = new THREE.ParametricGeometry( parametrization, slices, stacks );
+	// ParametricGeometry automatically merges vertices
+	var geometry = new THREE.Geometry().fromBufferGeometry(
+		new THREE.ParametricBufferGeometry( parametrization, slices, stacks ) );
+
 	var material = new THREE.MeshNormalMaterial( { side: THREE.DoubleSide } );
 	var mesh = new THREE.Mesh( geometry, material );
 	scene.add( mesh );
@@ -75,7 +80,7 @@
 
 		theta += .01;
 
-		// from source code for ParametricGeometry
+		// from source code for ParametricBufferGeometry
 
 		for ( var i = 0 ; i <= stacks ; i++ ) {
 
@@ -85,12 +90,12 @@
 
 				var u = j / slices;
 
-				var param = parametrization( u, v );
+				parametrization( u, v, target );
 				var vector = geometry.vertices[ i*(slices+1) + j ];
 
-				vector.x = param.x;
-				vector.y = param.y;
-				vector.z = param.z;
+				vector.x = target.x;
+				vector.y = target.y;
+				vector.z = target.z;
 
 			}
 		}
