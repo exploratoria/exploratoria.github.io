@@ -7,10 +7,10 @@
 <meta name=author content="Theo Armour">
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/build/three.min.js"></script>  
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/controls/OrbitControls.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/controls/FirstPersonControls.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/libs/stats.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js"></script>  
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/FirstPersonControls.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/libs/stats.min.js"></script>  
 
 <script>
 
@@ -74,7 +74,7 @@
 
 		selSprite.onchange = function() { 
 
-			texture = THREE.ImageUtils.loadTexture( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
+			texture = new THREE.TextureLoader().load( 'sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
 			drawStars();
 
 		};
@@ -97,15 +97,15 @@
 		scene = new THREE.Scene();
 
 // axes
-		var axisHelper = new THREE.AxisHelper( 50 );
-		scene.add( axisHelper );
+		var axesHelper = new THREE.AxesHelper( 50 );
+		scene.add( axesHelper );
 
 // texture
-		texture = THREE.ImageUtils.loadTexture( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/ball.png' );
+		texture = new THREE.TextureLoader().load( 'sprites/ball.png' );
 
 // interaction
 		raycaster = new THREE.Raycaster();
-		raycaster.params.PointCloud.threshold = 0.1;
+		raycaster.params.Points.threshold = 0.1;
 		mouse = new THREE.Vector2();
 
 		renderer.domElement.addEventListener( 'mousedown', onDocumentMouseDown, false );
@@ -249,9 +249,9 @@
 
 			geometry.computeBoundingSphere();
 
-			var material = new THREE.PointCloudMaterial( { map: texture, vertexColors: THREE.VertexColors, alphaTest: .1 } );
+			var material = new THREE.PointsMaterial( { map: texture, vertexColors: THREE.VertexColors, alphaTest: .1 } );
 
-			particleSystem = new THREE.PointCloud( geometry, material );
+			particleSystem = new THREE.Points( geometry, material );
 			scene.add( particleSystem );
 			scene.add( placards );
 
