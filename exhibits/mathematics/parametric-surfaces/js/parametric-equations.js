@@ -1,4 +1,4 @@
-var x, y, z;
+﻿var x, y, z;
 var pi = Math.PI;
 
 //equations = {
@@ -24,7 +24,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 10,
 		'dStep' : 0.05,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5);
@@ -33,7 +33,7 @@ var equations = function() { this.equations = {
 			z = scale * ( sin( u ) * ( a + b * cos( v ) )  );
 			y = scale * 0.6 * ( ( cos( v ) + sin( v ) * -1 ) * ( 3 + sin( v ) ) * log( 1 - pi * v / c ) + d * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -74,7 +74,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 8,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -82,7 +82,7 @@ var equations = function() { this.equations = {
 			z = scale * ( sin( u ) * ( R1 + R2 * cos( v ) ) + b * cos( c * u ) );
 			y = scale * ( - d * log( 1 - v * 0.3157 ) + e * sin( v ) + f * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -103,7 +103,7 @@ var equations = function() { this.equations = {
 		'cMin' : -20,
 		'cMax' : 20,
 		'cStep' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 5 * ( u - 0.5 );
 			v = 5 * ( v - 0.5 );
 
@@ -113,7 +113,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * exp( - pow( a * R1, 2 ) ) );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -138,7 +138,7 @@ var equations = function() { this.equations = {
 		'dMin' : -10,
 		'dMax' : 10,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 5 * ( v - 0.5 );
 
@@ -150,7 +150,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * exp( - pow( a * R1, d ) ) );
 			z = scale * ( t );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -183,7 +183,7 @@ var equations = function() { this.equations = {
 		'fMin' : -10,
 		'fMax' : 10,
 		'fStep' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 5 * ( u - 0.5 );
 			v = 5 * ( v - 0.5 );
 
@@ -193,7 +193,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( c * R1 ) * b * exp( - pow( a * R1, f ) ) );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 
 		}
 	},
@@ -231,7 +231,7 @@ var equations = function() { this.equations = {
 		'gMin' : -10,
 		'gMax' : 5,
 		'gStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 4 * pi * ( v - 0.5 );
 
@@ -239,7 +239,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( a + cos( u + c * pi / d) ) * ( cos( v ) - f ) + e );
 			z = scale * ( ( a + cos( u - c * pi / d) ) * ( cos( v ) - g ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -256,7 +256,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.01,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -264,7 +264,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos2( v ) * ( a + cos( v ) ) / ( b + sin2( v ) )  );
 			z = scale * ( sin( v ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -291,7 +291,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.01,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -299,7 +299,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * cos( v ) + d * sin( u ) );
 			z = scale * ( c * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -342,7 +342,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.05,
 		'u' : 80,
 		'v' : 50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -352,7 +352,7 @@ var equations = function() { this.equations = {
 			y = scale * ( W * sin( v ) );
 			z = scale * ( a * sin( u ) - sin( a * u ) + ( ( a - f ) / a ) * W * cos( ( a + h ) * u / c ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -369,7 +369,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -2,
 		'R2Max' : 15,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -377,7 +377,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( v ) + 3 * sin( 3 * u + pi / 2 ) );
 			z = scale * ( ( R2 + R1 * cos( v ) ) * sin( u ) - R2 * sqrt( 3 ) / 6 );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -398,7 +398,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.05,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u - 0.5 );
 			v = 1 * ( v - 0.5 );
 
@@ -406,7 +406,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( c + a * sin( 2 * pi * u ) ) * cos( 4 * pi * v ) );
 			z = scale * ( a * cos( 2 * pi * u ) + 3 * cos( 2 * pi * v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -450,7 +450,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.1,
 		'u' : 40,
 		'v' : 40,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = -pi * ( v - 0.5 );
 
@@ -461,7 +461,7 @@ var equations = function() { this.equations = {
 			y = scale * ( e * cos ( v ) * cos( v ) / s - 1 );
 			z = scale * ( R1 * cos ( v ) * cos( v ) * sin( h * u ) + cos( u ) * sin( h * v ) / s );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -500,7 +500,7 @@ var equations = function() { this.equations = {
 		'gStep' : 0.1,
 		'u' : 30,
 		'v' : 120,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 30 * ( u - 0.5);
 			v = 90 * ( v - 0.5 );
 
@@ -512,7 +512,7 @@ var equations = function() { this.equations = {
 			y = scale * ( f * R1 * cosh( a * u ) * ( - ( R1 * cos( v ) * cos( R1 * v ) ) - ( sin( v ) * sin( R1 * v ) ) ) / s );
 			z = scale * ( g * R1 * cosh( a * u ) * ( - ( R1 * sin( v ) * cos( R1 * v ) ) + ( cos( v ) * sin( R1 * v ) ) ) / s );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -529,7 +529,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.05,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 1.207 * ( v ) + 0.30;
 
@@ -537,7 +537,7 @@ var equations = function() { this.equations = {
 			y = scale * ( -b / tan( v ) + 1 );
 			z = scale * ( a * cos( v ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -564,7 +564,7 @@ var equations = function() { this.equations = {
 		'dStep' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 6 * pi * ( u - 0.5 );
 			v = 2.6 * ( v - 0.5 );
 
@@ -572,7 +572,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * cos( u ) * cosh( v ) );
 			z = scale * ( -b * sin( u /  c ) * sinh( v /  d) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -597,7 +597,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -605,7 +605,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * cosh( v / d ) * sin( u ) );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -622,7 +622,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.05,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -630,7 +630,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * u * sin( v ) );
 			z = scale * ( b * u * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -661,7 +661,7 @@ var equations = function() { this.equations = {
 		'eMin' : -5,
 		'eMax' : 5,
 		'eStep' : 0.05,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -669,7 +669,7 @@ var equations = function() { this.equations = {
 			y = scale * ( exp( d * v ) * sin( v ) + exp( c * v ) * cos( u ) * sin( v ) );
 			z = scale * ( exp( e * v ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -690,7 +690,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -698,7 +698,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * cos( v ) );
 			z = scale * ( c * cos( u + v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -719,7 +719,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -727,7 +727,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * -cos2( u + v ) + 1);
 			z = scale * ( c * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -754,7 +754,7 @@ var equations = function() { this.equations = {
 		'dStep' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -762,7 +762,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * cos( b * sqrt( pow( u, c ) + pow( v, d ) ) )  );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -776,7 +776,7 @@ var equations = function() { this.equations = {
 		'link1' : 'http://geometrygym.blogspot.com/2010/03/costa-minimal-surface.html',
 		'link1' : 'http://demonstrations.wolfram.com/TheTopologyOfCostasMinimalSurface/',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -784,7 +784,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( u + 2 * pi / 3 ) / cosh( v ) );
 			z = scale * ( cos( u - 2 * pi / 3 ) / cosh( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -817,7 +817,7 @@ var equations = function() { this.equations = {
 		'fMin' : -5,
 		'fMax' : 5,
 		'fStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -825,7 +825,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( a + sin( b * pi * u ) * sin( b * pi * v ) ) * cos( c * pi * v ) );
 			z = scale * d * ( cos( b * pi * u ) * sin( b * pi * v ) + e * v - f );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -863,7 +863,7 @@ var equations = function() { this.equations = {
 		'gMin' : -5,
 		'gMax' : 5,
 		'gStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -871,7 +871,7 @@ var equations = function() { this.equations = {
 			y = scale * ( d * sin( u ) * sin( b * v ) );
 			z = scale * ( pow( cos( v ), e ) - pow( cos( u ), f ) * pow( sin( v ), g )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -912,7 +912,7 @@ var equations = function() { this.equations = {
 		'hMin' : -5,
 		'hMax' : 5,
 		'hStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u );
 			v = 2 * pi * ( v );
 
@@ -924,7 +924,7 @@ var equations = function() { this.equations = {
 			y = scale * ( pow( u, d ) * pow( sin( v ), e ) + 2 * pow( u, f ) * sin( v ) * cos( v ) );
 			z = scale * ( sqrt( ( 1 - pow( u, g ) ) / h ) * u * ( sin( v ) + cos( v ) ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -953,7 +953,7 @@ var equations = function() { this.equations = {
 		'eMin' : -5,
 		'eMax' : 5,
 		'eStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -961,7 +961,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * sin( e * u ) );
 			z = scale * ( c * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1006,7 +1006,7 @@ var equations = function() { this.equations = {
 		'R1Min' : -5,
 		'R1Max' : 5,
 		'R1Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1014,7 +1014,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * pow( v, f ) / ( 1 + pow( v, 2) ) );
 			z = scale * ( ( R1 + c * pow( v, g ) / ( 1 + pow( v, h ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1043,7 +1043,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 15,
 		'R2Step' : 0.5,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 6 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -1051,7 +1051,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * v );
 			z = scale * ( ( R2 + R1 ) * sin( u ) - c * sin( ( ( R2 + R1 ) / R1 ) * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1096,7 +1096,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1104,7 +1104,7 @@ var equations = function() { this.equations = {
 			y = scale * ( c * v );
 			z = scale * ( ( R2 + b * exp( - ( pow( a, f ) * pow( v, g )) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1133,7 +1133,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 15,
 		'R2Step' : 0.5,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1141,7 +1141,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * v );
 			z = scale * ( ( R2 - R1 ) * sin( u ) - c * sin( ( ( R2 - R1 ) / R1 ) * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1170,7 +1170,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 1 * ( v - 0.5 );
 
@@ -1178,7 +1178,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * v );
 			z = scale * ( R2 * sin( u ) * cos( u ) / ( 1 + pow( sin( u ), c ) ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1227,7 +1227,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -15,
 		'R2Max' : 5,
 		'R2Step' : 0.5,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 4 * ( v - 0.5 );
 
@@ -1235,7 +1235,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * v  * ( pow( v, f ) - 1) / ( pow( v, f ) + 1 ) );
 			z = scale * ( ( R2 + c * ( pow( v, g ) - 1 ) / ( pow( v, h ) + 1 ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1280,7 +1280,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1288,7 +1288,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 2 * b * v  );
 			z = scale * ( ( R2 + 2 * c / ( f + pow( v, g ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1327,7 +1327,7 @@ var equations = function() { this.equations = {
 		'eStep' : 0.01,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 4 * pi * ( u );
 			v = 2 * ( v ) + 0.001;
 
@@ -1335,7 +1335,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * sin( u ) * sin( v ) );
 			z = scale * ( c * cos( v ) + log( tan( v / e ) ) + d * u );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1360,7 +1360,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 5 * ( v - 0.5 );
 
@@ -1368,7 +1368,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 0 );
 			z = scale * ( b * v * sin( d * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1393,7 +1393,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 1 * ( v );
 
@@ -1401,7 +1401,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * ( v - 1 ) * cos( u + 2 * pi / 3 ) );
 			z = scale * ( c * ( 1 - v ) * cos( u - 2 * pi / 3 ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1446,7 +1446,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1454,7 +1454,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R2 * ( c - d * cos( u ) ) * sin( u ) * sin( v ) );
 			z = scale * ( e * cos( f * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1499,7 +1499,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -1507,7 +1507,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( v * d) * cos( u * e ) );
 			z = scale * ( R2 * sin( u - a ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1540,7 +1540,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 			h = a - c * cos( u ) * cos( v )
@@ -1549,7 +1549,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R2 * ( b * sin( u ) * ( a - d * cos( v ) ) ) / h );
 			z = scale * ( b * sin( v ) * ( c * cos( u ) - d ) / h );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1590,7 +1590,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = b * ( u );  // unusual to have coefficient here...
 			v = 2 * pi * ( v );
 
@@ -1598,7 +1598,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( u - 0.5);
 			z = scale * R1 * ( d * sqrt( u * ( u - e ) * ( u - f ) ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1607,7 +1607,7 @@ var equations = function() { this.equations = {
 		'title' : 'Eight Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite41.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1615,7 +1615,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( u ) * sin( 2 * v ) );
 			z = scale * ( sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1640,7 +1640,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -1648,7 +1648,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * sin( u ) * sin( v ) );
 			z = scale * ( c * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1661,7 +1661,7 @@ var equations = function() { this.equations = {
 		'link1' : 'https://secure.msri.org/about/sgp/jim/geom/minimal/library/ennepern/z-index.html',
 		'link1' : 'http://blogs.ams.org/visualinsight/2013/11/01/enneper-surface/',
 		'scale' :  8,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 5 * ( u - 0.5 );
 			v = 5 * ( v - 0.5 );
 
@@ -1669,7 +1669,7 @@ var equations = function() { this.equations = {
 			var y = scale * ( v - v * v * v / 3 + v * u * u );
 			var z = scale * ( u * u - v * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1720,7 +1720,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 15,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2.5 * ( v );
 
@@ -1731,7 +1731,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( t - pow( t, d  )/ e + t * pow( s, f ) );
 			z = scale * R1 * ( pow( s, g ) - h * s * t );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1744,7 +1744,7 @@ var equations = function() { this.equations = {
 		'aMin' : -5,
 		'aMax' : 5,
 		'aStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 1 * pi * ( v  );
 
@@ -1752,7 +1752,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( v ) * cos( u ) );
 			z = scale * ( ( 1 - a * v ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1761,7 +1761,7 @@ var equations = function() { this.equations = {
 		'title' : 'Fish Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite47.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -1769,7 +1769,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( sin( u ) - sin( 2 * u ) ) * sin( v ) / 4 );
 			z = scale * ( cos( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1778,7 +1778,7 @@ var equations = function() { this.equations = {
 		'title' : 'Folium',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite77.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -1786,7 +1786,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( u + 2 * pi / 3 ) / cosh( v ) );
 			z = scale * ( cos( u - 2 * pi / 3 ) / cosh( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1811,7 +1811,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1819,7 +1819,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( c * c / b ) * ( ( sin( u ) * cos( v ) ) / ( sin( v ) * sin( v ) + c * c * cos( v ) * cos( v ) * ( cos( u ) * cos( u ) / a * a + sin( u ) * sin( u ) / b * b ) ) ) );
 			z = scale * ( c * ( ( sin( v ) ) / ( sin( v ) * sin( v ) + c * c * cos( v ) * cos( v ) * ( cos( u ) * cos( u ) / a * a + sin( u ) * sin( u ) / b * b ) ) ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1828,7 +1828,7 @@ var equations = function() { this.equations = {
 		'title' : 'Funnel',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite27.html',
 		'scale' :  35,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 ) + 0.0001;
 			v = 2 * pi * ( v - 0.5 );
 
@@ -1836,7 +1836,7 @@ var equations = function() { this.equations = {
 			y = scale * ( u * sin( v ) );
 			z = scale * ( log( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1861,7 +1861,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -1869,7 +1869,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * u * sin( v ) );
 			z = scale * ( c * u * sin( v ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1878,7 +1878,7 @@ var equations = function() { this.equations = {
 		'title' : 'Handkerchief Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite11.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -1886,7 +1886,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v );
 			z = scale * ( pow( u, 3 )/ 3 + u * pow( v, 2 ) + 2 * ( pow( u, 2) - pow( v, 2 ) ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1895,7 +1895,7 @@ var equations = function() { this.equations = {
 		'title' : 'Helicoid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite24.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1903,7 +1903,7 @@ var equations = function() { this.equations = {
 			y = scale * ( u * sin( v ) );
 			z = scale * ( 1 * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1912,7 +1912,7 @@ var equations = function() { this.equations = {
 		'title' : 'Henneberg Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite32.html',
 		'scale' :  2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1920,7 +1920,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 2 * sin( v ) * sinh( u ) + 0.667 * sin( 3 * v ) * sinh( 3 * u ) );
 			z = scale * ( 2 * cos( 2 * v ) * cosh( 2 * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1945,7 +1945,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -1953,7 +1953,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( a + u * cos( v ) ) * cos( b * pi * u ) + c * u );
 			z = scale * ( u * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -1962,7 +1962,7 @@ var equations = function() { this.equations = {
 		'title' : 'Hyperbolic Helicoid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite26.html',
 		'scale' :  90,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -1970,7 +1970,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sinh( v ) * sin( 3 * u ) / ( 1 + cosh( u ) * cosh( v ) )  );
 			z = scale * ( cosh( v ) * sinh( u ) / ( 1 + cosh( u ) * cosh( v ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2021,7 +2021,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2029,7 +2029,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( pow( sin( u - e ) * cos( v ), b ) );
 			z = scale * R1 * ( pow( sin( v - f ), c ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2038,7 +2038,7 @@ var equations = function() { this.equations = {
 		'title' : 'Hyperbolic Paraboloid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite99.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -2046,7 +2046,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v );
 			z = scale * ( u * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2055,7 +2055,7 @@ var equations = function() { this.equations = {
 		'title' : 'Hyperboloid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite30.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -2063,7 +2063,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 1 * cosh( v ) * sin( u ) );
 			z = scale * ( 1 * sinh( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2088,7 +2088,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2096,7 +2096,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( a + b * sin( c * u * 2 * pi ) ) * sin( v ) );
 			z = scale * ( ( a + b * sin( c * u * 2 * pi ) ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2149,7 +2149,7 @@ var equations = function() { this.equations = {
 */
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -2159,7 +2159,7 @@ var equations = function() { this.equations = {
 			y = scale * ( W * sin( v ) );
 			z = scale * ( b * sin( u ) - sin( b * u ) - W * cos( ( b - 1 ) * u / 2 ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2168,7 +2168,7 @@ var equations = function() { this.equations = {
 		'title' : 'Jet Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite43.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -2176,7 +2176,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( 1 - cosh( u ) ) * sin( u ) * sin( v ) / 2 + 1);
 			z = scale * ( cosh( u ) - 6);
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2189,7 +2189,7 @@ var equations = function() { this.equations = {
 		'aMin' : -5,
 		'aMax' : 5,
 		'aStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 1.01 * ( v ) + 0.5;
 
@@ -2197,7 +2197,7 @@ var equations = function() { this.equations = {
 			y = scale * ( - a * cos( v ) / tan( v ) );
 			z = scale * ( a * cos( v ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2206,7 +2206,7 @@ var equations = function() { this.equations = {
 		'title' : 'Kidney Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite42.html',
 		'scale' :  15,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -2214,7 +2214,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( u ) * ( 3 * cos( v ) - cos( 3 * v ) )  );
 			z = scale * ( 3 * sin( v ) - sin( 3 * v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2266,7 +2266,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 40,
 		'v' : 40,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2274,7 +2274,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( sin( u ) * ( d + sin( v ) * cos( u / e ) - sin( 2 * v ) * sin( u / 2 ) / f ) );
 			z = scale * R1 * ( sin( u / g ) * sin( v ) + cos( u / 2 ) * sin( 2 * v ) / h );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2325,7 +2325,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 200,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * b * c * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2333,7 +2333,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( sin( u / f ) * cos( u / e ) * ( d + cos( v ) ) + sin( u / e ) * sin( v ) * cos( v ) );
 			z = scale * R1 * ( - sin( u / h ) * ( g + cos( v ) ) + cos( u / h ) * sin( v ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2385,7 +2385,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 4.3 * pi * ( u - 0.5 );
 			v = 3.11 * ( v )  + 0.035;
 
@@ -2395,7 +2395,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( ( e * ( -u * cos(u) + sin(u)) * sin( v ) ) / r );  // paul bourke's version
 			z = scale * R1 * ( h * log( tan( v / f ) ) + g * cos( v ) / r );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2447,7 +2447,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u );
 			v = pi * ( v );
 
@@ -2455,7 +2455,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( cos( v ) * sqrt( abs( sin( b * u ) ) ) * sin( u ) );
 			z = scale * R1 * 0.00005 * ( pow( x, c ) - pow( y, d ) + e * x * y * pow( tan( v ),  f ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2472,7 +2472,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2480,7 +2480,7 @@ var equations = function() { this.equations = {
 			y = scale * ( u );
 			z = scale * ( ( sqrt( R2 * R2 - u * u ) - R1 ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2505,7 +2505,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2513,7 +2513,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( v ) / b );
 			z = scale * ( cos( u ) / ( a + sin( v ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2522,7 +2522,7 @@ var equations = function() { this.equations = {
 		'title' : 'Lockdisk',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite114.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 3 * ( v ) + 1;
 
@@ -2530,7 +2530,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( u ) / ( sqrt( 2 ) + sin( v ) )  );
 			z = scale * ( cos( u ) / ( 1 + sqrt( 2 ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2539,7 +2539,7 @@ var equations = function() { this.equations = {
 		'title' : 'Loop',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite66.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1.5 * ( u );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2547,7 +2547,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 2 * cos( v ) );
 			z = scale * ( 4 * sin( v ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2598,7 +2598,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 4 * pi * ( u - 0.5 );
 			v = 1 * ( v - 0.5 );
 
@@ -2606,7 +2606,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( -v * sin( u ) - d * pow( v, e ) * sin( f * u ) );
 			z = scale * R1 * ( 0.25 * exp( g, log( v ) ) * cos( h * u / 2) / 3 );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2631,7 +2631,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u - 0.5 );
 			v = 1 * ( v - 0.5 );
 
@@ -2639,7 +2639,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v );
 			z = scale * ( a * u * u * u * u + u * u * v - v * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2664,7 +2664,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2672,7 +2672,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * ( 1 - u ) * sin( v ) );
 			z = scale * ( u );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2682,7 +2682,7 @@ var equations = function() { this.equations = {
 		'link1' : 'http://www.3d-meier.de/tut3/Seite13.html',
 		'link1' : 'http://paulbourke.net/geometry/mobius/',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2690,7 +2690,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( u ) + v * cos( u / 2 ) * sin( u ) );
 			z = scale * (  v *  sin( u / 2 ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2700,7 +2700,7 @@ var equations = function() { this.equations = {
 		'link1' : 'http://www.3d-meier.de/tut3/Seite14.html',
 		'link1' : 'http://paulbourke.net/geometry/',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -2708,7 +2708,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v );
 			z = scale * ( u * u * u - 3 * u * v * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2733,7 +2733,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * ( v );
 
@@ -2741,7 +2741,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( v + b * u ) * sin( u ) );
 			z = scale * ( a * v * v  - 6 );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2750,7 +2750,7 @@ var equations = function() { this.equations = {
 		'title' : 'Paraboloid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite25.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -2758,7 +2758,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 1 * v * sin( u ) );
 			z = scale * ( 1 * v * v  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2767,7 +2767,7 @@ var equations = function() { this.equations = {
 		'title' : 'Pillow Shape',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite46.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2775,7 +2775,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( v ) );
 			z = scale * ( 0.8 * sin( u ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2800,7 +2800,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2808,7 +2808,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * ( c + sin( v ) )  );
 			z = scale * ( b * ( cos( v ) * ( c + sin( v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2863,7 +2863,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2871,7 +2871,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( e * cos( h - u ) * ( b + 0.868837 * cos( 2.43773 + v ) )  );
 			z = scale * R1 * ( f * cos( i + u ) * ( c + 0.495098 * cos( 0.377696 - v ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2880,7 +2880,7 @@ var equations = function() { this.equations = {
 		'title' : 'Plane',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite124.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 5 * ( u - 0.5 );
 			v = 5 * ( v - 0.5 );
 
@@ -2888,7 +2888,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 0 );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2898,7 +2898,7 @@ var equations = function() { this.equations = {
 		'link1' : 'http://www.3d-meier.de/tut3/Seite15.html',
 		'link1' : 'http://paulbourke.net/geometry/',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -2906,7 +2906,7 @@ var equations = function() { this.equations = {
 			y = scale * ( u * v );
 			z = scale * ( 1 - v * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2915,7 +2915,7 @@ var equations = function() { this.equations = {
 		'title' : 'Pseudo Cross Cap',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite51.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5);
 			v = 2 * pi * ( v - 0.5 );
 
@@ -2923,7 +2923,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( 1 - u * u ) * sin( 2 * v ) );
 			z = scale * ( u );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2932,7 +2932,7 @@ var equations = function() { this.equations = {
 		'title' : 'Pseudosphere',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite31.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 1 * pi * ( v ) + 0.05;
 
@@ -2940,7 +2940,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( u ) * sin( v ) );
 			z = scale * ( cos( v ) + log( tan( v / 2) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -2951,7 +2951,7 @@ var equations = function() { this.equations = {
 		'scale' :  25,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 3 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -2959,7 +2959,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( -2 * v - 3 * u*u*u*u * v - 2 * u*u * v*v * v + v*v*v*v*v ) / ( 6 * ( u*u + v*v ) ) );
 			z = scale * ( u );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3010,7 +3010,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -3024,7 +3024,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( sin( u ) * sin( d * v ) / e );
 			z = scale * R1 * ( cos( u ) * sin( f * v ) / g );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3033,7 +3033,7 @@ var equations = function() { this.equations = {
 		'title' : 'Roundabout',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite150.html',
 		'scale' :  70,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3041,7 +3041,7 @@ var equations = function() { this.equations = {
 			y = scale * ( u );
 			z = scale * ( pow( abs( u ) - 1, 2 ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3066,7 +3066,7 @@ var equations = function() { this.equations = {
 //		'dMin' : -5,
 //		'dMax' : 5,
 //		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -3074,7 +3074,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v );
 			z = scale * ( log( cos( c * u ) / cos( c * v ) ) / c );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3127,7 +3127,7 @@ var equations = function() { this.equations = {
 //		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 3 * ( v - 0.5 );
 			h = 1 - 0.5 * v;
@@ -3136,7 +3136,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * h * sin( R1 * v * pi ) * ( 1 + cos( u * pi ) ) + c * sin( R1 * v * pi ) );
 			z = scale * ( b * 0.5 * v + a * h * sin( u * pi ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3145,7 +3145,7 @@ var equations = function() { this.equations = {
 		'title' : 'Shoe Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite19.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * ( v - 0.5 );
 
@@ -3153,7 +3153,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v + 1 );
 			z = scale * ( u * u * u / 3 - v * v / 2 );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3174,7 +3174,7 @@ var equations = function() { this.equations = {
 		'R1Min' : -5,
 		'R1Max' : 5,
 		'R1Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * pi * ( u - 0.5 );
 			v = 3 * ( v ) + 0.03;
 
@@ -3186,7 +3186,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( p ) );
 			z = scale * ( ( log( tan( v / 2 ) ) + a * ( c + 1 ) * cos( v ) ) / sqrt( c ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3203,7 +3203,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 5 * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3211,7 +3211,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * u * cos( b * v ) );
 			z = scale * ( u * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3220,7 +3220,7 @@ var equations = function() { this.equations = {
 		'title' : 'Sine Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite20.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
@@ -3229,7 +3229,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( v  ) );
 			z = scale * ( sin( u + v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3254,7 +3254,7 @@ var equations = function() { this.equations = {
 		'dMin' : -5,
 		'dMax' : 5,
 		'dStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -3262,7 +3262,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * sin( b * sqrt( u * u + v * v ) )  );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3271,7 +3271,7 @@ var equations = function() { this.equations = {
 		'title' : 'Snail Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite38.html',
 		'scale' :  8,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 3 * pi * ( u );
 			v = 2.8 * ( v - 0.5 );
 
@@ -3279,7 +3279,7 @@ var equations = function() { this.equations = {
 			y = scale * ( u * cos( u ) * cos( v ) );
 			z = scale * ( -u * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3288,7 +3288,7 @@ var equations = function() { this.equations = {
 		'title' : 'Soucoupoid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite133.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v );
 
@@ -3296,7 +3296,7 @@ var equations = function() { this.equations = {
 			y = scale * ( pow( sin( u ), 3 ) );
 			z = scale * ( cos( u ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3321,7 +3321,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -3329,7 +3329,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * cos( u ) ) + a;
 			z = scale * ( R1 * sin( u ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3338,7 +3338,7 @@ var equations = function() { this.equations = {
 		'title' : 'Kugel I',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite120.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 1 * pi * ( v  );
 
@@ -3346,7 +3346,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( u ) );
 			z = scale * ( sin( u ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3355,7 +3355,7 @@ var equations = function() { this.equations = {
 		'title' : 'Sphere II',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite121.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3363,7 +3363,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( v ) );
 			z = scale * ( sin( u ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3372,7 +3372,7 @@ var equations = function() { this.equations = {
 		'title' : 'Sphere III',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite122.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 10 * ( u - 0.5 );
 			v = 10 * ( v - 0.5 );
 
@@ -3380,7 +3380,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( u * u + v * v - 1 ) / ( 1 + u * u + v * v ) );
 			z = scale * ( 2 * v / ( 1 + u * u + v * v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3389,7 +3389,7 @@ var equations = function() { this.equations = {
 		'title' : 'Sphere IV',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite123.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 10 * ( u );
 			v = 20 * ( v - 0.5 );
 
@@ -3397,7 +3397,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( 1 - u * u ) / ( 1 + u * u ) );
 			z = scale * ( ( 4 * u * v ) / ( ( 1 + u * u ) * ( 1 + v * v ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3412,7 +3412,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.1,
 		'u' : 200,
 		'v' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 10 * pi * ( u );
 			v = 1 * ( v - 0.5 );
 
@@ -3420,7 +3420,7 @@ var equations = function() { this.equations = {
 			y = scale * ( h * v );
 			z = scale * ( u * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3435,7 +3435,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.1,
 		'u' : 200,
 		'v' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 30 * ( u - 0.5 );
 			v = 1 * ( v - 0.5 );
 
@@ -3443,7 +3443,7 @@ var equations = function() { this.equations = {
 			y = scale * ( h * v );
 			z = scale * ( sqrt( u ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3458,7 +3458,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.1,
 		'u' : 200,
 		'v' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 4 * pi * u ;
 			v = 1 * ( v - 0.5 );
 
@@ -3467,7 +3467,7 @@ var equations = function() { this.equations = {
 			y = scale * ( h * v );
 			z = scale * ( sin( u ) / u );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3486,7 +3486,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.1,
 		'u' : 200,
 		'v' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 5 * pi * ( u - 0.5 );
 			v = 1 * ( v - 0.5 );
 
@@ -3494,7 +3494,7 @@ var equations = function() { this.equations = {
 			y = scale * ( h * v );
 			z = scale * ( exp( a * u ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3513,7 +3513,7 @@ var equations = function() { this.equations = {
 		'hStep' : 0.1,
 		'u' : 200,
 		'v' : 2,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1.5 * ( u );
 			v = 1 * ( v - 0.5 );
 
@@ -3521,7 +3521,7 @@ var equations = function() { this.equations = {
 			y = scale * ( h * v );
 			z = scale * ( sin( 2 * a * u ) / ( cos( 2 * a * u ) + cosh( 2 * u ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3548,7 +3548,7 @@ var equations = function() { this.equations = {
 		'dStep' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u  - 0.5 );
 			v = 20 * ( v - 0.5 );
 
@@ -3556,7 +3556,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * cos( b * u + c * v ) );
 			z = scale * ( v * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3579,7 +3579,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 120,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 12 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3587,7 +3587,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 * cos( v ) ) * sin( u ) );
 			z = scale * ( R1 * ( sin( v ) + a * u / pi ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3614,7 +3614,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 6 * pi * ( v - 0.5 );
 
@@ -3623,7 +3623,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 * cos( u ) ) * sin( v ) - R1 * a * sin( u ) * cos( v ) / b );
 			z = scale * ( a * v + R2 * R1 * sin( u ) / b );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3678,7 +3678,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3686,7 +3686,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( d * u * sin( e + f * v ) );
 			z = scale * R1 * ( g * v * cos( h + i * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3741,7 +3741,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -3749,7 +3749,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( -d + ( e + f * cos( u + 2 * pi / 3 ) ) * pow( cos( v + 2 * pi / 3 ), 2 ) * pow( sin( v + 2 * pi / 3), 2 )  );
 			z = scale * R1 * ( -( g + h * cos( u - i * pi / 3 ) ) * pow( cos( v + 2 * pi / 3 ), 2 ) * pow( sin( v + 2 * pi / 3), 2 ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3758,7 +3758,7 @@ var equations = function() { this.equations = {
 		'title' : 'Swallow Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite33.html',
 		'scale' :  50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 0.75 * ( v - 0.5 );
 
@@ -3766,7 +3766,7 @@ var equations = function() { this.equations = {
 			y = scale * ( -2 * u * v - 4 * v * v * v );
 			z = scale * ( u );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3783,7 +3783,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -3791,7 +3791,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 * cos( v ) ) * sin( u ) );
 			z = scale * ( R1 * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3806,7 +3806,7 @@ var equations = function() { this.equations = {
 		'cStep' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3814,7 +3814,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sin( u ) * sin( v ) + cos( u ) * sin( 2 * v ) / 2 );
 			z = scale * ( sin( u ) * ( c + sin( v ) * cos( u ) - sin( 2 * v ) * sin( u ) / 2 ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3835,7 +3835,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3843,7 +3843,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin(v) * sin(v) * sin(v) );
 			z = scale * ( (R2 + R1 * cos(v) * cos(v) * cos(v)) * sin(u) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3864,7 +3864,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3872,7 +3872,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 * cos( v ) * ( a + sin( u ) ) ) * sin( u ) );
 			z = scale * ( R1 * sin( v ) * ( a + sin( u ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3889,7 +3889,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3897,7 +3897,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( v ) );
 			z = scale * ( ( R2 + R1 * cos2( v ) * ( 2 + cos( v ) ) / ( 3 + sin2( v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3914,7 +3914,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -3922,7 +3922,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * cos2( v ) * ( 2 + cos( v ) ) / ( 3 + sin2( v ) )  );
 			z = scale * ( ( R2 + R1 * sin( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -3981,7 +3981,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 8 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -3989,7 +3989,7 @@ var equations = function() { this.equations = {
 			y = scale * ( d * ( e * sin( v ) + f * sin( j * u ) )  );
 			z = scale * ( g * cos( v ) * sin( u ) + h * sin( u ) * ( 1 + i * cos( j * u ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4006,7 +4006,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4014,7 +4014,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 2 * sin( v ) - sin( 2 * v ) )  );
 			z = scale * ( ( R2 + R1 * ( 2 * cos( v ) - cos( 2 * v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4031,7 +4031,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4039,7 +4039,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 2 * cos( v ) - cos( 2 * v ) )  );
 			z = scale * ( ( R2 + R1 * ( 2 * sin( v ) - sin( 2 * v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4066,7 +4066,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4076,7 +4076,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sqrt( M / 2 ) * sin( v ) );
 			z = scale * ( ( R2 + sqrt( M / 2 ) * cos( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4105,7 +4105,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4115,7 +4115,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sqrt( M / 2 ) * cos( v ) );
 			z = scale * ( ( R2 + sqrt( M / 2 ) * sin( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4142,14 +4142,14 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
 			x = scale * ( ( R2 + R1 * cos( v ) ) * cos( u ) );
 			y = scale * ( R1 * sin( v ) + b * sin( a * u ) );
 			z = scale * ( ( R2 + R1 * cos( v ) ) * sin( u ) );
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4176,7 +4176,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4184,7 +4184,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( v ) );
 			z = scale * ( ( R2 + b * cos( a * u ) + R1 * cos( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4197,7 +4197,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -4205,7 +4205,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( c + cos( v ) ) * sin( u ) );
 			z = scale * ( sin( v ) + cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4226,7 +4226,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4234,7 +4234,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 ) * sin( v ) - h * sin( ( ( R2 + R1 ) / R1 ) * v ) );
 			z = scale * ( ( R1 + ( R2 + R1 ) * cos( v ) - h * cos( ( ( R2 + R1 ) / R1 ) * v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4255,7 +4255,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -4263,7 +4263,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 ) * cos( v ) - a * cos( ( ( R2 + R1 ) / R1 ) * v ) );
 			z = scale * ( ( R1 + ( R2 + R1 ) * sin( v ) - a * sin( ( ( R2 + R1 ) / R1 ) * v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4294,7 +4294,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4304,7 +4304,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( v ) );
 			z = scale * ( ( R2 + R1 * cos( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4325,7 +4325,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -4333,7 +4333,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 - R1 ) * sin( v ) - h * sin(( ( R2 - R1 ) / R1 ) * v ) );
 			z = scale * ( ( R1 + ( R2 - R1 ) * cos( v ) + h * cos( ( ( R2 - R1 ) / R1 ) * v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4354,7 +4354,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -4362,7 +4362,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 - R1 ) * cos( v ) + h * cos( ( ( R2 - R1 ) / R1 ) * v ) );
 			z = scale * ( ( R1 + ( R2 - R1 ) * sin( v ) - h * sin( ( ( R2 - R1 ) / R1 ) * v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4393,7 +4393,7 @@ var equations = function() { this.equations = {
 		'eStep' : 0.1,
 		'u' : 100,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4401,7 +4401,7 @@ var equations = function() { this.equations = {
 			y = scale * ( c * sin( v ) + b * sin( d * u ) );
 			z = scale * ( ( a + b * cos( d * u ) + c * cos( v ) ) * sin( e * u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4418,7 +4418,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4426,7 +4426,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( v ) * cos( v ) );
 			z = scale * ( ( R2 + R1 * sin( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4443,7 +4443,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4451,7 +4451,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * sin( v ) );
 			z = scale * ( ( R2 + R1 * sin( v ) * cos( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4468,7 +4468,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4476,7 +4476,7 @@ var equations = function() { this.equations = {
 			y = scale * (  R1 * sin( v ) * cos( v ) / ( 1 + sin( v ) * sin( v ) ) );
 			z = scale * ( ( R2 + R1 * cos( v ) / ( 1 + sin( v ) * sin( v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4493,7 +4493,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4501,7 +4501,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * cos( v ) / ( 1 + sin( v ) * sin( v ) )  );
 			z = scale * ( ( R2 + R1 * sin( v ) * cos( v ) / ( 1 + sin( v ) * sin( v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4512,7 +4512,7 @@ var equations = function() { this.equations = {
 		'scale' :  25,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4520,7 +4520,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 1 / ( sqrt( 2 ) + cos( v ) )  );
 			z = scale * ( sin( u ) / ( sqrt( 2 ) + sin( v ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4537,7 +4537,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4545,7 +4545,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 3 * sin( v ) - sin( 3 * v ) ) );
 			z = scale * ( ( R2 + R1 * ( 3 * cos( v ) - cos( 3 * v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4562,7 +4562,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4570,7 +4570,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 3 * cos( v ) - cos( 3 * v ) )  );
 			z = scale * ( ( R2 + R1 * ( 3 * sin( v ) - sin( 3 * v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4587,7 +4587,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4595,7 +4595,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( v ) * ( R1 + sin( v ) )  );
 			z = scale * ( ( R2 + ( R1 + sin( v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4612,7 +4612,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4620,7 +4620,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 + sin( v ) );
 			z = scale * ( ( R2 + cos( v ) * ( R1 + sin( v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4629,7 +4629,7 @@ var equations = function() { this.equations = {
 		'title' : 'Torus Saddle',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite73.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -4640,7 +4640,7 @@ var equations = function() { this.equations = {
 			z = scale * ( ( 2 + Math.sign( u ) * sqrt( abs( u ) ) ) * Math.sign( v  ) * sqrt( abs( v  ) ) );
 
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4675,7 +4675,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4683,7 +4683,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( c * sin( v ) + b * sin( d * u ) );
 			z = scale * R1 * ( ( a + b * cos( d * u ) + c * cos( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4704,7 +4704,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4712,7 +4712,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * cos( v ) * cos( a * u / 2 ) );
 			z = scale * ( ( R2 + R1 * sin( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4733,7 +4733,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4741,7 +4741,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * cos( v ) * cos( a * u / 2 ) );
 			z = scale * ( ( R2 + R1 * sin( v ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4758,7 +4758,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4766,7 +4766,7 @@ var equations = function() { this.equations = {
 			y = scale * (  R1 * ( 2 * sin( v ) - sin( 2 * v ) ) );
 			z = scale * ( ( R2 + R1 * ( 2 * cos( v ) + cos( 2 * v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4783,7 +4783,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4791,7 +4791,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 2 * cos( v ) + cos( 2 * v ) )  );
 			z = scale * ( ( R2 + R1 * ( 2 * sin( v ) - sin( 2 * v ) ) ) * sin( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4823,7 +4823,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4831,7 +4831,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + R1 * ( cos( u / 2 ) * sin( v ) - b * sin( u / 2 ) * sin( 2 * v ) ) ) * sin( u ) );
 			z = scale * ( R1 * ( sin( u / 2 ) * sin( v ) + c * cos( u / 2 ) * sin( 2 * v ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4840,7 +4840,7 @@ var equations = function() { this.equations = {
 		'title' : 'Torus Umbilical',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite61.html',
 		'scale' :  8,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4848,7 +4848,7 @@ var equations = function() { this.equations = {
 			y = scale * ( cos( u ) * ( 7 + cos( u / 3 - 2 * v ) + 2 * cos( u / 3 + v ) )  );
 			z = scale * ( sin( u / 3 - 2 * v ) + 2 * sin( u / 3 + v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4907,7 +4907,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -4917,7 +4917,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( R2 + ( R1 + a * c * sin( j * u ) ) * cos( v ) ) * sin( u ) );
 			z = scale * ( ( R1 + a * d * sin( j * u ) ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4926,7 +4926,7 @@ var equations = function() { this.equations = {
 		'title' : 'Tractroid',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite28.html',
 		'scale' :  35,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4934,7 +4934,7 @@ var equations = function() { this.equations = {
 			y = scale * ( sech( u ) * sin( v ) );
 			z = scale * ( u - tanh( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -4989,7 +4989,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 80,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -4997,7 +4997,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( d * ( sin( u ) + e * sin( 2 * u ) ) / ( f + cos( v + 2 * pi / 3 ) ) );
 			z = scale * R1 * ( ( cos( u ) - g * cos( 2 * u ) ) * ( h + cos( v ) ) * ( i + cos( v + 2 * pi / 3 ) ) / 4 );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5014,7 +5014,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * ( v );
 
@@ -5022,7 +5022,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v * sin( u ) );
 			z = scale * ( a * v * v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5077,7 +5077,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 12 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -5089,7 +5089,7 @@ var equations = function() { this.equations = {
 			y = scale * ( By + R1 * e * sin( u / 3 ) * cos( f * v - pi ) );
 			z = scale * ( Bz + R1 * h * sin( i * v - pi ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5140,7 +5140,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 4 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5148,7 +5148,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * f * sin( v ) + a * c * sin( h * u ) );
 			z = scale * ( R1 * g * cos( v ) * sin( u ) + R2 * sin( u ) * ( 1 + a * d * cos( h * u ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5201,7 +5201,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5209,7 +5209,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( sin( u + 2 * pi / b ) / ( sqrt( c ) + cos( v + 2 * pi / d ) )  );
 			z = scale * R1 * ( cos( u - 2 * pi / e ) / ( sqrt( f ) + cos( v - 2 * pi / g ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5218,7 +5218,7 @@ var equations = function() { this.equations = {
 		'title' : 'Triaxial Teardrop',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite45.html',
 		'scale' :  80,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -5226,7 +5226,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( 1 - cos( u ) ) * cos( u + 2 * pi / 3) * cos( v - 2 * pi / 3) / 2 );
 			z = scale * ( cos( u - 2 * pi / 3) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5273,7 +5273,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 50,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5281,7 +5281,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( sin( u + b * pi / 3 ) * ( d + cos( v + f * pi / 3 ) )  );
 			z = scale * R1 * ( sin( u + c * pi / 3 ) * ( e + cos( v + g * pi / 3 ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5306,7 +5306,7 @@ var equations = function() { this.equations = {
 		'R2Min' : -5,
 		'R2Max' : 5,
 		'R2Step' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5314,7 +5314,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 1 - abs( u ) ) * cos( v ) + R2 * ( 1 - abs( u )) * cos( u * b * pi ) );
 			z = scale * ( R1 * ( 1 - abs( u ) ) * sin( v ) + R2 * ( 1 - abs( u )) * sin( u * b * pi ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5349,7 +5349,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5357,7 +5357,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * exp( - ( b * b * u * u ) ) * cos( v ) + R2 * exp( - ( a * a * u * u ) ) * cos( u * d * pi ) );
 			z = scale * ( R1 * exp( - ( b * b * u * u ) ) * sin( v ) + R2 * exp( - ( a * a * u * u ) ) * sin( u * d * pi ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5384,7 +5384,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5392,7 +5392,7 @@ var equations = function() { this.equations = {
 			y = scale * ( R1 * ( 1 - abs( u )) * cos( v ) + R2 * cos( u * pi / 2 ) * cos( u * d * pi ) );
 			z = scale * ( R1 * ( 1 - abs( u )) * sin( v ) + R2 * cos( u * pi / 2 ) * sin( u * d * pi ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5405,7 +5405,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 4 * ( u - 0.5 ) ;
 			v = 3 * ( v - 0.5 );
 
@@ -5413,7 +5413,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v*v*v + c * v );
 			z = scale * ( u * v + v*v*v*v*v + c * v*v*v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5422,7 +5422,7 @@ var equations = function() { this.equations = {
 		'title' : 'Twisted Heart',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite117.html',
 		'scale' :  25,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 
 			var m = 1 / sqrt( 2 );
 
@@ -5433,7 +5433,7 @@ var equations = function() { this.equations = {
 			y = scale * ( ( abs( v ) + abs( u ) - abs( tanh( m * u ) / m ) - abs( tanh( m * v ) / m ) ) * cos( v ) + 0.5 );
 			z = scale * ( m * ( u * u + v * v ) / ( cosh( m * u ) * cosh( m * v ) ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5484,7 +5484,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u );
 			v = 2 * pi * ( v );
 
@@ -5494,7 +5494,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( sin( v - 2 * pi / d ) * ( e + cos( u - 2 * pi / f ) ) / r );
 			z = scale * R1 * ( sin( v + 2 * pi / g ) * ( e + cos( u + 2 * pi / h ) ) / r );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5511,7 +5511,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5519,7 +5519,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * sin( v ) + b * u );
 			z = scale * ( a * sin( u ) * cos( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5536,7 +5536,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u - 0.5 );
 			v = pi * ( v );
 
@@ -5544,7 +5544,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v * sin( u ) );
 			z = scale * ( a * v * v - 6);
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5553,7 +5553,7 @@ var equations = function() { this.equations = {
 		'title' : 'Verrill Surface',
 		'link1' : 'http://www.3d-meier.de/tut3/Seite75.html',
 		'scale' :  15,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u ) + 0.5;
 			v = 2 * pi * ( v );
 
@@ -5561,7 +5561,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 6 * u * sin( v ) - 2 * sin( v ) / u - 2 * u * u * u * cos( 3 * v ) / 3 );
 			z = scale * ( 4 * log( u ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5582,7 +5582,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u - 0.5 );
 			v = 1 * ( v );
 
@@ -5590,7 +5590,7 @@ var equations = function() { this.equations = {
 			y = scale * ( v * sin( u ) );
 			z = scale * ( c * sqrt( a * a - b * b * cos( u ) * cos( u ) ) - 4.5  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5611,7 +5611,7 @@ var equations = function() { this.equations = {
 		'cMin' : -5,
 		'cMax' : 5,
 		'cStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -5619,7 +5619,7 @@ var equations = function() { this.equations = {
 			y = scale * ( a * cos( b * u ) * cos( c * v ) );
 			z = scale * ( v );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5670,7 +5670,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 30,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 14.5 * ( u);
 			v = 1.5 * pi * ( v - 0.5 );
 
@@ -5678,7 +5678,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( b * u * cos( e * cos( u ) ) * sin( h * v ) );
 			z = scale * R1 * ( c * u * sin( f * cos( u ) )  );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5705,7 +5705,7 @@ var equations = function() { this.equations = {
 		'dStep' : 0.1,
 		'u' : 20,
 		'v' : 20,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = pi * ( u - 0.5 );
 			v = pi * ( v - 0.5 );
 
@@ -5713,7 +5713,7 @@ var equations = function() { this.equations = {
 			y = scale * ( b * u );
 			z = scale * ( c * pow( v, d ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5730,7 +5730,7 @@ var equations = function() { this.equations = {
 		'bMin' : -5,
 		'bMax' : 5,
 		'bStep' : 0.1,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 12 * pi * ( u  );
 			v = 2 * pi * ( v - 0.5 );
 
@@ -5740,7 +5740,7 @@ var equations = function() { this.equations = {
 			y = scale * ( 1 - pow( Math.E, u / ( b * pi ) ) - sin( v ) + h * sin( v ) + 18 );
 			z = scale * ( a * ( -1 + h ) * sin( u ) * cos( 0.5 * v ) * cos( 0.5 * v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5779,7 +5779,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 50,
 		'v' : 30,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 2 * pi * ( u);
 			v = 2 * pi * ( v );
 
@@ -5787,7 +5787,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( d * cos( u ) * sin( v ) * cos( v ) * sin( u ) * cos( v ) + e * cos( u ) );
 			z = scale * R1 * ( g * cos( v ) * sin( u ) * cos( u ) * sin( v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 
@@ -5831,7 +5831,7 @@ var equations = function() { this.equations = {
 		'R2Step' : 0.1,
 		'u' : 20,
 		'v' : 100,
-		'curve' : function( u, v ) {
+		'curve' : function( u, v, target ) {
 			u = 1 * ( u );
 			v = 1.4 * ( v - 0.5 );
 
@@ -5839,7 +5839,7 @@ var equations = function() { this.equations = {
 			y = scale * R2 * ( d * u * sin( e * v ) );
 			z = scale * R1 * ( g * tan( h * v ) );
 
-			return new THREE.Vector3( x, y, z );
+			target.set( x, y, z );
 		}
 	},
 

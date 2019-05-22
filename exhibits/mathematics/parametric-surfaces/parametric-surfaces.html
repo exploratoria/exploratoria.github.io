@@ -13,8 +13,8 @@
 
 <body>
 
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/mrdoob/texgen.js/build/texgen.min.js"></script>
 <script src="http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/js/parametric-equations.js"></script>
 <script src="http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/js/materials-lights.js"></script>
@@ -79,8 +79,8 @@
 		controls.maxDistance = 800;
 		controls.noKeys = true;
 
-		var axisHelper = new THREE.AxisHelper( 100 );
-		scene.add( axisHelper );
+		var axesHelper = new THREE.AxesHelper( 100 );
+		scene.add( axesHelper );
 
 // assets
 		addLights();
