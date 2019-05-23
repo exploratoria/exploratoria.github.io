@@ -74,7 +74,7 @@
 
 		selSprite.onchange = function() { 
 
-			texture = new THREE.TextureLoader().load( 'sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
+			texture = new THREE.TextureLoader().load( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
 			drawStars();
 
 		};
@@ -101,7 +101,7 @@
 		scene.add( axesHelper );
 
 // texture
-		texture = new THREE.TextureLoader().load( 'sprites/ball.png' );
+		texture = new THREE.TextureLoader().load( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/ball.png' );
 
 // interaction
 		raycaster = new THREE.Raycaster();
