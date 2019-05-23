@@ -18,6 +18,7 @@
 <script src="https://cdn.jsdelivr.net/gh/mrdoob/texgen.js/build/texgen.min.js"></script>
 <script src="http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/js/parametric-equations.js"></script>
 <script src="http://exploratoria.github.io/exhibits/mathematics/parametric-surfaces/js/materials-lights.js"></script>
+<script src="js/materials-lights.js"></script>
 
 <script>
 
@@ -77,7 +78,7 @@
 		camera.position.set( 100, 100, 100 );
 		controls = new THREE.OrbitControls( camera, renderer.domElement );
 		controls.maxDistance = 800;
-		controls.noKeys = true;
+		controls.enableKeys = false;
 
 		var axesHelper = new THREE.AxesHelper( 100 );
 		scene.add( axesHelper );

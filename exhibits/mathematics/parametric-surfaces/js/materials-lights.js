@@ -17,7 +17,7 @@
 
 		'Normal Side 2': { 'material': new THREE.MeshNormalMaterial( { side: 2  } ) },
 		'Normal Side 2 Opacity 0.7' : { 'material' : new THREE.MeshNormalMaterial( { opacity: 0.7, side: 2, transparent: true   } ), },
-		'Normal Flat': { 'material': new THREE.MeshNormalMaterial( { shading: THREE.FlatShading, side: 2 } )  },
+		'Normal Flat': { 'material': new THREE.MeshNormalMaterial( { flatShading: true, side: 2 } )  },
 		'Normal Wireframe': { 'material': new THREE.MeshNormalMaterial( { wireframe: true } ) },
 
 
@@ -50,9 +50,6 @@
 
 		"Lambert Red":
 			{ 'material': new THREE.MeshLambertMaterial( { color: 0xff0000 } ) },
-
-		"Lambert Red + specular":
-			{ 'material': new THREE.MeshLambertMaterial( { color: 0xff0000, specular: 0x111111 } ) },
 
 		"Lambert Green":
 			{ 'material': new THREE.MeshLambertMaterial( { color: 0x00ff00 } ) },
@@ -646,7 +643,7 @@
 
 			}
 
-			textureCube = THREE.ImageUtils.loadTextureCube( urls );
+			textureCube = new THREE.CubeTextureLoader().load( urls );
 			textureCube.format = THREE.RGBFormat;
 			material.envMap = textureCube;
 			material.reflectivity = 0.85;
@@ -667,7 +664,7 @@
 
 	function addLights() {
 
-		renderer.shadowMapEnabled = false;
+		renderer.shadowMap.enabled = false;
 
 		var lightAmbient, lightDirectional, lightPoint;
 
@@ -678,22 +675,20 @@
 		lightDirectional.position.set( -200, 200, 200 );
 
 		var d = 100;
-		lightDirectional.shadowCameraLeft = -d;
-		lightDirectional.shadowCameraRight = d;
-		lightDirectional.shadowCameraTop = d;
-		lightDirectional.shadowCameraBottom = -d;
+		lightDirectional.shadow.camera.left = -d;
+		lightDirectional.shadow.camera.right = d;
+		lightDirectional.shadow.camera.top = d;
+		lightDirectional.shadow.camera.cottom = -d;
 
-		lightDirectional.shadowCameraNear = 200;
-		lightDirectional.shadowCameraFar = 500;
+		lightDirectional.shadow.camera.near = 200;
+		lightDirectional.shadow.camera.far = 500;
 
 // can help stop appearance of gridlines in objects with opacity < 1
-		lightDirectional.shadowBias = -0.001; // default 0 ~ distance from corners?
-		lightDirectional.shadowDarkness = 0.3; // default 0.5
-		lightDirectional.shadowMapWidth = 2048;  // default 512
-		lightDirectional.shadowMapHeight = 2048;
+		lightDirectional.shadow.bias = -0.001; // default 0 ~ distance from corners?
+		lightDirectional.shadow.mapSize.width = 2048;  // default 512
+		lightDirectional.shadow.mapSize.height = 2048;
 
 		lightDirectional.castShadow = true;
-		lightDirectional.shadowCameraVisible = true;
 		scene.add( lightDirectional );
 
 		lightPoint = new THREE.PointLight( 0xffffff, 0.5 );
