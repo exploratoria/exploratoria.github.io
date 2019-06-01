@@ -3,7 +3,7 @@
 <head>
 <title>Code-Edit-View</title>
 <meta charset=utf-8>
-<meta name=viewport content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+<meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <style>
 
 	html, body { height: 100%; }
@@ -17,7 +17,9 @@
 
 </style>
 </head>
+
 <body>
+
 <script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js></script>
 
 	<div id=edit></div>
@@ -97,8 +99,8 @@
 
 	function saveFile() {
 
-		blob = new Blob( [ editor.getValue() ] );
-		a = document.body.appendChild( document.createElement( 'a' ) );
+		var blob = new Blob( [ editor.getValue() ] );
+		var a = document.body.appendChild( document.createElement( 'a' ) );
 		a.href = window.URL.createObjectURL( blob );
 		a.download = document.title;
 		a.click();
@@ -151,5 +153,6 @@
 	}
 
 </script>
+
 </body>
 </html>
