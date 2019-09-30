@@ -72,7 +72,7 @@ It attempts to achieve the best of what technology should do in the real world.
 Short coding samples - also called snippets - solutions to common tasks, 'presented in detail so that the users who are not necessarily expert in the field can produce workable results'.
 
 [Cookbook - web page view]( http://exploratoria.github.io/cookbook/ )  
-[Cookbook - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/ )
+[Cookbook - source code view]( https://github.com/exploratoria/exploratoria.github.io/tree/master/cookbook/ )
 
 
 ## Templates
@@ -80,7 +80,7 @@ Short coding samples - also called snippets - solutions to common tasks, 'presen
 These are the files we use to build this web site. You can use them too.
 
 [Templates - web page view]( http://exploratoria.github.io/templates/ )  
-[Templates - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/templates/ )
+[Templates - source code view]( https://github.com/exploratoria/exploratoria.github.io/tree/master/templates/ )
 
 
 ## Library
@@ -88,7 +88,7 @@ These are the files we use to build this web site. You can use them too.
 Supporting files and miscellaneous utilities
 
 [Library - web page view]( http://exploratoria.github.io/lib/ )  
-[Library - source code view](  https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/ )
+[Library - source code view]( https://github.com/exploratoria/exploratoria.github.io/tree/master/lib/ )
 
 
 <center>
