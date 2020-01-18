@@ -24,7 +24,7 @@ A plane cutting an ellipsoid always produces an ellipse!
  
 ### About the Code
 
-The ellipsoid starts out as a sphere that this then scaled individually in each direction.
+The ellipsoid starts out as a sphere that is then scaled individually in each direction.
 
 While the line of intersection is easily evaluated algebraically, this example uses a raycaster from the origin to determine the points of intersection. That means the method will work for any arbitrary shape intersecting the plane. It is important that the material of the object is double sided for the raycasting to work from the inside of the object.
 
@@ -34,7 +34,7 @@ With scale variables represented by the letter "s", the ellipsoid parametrizatio
 
 \\[ \left( \frac{x}{s\_x} \right)^2 + \left( \frac{y}{s\_y} \right)^2 + \left( \frac{z}{s\_z} \right)^2 = 1 \\]
 
-The normal to the plane is the z-axis rotated by the two Euler angle values. The plane parametrization is
+The normal to the plane is the z-axis rotated by the two angle values. The plane parametrization is
 
 \\[ n\_x x + n\_y y + n\_z z = 0 \\]
 
