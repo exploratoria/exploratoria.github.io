@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plane to Sphere</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<meta name=author content="Paul Masson">
+<style>
+
+	body { margin: 0px; overflow: hidden; }
+
+</style>
+</head>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/controls/OrbitControls.js"></script>
+
+<script>
+
+	var scene = new THREE.Scene();
+
+	var renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setClearColor( 0x000000, 1 );
+	document.body.appendChild( renderer.domElement );
+
+	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 20 );
+	camera.up.set( 0, 0, 1 );
+	camera.position.set( 3, 3, 3 );
+
+	var controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+	window.addEventListener( 'resize', function() {
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+	} );
+
+	var size = 10, steps = 100;
+
+	var geometry = new THREE.PlaneGeometry( size, size, steps, steps );
+	geometry.translate( 0, 0, -1 );
+
+	// evaluate parameters for each vertex and store there
+	geometry.vertices.forEach( v => {
+
+		var rNormalized = Math.hypot( v.x, v.y ) * Math.sqrt(2) / size;
+
+		v.a = Math.PI * ( 1 - rNormalized );
+		v.phi = Math.atan2( v.y, v.x );
+
+	} );
+
+	// add checkerboard coloring
+	geometry.faces.forEach( f => {
+
+		var center = new THREE.Vector3().add( geometry.vertices[f.a] )
+				.add( geometry.vertices[f.b] ).add( geometry.vertices[f.c] )
+				.divideScalar( 3 );
+
+		if ( ( Math.floor(center.x) + Math.floor(center.y) ) % 2 === 0 )
+			f.color = new THREE.Color( 'red' );
+
+	} );
+
+	var material = new THREE.MeshBasicMaterial( { side: THREE.DoubleSide, vertexColors: THREE.FaceColors } );
+
+	var mesh = new THREE.Mesh( geometry, material );
+	scene.add( mesh );
+
+	function r( t, a ) { return Math.sin(t) - ( t - a ) * Math.cos(t); }
+
+	function z( t, a ) { return Math.cos(t) + ( t - a ) * Math.sin(t); }
+
+	function t( a ) { return ( a - Math.PI ) * lerp + Math.PI; }
+
+	var lerp = 0, direction = 1;
+
+	function render() {
+
+		requestAnimationFrame( render );
+		renderer.render( scene, camera );
+
+		geometry.vertices.forEach( v => {
+
+			v.x = r( t(v.a), v.a ) * Math.cos(v.phi);
+			v.y = r( t(v.a), v.a ) * Math.sin(v.phi);
+			v.z = z( t(v.a), v.a );
+
+		} );
+
+		geometry.verticesNeedUpdate = true;
+
+		lerp += .005 * direction;
+
+		if ( lerp <= 0 || lerp >= 1 ) direction = -direction;
+
+	}
+
+	render();
+
+</script>
+
+</body>
+</html>

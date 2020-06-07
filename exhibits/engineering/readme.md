@@ -11,6 +11,11 @@ Engineering & Structure Read Me
 [Catenoid to Helicoid - Web Page]( http://exploratoria.github.io/exhibits/engineering/catenoid-to-helicoid/index.html )  
 [Catenoid to Helicoid - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/catenoid-to-helicoid/ )
 
+## Plane to Sphere
+
+[Plane to Sphere - Web Page]( http://exploratoria.github.io/exhibits/engineering/plane-to-sphere/index.html )  
+[Plane to Sphere - Source Code]( https://github.com/exploratoria/exploratoria.github.io/tree/master/exhibits/engineering/plane-to-sphere/ )
+
 ## Platonic Solids
 
 [Platonic Solids - Web Page]( http://exploratoria.github.io/exhibits/engineering/platonic-solids/index.html )  
