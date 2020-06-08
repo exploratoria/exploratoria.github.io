@@ -17,8 +17,9 @@
 
 <span id=inputs>
 Location of Flatland:<br>
-&nbsp;<input id=flatland type=range value=0 min=-4 max=4 step=.1 oninput=drawFlatland() ><br>
-Show balls: <input type=checkbox onclick=toggleBalls() >
+&nbsp;<input id=flatland type=range value=0 min=-4 max=4 step=.1
+			 oninput="flatlandMesh.position.z=this.value"><br>
+Show balls: <input type=checkbox onclick="toggleBalls()">
 </span>
 
 <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js"></script>
@@ -91,19 +92,14 @@ Show balls: <input type=checkbox onclick=toggleBalls() >
 
 	}
 
-	function drawFlatland() {
+	// draw flatland
+	var geometry = new THREE.PlaneGeometry( 2 * range, 2 * range );
+	var material = new THREE.MeshBasicMaterial( { transparent: true, opacity: .2, side: THREE.DoubleSide } );
 
-		scene.remove( scene.getObjectByName( 'flatland' ) );
+	var flatlandMesh = new THREE.Mesh( geometry, material );
+	flatlandMesh.position.z = flatland.value;
+	scene.add( flatlandMesh );
 
-		var geometry = new THREE.PlaneGeometry( 2 * range, 2 * range );
-		var material = new THREE.MeshBasicMaterial( { transparent: true, opacity: .2, side: THREE.DoubleSide } );
-
-		var mesh = new THREE.Mesh( geometry, material );
-		mesh.position.z = flatland.value;
-		mesh.name = 'flatland';
-		scene.add( mesh );
-
-	}
 
 	function findIntersections() {
 
@@ -191,7 +187,6 @@ Show balls: <input type=checkbox onclick=toggleBalls() >
 
 	}
 
-	drawFlatland();
 	render();
 
 </script>
