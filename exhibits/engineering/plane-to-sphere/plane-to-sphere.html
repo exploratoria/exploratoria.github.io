@@ -40,15 +40,15 @@
 
 	} );
 
-	var size = 10, steps = 100;
+	var size = 5, steps = 100;
 
-	var geometry = new THREE.PlaneGeometry( size, size, steps, steps );
+	var geometry = new THREE.PlaneGeometry( 2 * size, 2 * size, steps, steps );
 	geometry.translate( 0, 0, -1 );
 
 	// evaluate parameters for each vertex and store there
 	geometry.vertices.forEach( v => {
 
-		var rNormalized = Math.hypot( v.x, v.y ) * Math.sqrt(2) / size;
+		var rNormalized = Math.hypot( v.x, v.y ) / Math.sqrt(2) / size;
 
 		v.a = Math.PI * ( 1 - rNormalized );
 		v.phi = Math.atan2( v.y, v.x );
