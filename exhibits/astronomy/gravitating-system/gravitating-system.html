@@ -71,6 +71,9 @@
 
 	var center = new THREE.Vector3();
 
+	var normal = new THREE.Vector3();
+	var relativeVelocity = new THREE.Vector3();
+
 	for ( var i = 0 ; i < n ; i++ ) {
 
 		var geometry = new THREE.SphereGeometry( radius, 20, 20 );
@@ -135,6 +138,28 @@
 				positions[i].x += v.x * dt;
 				positions[i].y += v.y * dt;
 				positions[i].z += v.z * dt;
+
+				// elastic collision to avoid interpenetration
+				for ( var j = i + 1 ; j < n ; j++ ) {
+
+					scratch.copy( positions[i] ).sub( positions[j] );
+
+					// exchange normal velocities for collision, leave tangential alone
+					if ( scratch.length() < 2 * radius ) {
+
+						normal.copy( positions[i] ).sub( positions[j] ).normalize();
+
+						relativeVelocity.copy( velocities[i] ).sub( velocities[j] );
+						var dot = relativeVelocity.dot( normal );
+
+						normal = normal.multiplyScalar( dot );
+
+						velocities[i].sub( normal );
+						velocities[j].add( normal );
+
+					}
+
+				}
 
 			}
 
