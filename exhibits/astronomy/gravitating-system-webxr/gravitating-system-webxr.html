@@ -20,8 +20,8 @@
 &Delta;<i>E</i> = <span id=d2></span>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r100/examples/js/vr/WebVR.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r115/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/paulmasson/paulmasson.github.io@master/webxr-worlds/js/VRButton.js"></script>
 
 <script>
 
@@ -34,15 +34,14 @@
 	renderer.setClearColor( 0x000000, 1 );
 	document.body.appendChild( renderer.domElement );
 
-	renderer.vr.enabled = true;
-	document.body.appendChild( WEBVR.createButton( renderer ) );
+	renderer.xr.enabled = true;
+	document.body.appendChild( VRButton.createButton( renderer ) );
 
 	var axes = new THREE.AxesHelper( 1 );
 	scene.add( axes );
 
 	var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
-	camera.position.set( 0, -1.5, 3 );
-	camera.lookAt( scene.position );
+	camera.position.set( 0, 1.6, 1 );
 
 	var light = new THREE.DirectionalLight( 0xffffff, .8 );
 	light.position.set( 0, 1, 1 );
