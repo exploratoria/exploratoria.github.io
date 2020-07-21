@@ -3,7 +3,7 @@
 
 # Elastic Collisions in Flatland
 
-<iframe src=https://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/mechanics/elastic-collisions-in-flatland/elastic-collisions-in-flatland.html width=100% height=500px></iframe>
+<iframe src=https://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#https://exploratoria.github.io/exhibits/mechanics/elastic-collisions-in-flatland/elastic-collisions-in-flatland.html width=100% height=500px></iframe>
 
 <span style="display: none">_View as a web page to see the content of this iframe_</span>
 
