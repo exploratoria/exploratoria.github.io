@@ -3,7 +3,7 @@
 
 # Rotating Tesseract
 
-<iframe src=http://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/rotating-tesseract.html width=100% height=500px></iframe>
+<iframe src=https://exploratoria.github.io/lib/code-edit-view/code-edit-view.html#http://exploratoria.github.io/exhibits/engineering/rotating-tesseract/rotating-tesseract.html width=100% height=500px></iframe>
 
 <span style="display: none">_View as a web page to see the content of this iframe_</span>
 
