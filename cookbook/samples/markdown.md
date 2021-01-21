@@ -79,7 +79,7 @@ Task lists
 - [ ] task
 - [x] task
 
-http://www.emoji-cheat-sheet.com/
+https://www.emoji-cheat-sheet.com/
 
 :large_blue_circle:
 

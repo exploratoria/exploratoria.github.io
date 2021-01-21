@@ -11,10 +11,10 @@ h1, a { margin: 0; }
 </style>
 </head>
 <body>
-<script src=http://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/build/three.min.js ></script>  
-<script src=http://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/controls/OrbitControls.js ></script>
-<script src=http://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/libs/stats.min.js ></script>  
-<script src=http://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/loaders/STLLoader.js ></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/build/three.min.js ></script>  
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/controls/OrbitControls.js ></script>
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/libs/stats.min.js ></script>  
+<script src=https://cdn.jsdelivr.net/gh/mrdoob/three.js@r71/examples/js/loaders/STLLoader.js ></script>
 <script>
 
 	var css, info, stats, renderer, scene, camera, controls;
@@ -32,7 +32,7 @@ h1, a { margin: 0; }
 			info = document.body.appendChild( document.createElement( 'div' ) );
 			info.style.cssText = 'margin: 0 20px; position: absolute; ';
 			info.innerHTML = '<h1><a href="" >' + document.title + '</a> - ' +
-				'<a id=i href=http://exploratoria.github.io/cookbook/viewers/view-stl-files/ >&#x24D8;</a>' +
+				'<a id=i href=https://exploratoria.github.io/cookbook/viewers/view-stl-files/ >&#x24D8;</a>' +
 				'</h1>' +
 				'<p>Use your pointing device to zoom, pan and rotate</p>' +
 				'<div id=msg ></div>' +
@@ -77,7 +77,7 @@ h1, a { margin: 0; }
 
 		} else {
 
-			loadFileSTLByURL( 'http://exploratoria.github.io/cookbook/models/original-nimble-scooter.stl' );
+			loadFileSTLByURL( 'https://exploratoria.github.io/cookbook/models/original-nimble-scooter.stl' );
 
 		}
 
@@ -86,7 +86,7 @@ h1, a { margin: 0; }
 
 	function loadFileSTLByURL( fileName ) {
 
-// http:///jaanga.github.io/cookbook-threejs/viewers/viewer-stl/latest/#http://va3c.github.io/viewer/samples/NPP_16.stl
+// https:///jaanga.github.io/cookbook-threejs/viewers/viewer-stl/latest/#https://va3c.github.io/viewer/samples/NPP_16.stl
 
 		var loader = new THREE.STLLoader();
 		loader.crossOrigin = 'anonymous';
