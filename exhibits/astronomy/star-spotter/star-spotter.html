@@ -14,7 +14,7 @@
 
 <script>
 
-	var fileName ='http://exploratoria.github.io/exhibits/astronomy/star-spotter/data/hygdata_v3.csv';
+	var fileName ='https://exploratoria.github.io/exhibits/astronomy/star-spotter/data/hygdata_v3.csv';
 	var xmlHttp;
 	var count = 0;
 	var particleSystem;
@@ -74,7 +74,7 @@
 
 		selSprite.onchange = function() { 
 
-			texture = new THREE.TextureLoader().load( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
+			texture = new THREE.TextureLoader().load( 'https://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/' + sprites[ selSprite.selectedIndex ] + '.png' ); 
 			drawStars();
 
 		};
@@ -101,7 +101,7 @@
 		scene.add( axesHelper );
 
 // texture
-		texture = new THREE.TextureLoader().load( 'http://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/ball.png' );
+		texture = new THREE.TextureLoader().load( 'https://exploratoria.github.io/exhibits/astronomy/star-spotter/sprites/ball.png' );
 
 // interaction
 		raycaster = new THREE.Raycaster();
