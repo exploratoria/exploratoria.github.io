@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright &copy; 2015-2025 exploratoria authors
+Copyright &copy; 2015-2026 exploratoria authors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
